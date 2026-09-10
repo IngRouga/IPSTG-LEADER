@@ -54,34 +54,17 @@ h1,h2,h3,.serif{font-family:'Fraunces',serif;}
 <style>
 .carousel-slide{opacity:0;transition:opacity 1s ease;position:absolute;inset:0;}
 .carousel-slide.active{opacity:1;position:relative;}
-.gallery-track{scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;}
+.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
 .gallery-track::-webkit-scrollbar{display:none;}
-.gallery-item{scroll-snap-align:start;flex:0 0 auto;}
+.gallery-item{flex:0 0 auto;}
 .float-stack{display:flex;flex-direction:column;gap:.85rem;}
 .counter{font-variant-numeric:tabular-nums;}
+.marquee-wrap{overflow:hidden;white-space:nowrap;}
+.marquee-track{display:inline-block;padding-left:100%;animation:marquee 18s linear infinite;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 </style>
 </head>
 <body>
-
-<!-- TOP BAR -->
-<div class="w-full text-white text-xs" style="background:var(--navy);">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-2">
-    <div class="flex items-center gap-4">
-      <span>Niamey, Niger</span>
-      <span class="hidden sm:inline text-white/40">|</span>
-      <a href="tel:+22780574747" class="hidden sm:inline hover:text-[var(--gold-light)]">+227 80 57 47 47</a>
-    </div>
-    <div class="flex items-center gap-4">
-      <a href="#formations" class="hidden md:inline hover:text-[var(--gold-light)]">Étudiant</a>
-      <a href="#admissions" class="hidden md:inline hover:text-[var(--gold-light)]">Parent</a>
-      <a href="#contact" class="hidden md:inline hover:text-[var(--gold-light)]">Entreprise</a>
-      <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-[var(--gold-light)]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
-      </a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold px-3.5 py-1.5 rounded-sm font-semibold text-[11px]">Inscription 2026–2027</a>
-    </div>
-  </div>
-</div>
 
 <!-- NAVIGATION -->
 <header id="nav" class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-black/5">
@@ -342,16 +325,39 @@ h1,h2,h3,.serif{font-family:'Fraunces',serif;}
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT + PRÉINSCRIPTION -->
 <section id="contact" class="section-pad" style="background:var(--cream);">
-  <div class="max-w-3xl mx-auto text-center reveal">
-    <p class="eyebrow">Contact</p>
-    <h2 class="serif text-2xl md:text-3xl font-semibold mt-4" style="color:var(--burgundy);">IPSTG-LEADER</h2>
-    <p class="text-gray-600 mt-3 text-sm">Bobiel, Face mosquée Imam Chaffi, Niamey, Niger</p>
-    <p class="text-gray-600 text-sm">WhatsApp : +227 80 57 47 47</p>
-    <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener" class="btn-gold inline-block mt-6 px-7 py-3 rounded-sm font-semibold text-sm">Contacter IPSTG-LEADER</a>
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="serif text-2xl md:text-3xl font-semibold mt-4" style="color:var(--burgundy);">IPSTG-LEADER</h2>
+      <p class="text-gray-600 mt-3 text-sm">Bobiel, Face mosquée Imam Chaffi, Niamey, Niger</p>
+      <p class="text-gray-600 text-sm">WhatsApp : +227 80 57 47 47</p>
+      <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener" class="btn-gold inline-block mt-6 px-7 py-3 rounded-sm font-semibold text-sm">Contacter IPSTG-LEADER</a>
+    </div>
+    <div class="reveal bg-white p-7 rounded-sm border border-black/5">
+      <p class="eyebrow">Préinscription rapide</p>
+      <h3 class="serif text-lg font-semibold mt-2" style="color:var(--burgundy);">Réservez votre place pour 2026–2027</h3>
+      <p class="text-gray-500 text-xs mt-2">Remplissez ce formulaire : il ouvre WhatsApp avec vos informations déjà prêtes à envoyer à IPSTG-LEADER.</p>
+      <form id="preinscription-form" class="mt-5 space-y-3">
+        <input id="pi-nom" type="text" required placeholder="Nom complet" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <input id="pi-tel" type="tel" required placeholder="Téléphone" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <input id="pi-formation" type="text" required placeholder="Formation souhaitée (ex: BTS Génie Électrique)" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <button type="submit" class="btn-gold w-full py-3 rounded-sm font-semibold text-sm flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Z"/></svg>
+          Envoyer ma préinscription sur WhatsApp
+        </button>
+      </form>
+    </div>
   </div>
 </section>
+
+<!-- BANDEAU DÉFILANT -->
+<div class="marquee-wrap py-2.5" style="background:var(--burgundy);">
+  <div class="marquee-track text-white text-xs font-semibold tracking-wide">
+    🎓 Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours —
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer style="background:var(--navy);" class="text-white/70 pt-16 pb-8 px-5 md:px-10">
@@ -531,24 +537,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {threshold:.5});
   counters.forEach(c=>cio.observe(c));
 
-  // Horizontal gallery
+  // Horizontal gallery — seamless infinite auto-scroll
   const track = document.getElementById('gallery-track');
+  // duplicate items once for seamless looping
+  track.innerHTML += track.innerHTML;
   document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
   document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
+  let galleryPaused = false;
   let galleryAuto = setInterval(()=>{
-    if(track.scrollLeft + track.clientWidth >= track.scrollWidth - 5){
-      track.scrollTo({left:0, behavior:'smooth'});
+    if(galleryPaused) return;
+    const half = track.scrollWidth / 2;
+    if(track.scrollLeft >= half){
+      track.scrollLeft -= half;
     } else {
-      track.scrollBy({left:1, behavior:'auto'});
+      track.scrollLeft += 1;
     }
-  }, 40);
-  track.addEventListener('mouseenter', ()=>clearInterval(galleryAuto));
-  track.addEventListener('touchstart', ()=>clearInterval(galleryAuto));
+  }, 30);
+  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
+  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
+  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
+  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
 
   // News modal (reuses program-modal overlay from site.js)
   document.querySelectorAll('.news-modal-btn').forEach(btn=>{
     btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
   });
+
+  // Préinscription form → WhatsApp
+  const piForm = document.getElementById('preinscription-form');
+  if(piForm){
+    piForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const nom = document.getElementById('pi-nom').value.trim();
+      const tel = document.getElementById('pi-tel').value.trim();
+      const formation = document.getElementById('pi-formation').value.trim();
+      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
+      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+  }
 });
 </script>
 </body>
