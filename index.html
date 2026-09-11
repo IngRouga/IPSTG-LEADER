@@ -1,1 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPSTG-LEADER | Institut Privé des Sciences Technologiques et de Gestion – Niamey</title>
+<meta name="description" content="IPSTG-LEADER à Niamey : formations Licence, BTS d'État, Master et formations professionnelles. Inscriptions 2026–2027.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
 
+</style>
+</head>
+<body>
+<header id="nav" class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-3">
+    <a href="#accueil" class="flex items-center gap-3">
+      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain">
+      <div class="leading-tight">
+        <div class="serif font-semibold text-base" style="color:var(--burgundy);">IPSTG-LEADER</div>
+        <div class="text-[10px] tracking-wide text-gray-500 hidden sm:block">Sciences Technologiques &amp; Gestion</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <a href="#accueil" class="nav-link current">Accueil</a>
+      <a href="#institut" class="nav-link">L'Institut</a>
+      <a href="#formations" class="nav-link">Formations</a>
+      <a href="#admissions" class="nav-link">Admissions</a>
+      <a href="#vie-etudiante" class="nav-link">Vie étudiante</a>
+      <a href="#actualites" class="nav-link">Actualités</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="hidden lg:inline-block btn-gold px-5 py-2.5 rounded-sm text-sm font-semibold">Inscription 2026–2027</a>
+    <button id="burger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden flex-col bg-white border-t border-black/5 px-5 py-4 gap-4 text-gray-700 font-medium">
+    <a href="#accueil" class="py-1">Accueil</a>
+    <a href="#institut" class="py-1">L'Institut</a>
+    <a href="#formations" class="py-1">Formations</a>
+    <a href="#admissions" class="py-1">Admissions</a>
+    <a href="#vie-etudiante" class="py-1">Vie étudiante</a>
+    <a href="#actualites" class="py-1">Actualités</a>
+    <a href="#contact" class="py-1">Contact</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold text-center py-3 rounded-sm mt-2">Inscription 2026–2027</a>
+  </div>
+</header>
+
+<section id="accueil">
+<!-- HERO CAROUSEL -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden" id="hero" style="background:linear-gradient(135deg, var(--navy) 0%, var(--burgundy-deep) 100%);">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="assets/students1.jpg">
+    <source src="assets/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-10 py-20 text-white">
+    <p class="eyebrow reveal">Institut Privé des Sciences Technologiques et de Gestion</p>
+    <h1 class="serif reveal mt-5 text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.05] max-w-4xl">
+      Construisez votre avenir.<br>Devenez le <span class="gold-text">leader</span> de demain.
+    </h1>
+    <p class="reveal mt-6 max-w-xl text-white/85 text-base md:text-lg">
+      Une formation de qualité pour des compétences réelles et un meilleur avenir professionnel.
+    </p>
+    <div class="reveal mt-8 flex flex-wrap gap-4">
+      <a href="#formations" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm">Découvrir nos formations</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="border border-white/60 text-white px-7 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--navy)] transition">Inscription 2026–2027</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-14 px-5 md:px-10" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto">
+    <p class="eyebrow text-center reveal">Résultats académiques 2026</p>
+    <h2 class="serif text-2xl md:text-3xl font-semibold text-center mt-3 reveal" style="color:var(--burgundy);">Des résultats qui parlent d'eux-mêmes.</h2>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      <div class="reveal text-center">
+        <div class="serif text-4xl md:text-5xl font-semibold counter" data-target="80" style="color:var(--gold);">80%</div>
+        <p class="text-sm text-gray-600 mt-3">de réussite au BTS d'État 2026</p>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25v11.5M12 6.25 4 9.5v6l8 3.25 8-3.25v-6L12 6.25Z"/></svg>
+        <p class="text-sm text-gray-600 mt-3">Des filières adaptées au marché</p>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm12 10v-2a4 4 0 0 0-3-3.87M15 2.13a4 4 0 0 1 0 7.75"/></svg>
+        <p class="text-sm text-gray-600 mt-3">Des centaines d'étudiants formés</p>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5-2 2m-9 9-2 2m0-13 2 2m9 9 2 2"/></svg>
+        <p class="text-sm text-gray-600 mt-3">Un cadre d'apprentissage moderne</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <p class="eyebrow">Formations</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Des parcours pour un avenir meilleur.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
+        <h3 class="serif font-semibold" style="color:var(--burgundy);">Licence — Bac+3</h3>
+        <p class="text-gray-500 text-xs mt-2">Génie logiciel, IA, gestion, énergies renouvelables et plus.</p>
+        <a href="#formations" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+      </div>
+      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
+        <h3 class="serif font-semibold" style="color:var(--burgundy);">BTS d'État</h3>
+        <p class="text-gray-500 text-xs mt-2">18 filières, du génie électrique à la comptabilité de gestion.</p>
+        <a href="#formations" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+      </div>
+      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
+        <h3 class="serif font-semibold" style="color:var(--burgundy);">Master — Bac+5</h3>
+        <p class="text-gray-500 text-xs mt-2">Approfondissement académique et spécialisation professionnelle.</p>
+        <a href="#formations" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+      </div>
+      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
+        <h3 class="serif font-semibold" style="color:var(--burgundy);">Formation Continue</h3>
+        <p class="text-gray-500 text-xs mt-2">Leadership, ressources humaines, marketing, RSE et plus.</p>
+        <a href="#formations" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+      </div>
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a href="#formations" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les formations</a>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI CHOISIR -->
+<section class="section-pad" style="background:#F3EEE4;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <p class="eyebrow">Pourquoi nous choisir</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Un environnement propice à votre réussite.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+      <div class="reveal text-center">
+        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/></svg>
+        <h3 class="font-semibold mt-4 text-sm">Formation de qualité</h3>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 3.5a5.5 5.5 0 0 0-3 10.1c.6.4 1 1.1 1 1.9v.5h5v-.5c0-.8.4-1.5 1-1.9a5.5 5.5 0 0 0-4-10.1ZM9 19.5h3M9 22h3"/></svg>
+        <h3 class="font-semibold mt-4 text-sm">Innovation &amp; technologie</h3>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-2.5-8-5.5-8-10A5 5 0 0 1 12 7a5 5 0 0 1 8 4c0 4.5-4 7.5-8 10Z"/></svg>
+        <h3 class="font-semibold mt-4 text-sm">Vie étudiante enrichissante</h3>
+      </div>
+      <div class="reveal text-center">
+        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 14 0"/></svg>
+        <h3 class="font-semibold mt-4 text-sm">Accompagnement</h3>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-10 border-t border-black/10 reveal">
+      <p class="eyebrow text-center">Notre différence</p>
+      <div class="grid sm:grid-cols-3 gap-6 mt-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01"/></svg>
+          <p class="text-sm text-gray-700 font-medium">École bilingue qui forme des entrepreneurs</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25v11.5M4 9.5l8-3.25 8 3.25v6l-8 3.25-8-3.25v-6Z"/></svg>
+          <p class="text-sm text-gray-700 font-medium">École technologique où l'on lit 100 livres en 3 ans</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5Z"/></svg>
+          <p class="text-sm text-gray-700 font-medium">École de voyages grâce à des partenaires internationaux</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIE ÉTUDIANTE — GALERIE HORIZONTALE -->
+<section class="section-pad">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-end justify-between flex-wrap gap-4 reveal">
+      <div>
+        <p class="eyebrow">Vie étudiante</p>
+        <h2 class="serif text-3xl md:text-4xl font-semibold mt-3" style="color:var(--burgundy);">Apprendre. Partager. Grandir.</h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="gallery-prev" aria-label="Précédent" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">‹</button>
+        <button id="gallery-next" aria-label="Suivant" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">›</button>
+      </div>
+    </div>
+    <div id="gallery-track" class="gallery-track flex gap-4 mt-10 overflow-x-auto pb-4">
+      <img src="assets/students1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Étudiantes en cours" loading="lazy">
+      <img src="assets/group1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Communauté étudiante" loading="lazy">
+      <img src="assets/classroom3.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Salle de classe" loading="lazy">
+      <img src="assets/classroom4.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Événement institutionnel" loading="lazy">
+      <img src="assets/quote1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Une école de prestige" loading="lazy">
+      <img src="assets/makeithappen.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Esprit IPSTG-LEADER" loading="lazy">
+    </div>
+    <div class="text-center mt-8 reveal">
+      <a href="#vie-etudiante" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toute la vie étudiante</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACTUALITÉS -->
+<section class="section-pad" style="background:#F3EEE4;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <p class="eyebrow">Actualités</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Dernières nouvelles</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+        <img src="assets/building2.jpg" class="w-full h-44 object-cover" alt="Campus IPSTG-LEADER" loading="lazy">
+        <div class="p-5">
+          <span class="text-xs text-gray-400">2026</span>
+          <h3 class="serif text-base mt-1 font-semibold">Bienvenue à IPSTG-LEADER</h3>
+          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="Bienvenue à IPSTG-LEADER" data-text="Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut pour l'année académique 2026–2027.">Lire l'article →</button>
+        </div>
+      </article>
+      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+        <img src="assets/presenter1.jpg" class="w-full h-44 object-cover" alt="Session de formation" loading="lazy">
+        <div class="p-5">
+          <span class="text-xs text-gray-400">2026</span>
+          <h3 class="serif text-base mt-1 font-semibold">Sessions de formation continue</h3>
+          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="Sessions de formation continue" data-text="Des ateliers et sessions animées accompagnent étudiants et professionnels dans leur développement tout au long de l'année.">Lire l'article →</button>
+        </div>
+      </article>
+      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+        <img src="assets/classroom5.jpg" class="w-full h-44 object-cover" alt="BTS d'État 2026" loading="lazy">
+        <div class="p-5">
+          <span class="text-xs text-gray-400">2026</span>
+          <h3 class="serif text-base mt-1 font-semibold">De bons résultats au BTS d'État 2026</h3>
+          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="De bons résultats au BTS d'État 2026" data-text="80% de réussite au BTS d'État 2026 — une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.">Lire l'article →</button>
+        </div>
+      </article>
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a href="#actualites" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les actualités →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="section-pad text-white" style="background:var(--burgundy);">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="eyebrow" style="color:var(--gold-light);">Admissions 2026–2027</p>
+    <h2 class="serif text-3xl md:text-5xl font-semibold mt-4">Votre avenir commence ici.</h2>
+    <p class="text-white/80 mt-5 max-w-lg mx-auto">Rejoignez IPSTG-LEADER et construisez votre futur.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-9">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold px-8 py-3.5 rounded-sm font-semibold text-sm">Je m'inscris maintenant</a>
+      <a href="#contact" class="border border-white/50 px-8 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--burgundy)] transition">Demander des informations</a>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 mt-14 text-left">
+      <div class="border-t border-white/20 pt-5">
+        <div class="serif text-2xl" style="color:var(--gold-light);">01</div>
+        <p class="mt-2 font-medium text-sm">Choisissez votre formation</p>
+      </div>
+      <div class="border-t border-white/20 pt-5">
+        <div class="serif text-2xl" style="color:var(--gold-light);">02</div>
+        <p class="mt-2 font-medium text-sm">Remplissez le formulaire d'inscription</p>
+      </div>
+      <div class="border-t border-white/20 pt-5">
+        <div class="serif text-2xl" style="color:var(--gold-light);">03</div>
+        <p class="mt-2 font-medium text-sm">Recevez les informations pour la suite</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + PRÉINSCRIPTION -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="serif text-2xl md:text-3xl font-semibold mt-4" style="color:var(--burgundy);">IPSTG-LEADER</h2>
+      <p class="text-gray-600 mt-3 text-sm">Quartier Bobiel, face Mosquée Imam Chafaï, Niamey, Niger</p>
+      <p class="text-gray-600 text-sm">
+        <a href="tel:+22780574747" class="hover:underline">+227 80 57 47 47</a> ·
+        <a href="tel:+22791313956" class="hover:underline">+227 91 31 39 56</a>
+      </p>
+      <p class="text-gray-600 text-sm mt-1"><a href="mailto:ipstgleader@gmail.com" class="hover:underline gold-text">ipstgleader@gmail.com</a></p>
+      <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener" class="btn-gold inline-block mt-6 px-7 py-3 rounded-sm font-semibold text-sm">Contacter IPSTG-LEADER</a>
+    </div>
+    <div class="reveal bg-white p-7 rounded-sm border border-black/5">
+      <p class="eyebrow">Préinscription rapide</p>
+      <h3 class="serif text-lg font-semibold mt-2" style="color:var(--burgundy);">Réservez votre place pour 2026–2027</h3>
+      <p class="text-gray-500 text-xs mt-2">Remplissez ce formulaire : il ouvre WhatsApp avec vos informations déjà prêtes à envoyer à IPSTG-LEADER.</p>
+      <form id="preinscription-form" class="mt-5 space-y-3">
+        <input id="pi-nom" type="text" required placeholder="Nom complet" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <input id="pi-tel" type="tel" required placeholder="Téléphone" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <input id="pi-formation" type="text" required placeholder="Formation souhaitée (ex: BTS Génie Électrique)" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        <button type="submit" class="btn-gold w-full py-3 rounded-sm font-semibold text-sm flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Z"/></svg>
+          Envoyer ma préinscription sur WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- BANDEAU DÉFILANT -->
+<div class="marquee-wrap py-2.5" style="background:var(--burgundy);">
+  <div class="marquee-track text-white text-xs font-semibold tracking-wide">
+    🎓 Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours —
+  </div>
+</div>
+
+<!-- FOOTER -->
+</section>
+
+<section id="institut">
+<section class="relative min-h-[60vh] flex items-end" style="background:url('assets/building2.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">L'Institut</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Une école de prestige à Niamey.</h1>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <p class="eyebrow">Notre histoire</p>
+      <h2 class="serif text-3xl font-semibold mt-4" style="color:var(--burgundy);">Qui sommes-nous ?</h2>
+      <div class="woven-divider w-24 mt-6"></div>
+      <p class="text-gray-600 mt-6 leading-relaxed">
+        IPSTG-LEADER (Institut Privé des Sciences Technologiques et de Gestion) est un établissement d'enseignement supérieur situé au quartier Bobiel, face à la mosquée Imam Chafaï, à Niamey. L'institut propose des parcours en BTS d'État, Licence, Master et formation professionnelle continue, avec une orientation forte vers la technologie, la gestion et le leadership.
+      </p>
+    </div>
+    <div class="reveal"><img src="assets/quote1.jpg" class="lightbox-img rounded-sm w-full h-[380px] object-cover" alt="Une école de prestige" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--burgundy-deep);">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="eyebrow">Le mot du fondateur</p>
+    <blockquote class="serif text-2xl md:text-3xl text-white mt-6 leading-snug">
+      « Notre ambition est de former des jeunes Africains capables de créer des entreprises compétitives, de les mener vers la prospérité et de les vendre à l'international. En effet, des entrepreneurs étrangers parviennent à fonder des entreprises qui prospèrent et finissent par les vendre dans nos pays. Nous avons le potentiel pour faire de même ! »
+    </blockquote>
+    <p class="text-white/60 mt-6 text-sm">— Issiafa Hamidou Maiga, Fondateur IPSTG-LEADER</p>
+  </div>
+</section>
+
+<section class="section-pad" style="background:#F3EEE4;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <p class="eyebrow">Nos valeurs</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Ce qui nous distingue.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
+        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">École bilingue</h3>
+        <p class="text-gray-600 text-sm mt-3">Une pédagogie qui forme aussi des entrepreneurs, en français et en anglais.</p>
+      </div>
+      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
+        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">École technologique</h3>
+        <p class="text-gray-600 text-sm mt-3">Un institut qui encourage la lecture et l'apprentissage continu tout au long du cursus.</p>
+      </div>
+      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
+        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">Ouverture internationale</h3>
+        <p class="text-gray-600 text-sm mt-3">Des partenariats qui ouvrent les étudiants à des perspectives au-delà du Niger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+    <img src="assets/group1.jpg" class="lightbox-img rounded-sm w-full h-72 object-cover reveal" alt="Communauté IPSTG-LEADER" loading="lazy">
+    <img src="assets/leader1.jpg" class="lightbox-img rounded-sm w-full h-72 object-cover reveal" alt="Direction IPSTG-LEADER" loading="lazy">
+  </div>
+</section>
+</section>
+
+<section id="formations">
+<section class="relative min-h-[55vh] flex items-end" style="background:url('assets/classroom1.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">Formations</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Des formations pour construire l'avenir.</h1>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-2 reveal">
+      <button class="tab-btn active px-5 py-2.5 rounded-full text-sm font-semibold border border-[var(--burgundy)]" data-tab="licence">Licence — Bac+3</button>
+      <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-[var(--burgundy)]" style="color:var(--burgundy);" data-tab="bts">BTS d'État</button>
+      <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-[var(--burgundy)]" style="color:var(--burgundy);" data-tab="master">Master — Bac+5</button>
+      <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-[var(--burgundy)]" style="color:var(--burgundy);" data-tab="pro">Formation Continue</button>
+    </div>
+    <div class="mt-12">
+      <div class="tab-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-panel="licence"></div>
+      <div class="tab-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-panel="bts"></div>
+      <div class="tab-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-panel="master"></div>
+      <div class="tab-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-panel="pro"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad text-center" style="background:var(--navy);">
+  <h2 class="serif text-white text-3xl md:text-4xl font-semibold reveal">Prêt à choisir votre parcours ?</h2>
+  <a href="#admissions" class="btn-gold inline-block mt-8 px-8 py-3.5 rounded-sm font-semibold text-sm reveal">Inscription 2026–2027</a>
+</section>
+</section>
+
+<section id="admissions">
+<section class="relative min-h-[55vh] flex items-end" style="background:url('assets/classroom3.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">Admissions 2026–2027</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Votre avenir commence ici.</h1>
+    <p class="reveal mt-5 max-w-xl text-white/85">Préparez votre prochaine étape avec IPSTG-LEADER.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-7 px-8 py-3.5 rounded-sm font-semibold text-sm">Je m'inscris pour 2026–2027</a>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center reveal">
+      <p class="eyebrow">Processus</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Comment s'inscrire</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-8 mt-12">
+      <div class="reveal">
+        <div class="serif text-4xl gold-text">01</div>
+        <p class="mt-3 font-semibold">Choisissez votre formation</p>
+        <p class="text-gray-600 text-sm mt-2">Parcourez les filières Licence, BTS d'État, Master ou formation continue.</p>
+      </div>
+      <div class="reveal">
+        <div class="serif text-4xl gold-text">02</div>
+        <p class="mt-3 font-semibold">Remplissez le formulaire d'inscription</p>
+        <p class="text-gray-600 text-sm mt-2">Complétez le formulaire en ligne dédié aux admissions 2026–2027.</p>
+      </div>
+      <div class="reveal">
+        <div class="serif text-4xl gold-text">03</div>
+        <p class="mt-3 font-semibold">Recevez les informations pour la suite</p>
+        <p class="text-gray-600 text-sm mt-2">L'équipe IPSTG-LEADER vous contacte pour la suite de votre admission.</p>
+      </div>
+    </div>
+    <div class="text-center mt-14 reveal">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold inline-block px-8 py-3.5 rounded-sm font-semibold text-sm">Accéder au formulaire d'inscription</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:#F3EEE4;">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <img src="assets/students1.jpg" class="rounded-sm w-full h-80 object-cover reveal" alt="Étudiants IPSTG-LEADER" loading="lazy">
+    <div class="reveal">
+      <p class="eyebrow">Une question ?</p>
+      <h2 class="serif text-2xl md:text-3xl font-semibold mt-3" style="color:var(--burgundy);">Contactez l'équipe des admissions</h2>
+      <p class="text-gray-600 mt-4">Notre équipe vous répond directement sur WhatsApp pour toute question sur les formations ou les inscriptions.</p>
+      <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" class="btn-gold inline-block mt-6 px-7 py-3 rounded-sm font-semibold text-sm">Contacter sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="vie-etudiante">
+<section class="relative min-h-[55vh] flex items-end" style="background:url('assets/classroom4.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">Vie étudiante</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Bien plus qu'une formation.</h1>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <h2 class="serif text-3xl font-semibold" style="color:var(--burgundy);">Vie académique</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <img src="assets/classroom3.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Salle de classe" loading="lazy">
+      <img src="assets/training1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Session de formation" loading="lazy">
+      <img src="assets/classroom5.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Travaux pratiques informatique" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:#F3EEE4;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center reveal">
+      <h2 class="serif text-3xl font-semibold" style="color:var(--burgundy);">Événements &amp; cérémonies</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <img src="assets/group1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Photo de groupe étudiants" loading="lazy">
+      <img src="assets/presenter1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Prise de parole en session" loading="lazy">
+      <img src="assets/makeithappen.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Salle de classe IPSTG-LEADER" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="serif text-2xl md:text-3xl" style="color:var(--burgundy);">« Some people dream of success, others make it happen. »</p>
+    <p class="text-gray-500 mt-4 text-sm">L'esprit affiché dans les salles de cours d'IPSTG-LEADER.</p>
+  </div>
+</section>
+</section>
+
+<section id="actualites">
+<section class="relative min-h-[50vh] flex items-end" style="background:url('assets/classroom2.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">Actualités</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Actualités &amp; événements</h1>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/quote1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Une école de prestige" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Institution</span>
+        <h3 class="serif text-lg mt-2 font-semibold">Une école de prestige</h3>
+        <p class="text-gray-600 text-sm mt-2">Le mot du fondateur sur l'ambition de former des entrepreneurs africains compétitifs à l'international.</p>
+      </div>
+    </article>
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/presenter1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Session de formation" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Formation</span>
+        <h3 class="serif text-lg mt-2 font-semibold">Sessions de formation continue</h3>
+        <p class="text-gray-600 text-sm mt-2">Ateliers et sessions animées pour accompagner étudiants et professionnels dans leur développement.</p>
+      </div>
+    </article>
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/makeithappen.jpg" class="lightbox-img w-full h-48 object-cover" alt="Salle de classe IPSTG-LEADER" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Vie étudiante</span>
+        <h3 class="serif text-lg mt-2 font-semibold">L'esprit IPSTG-LEADER</h3>
+        <p class="text-gray-600 text-sm mt-2">« Some people dream of success, others make it happen » — l'état d'esprit affiché dans nos salles de cours.</p>
+      </div>
+    </article>
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/classroom1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Résultats BTS 2026" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Résultats</span>
+        <h3 class="serif text-lg mt-2 font-semibold">BTS d'État 2026</h3>
+        <p class="text-gray-600 text-sm mt-2">Une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.</p>
+      </div>
+    </article>
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/group1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Communauté étudiante" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Communauté</span>
+        <h3 class="serif text-lg mt-2 font-semibold">Une communauté visionnaire</h3>
+        <p class="text-gray-600 text-sm mt-2">Étudiants et équipe pédagogique réunis autour d'un même objectif : former les leaders de demain.</p>
+      </div>
+    </article>
+    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
+      <img src="assets/building2.jpg" class="lightbox-img w-full h-48 object-cover" alt="Campus IPSTG-LEADER" loading="lazy">
+      <div class="p-5">
+        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Campus</span>
+        <h3 class="serif text-lg mt-2 font-semibold">Bienvenue à IPSTG-LEADER</h3>
+        <p class="text-gray-600 text-sm mt-2">Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut.</p>
+      </div>
+    </article>
+  </div>
+</section>
+</section>
+
+<section id="contact">
+<section class="relative min-h-[45vh] flex items-end" style="background:url('assets/building1.jpg') center/cover no-repeat;">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+    <p class="eyebrow reveal">Contact</p>
+    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Parlons de votre avenir.</h1>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14">
+    <div class="reveal">
+      <p class="eyebrow">Coordonnées</p>
+      <h2 class="serif text-3xl font-semibold mt-4" style="color:var(--burgundy);">IPSTG-LEADER</h2>
+      <div class="mt-8 space-y-4 text-gray-700 text-sm">
+        <p><strong>Adresse :</strong> Quartier Bobiel, face Mosquée Imam Chafaï, Niamey, Niger</p>
+        <p><strong>Téléphones :</strong> <a href="tel:+22780574747" class="underline">+227 80 57 47 47</a> · <a href="tel:+22791313956" class="underline">+227 91 31 39 56</a></p>
+        <p><strong>Email :</strong> <a href="mailto:ipstgleader@gmail.com" class="underline gold-text">ipstgleader@gmail.com</a></p>
+        <p><strong>WhatsApp :</strong> +227 80 57 47 47</p>
+        <p><strong>Facebook :</strong> <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" rel="noopener" class="underline gold-text">IPSTG-Leader</a></p>
+      </div>
+      <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-8 btn-gold px-6 py-3.5 rounded-sm font-semibold text-sm">
+        Contacter IPSTG-LEADER sur WhatsApp
+      </a>
+      <img src="assets/building2.jpg" class="rounded-sm w-full h-56 object-cover mt-10" alt="Campus IPSTG-LEADER" loading="lazy">
+    </div>
+    <form class="reveal bg-white p-7 rounded-sm border border-black/5 space-y-4 h-fit" onsubmit="event.preventDefault(); alert('Merci pour votre message. Ce formulaire de démonstration n\'est pas encore relié à une messagerie réelle — une intégration email ou CRM pourra être connectée lors de la mise en ligne officielle. En attendant, contactez-nous directement via WhatsApp.');">
+      <div>
+        <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Nom complet</label>
+        <input type="text" required class="w-full mt-1.5 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Téléphone</label>
+          <input type="tel" required class="w-full mt-1.5 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Email</label>
+          <input type="email" class="w-full mt-1.5 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Formation souhaitée</label>
+        <input type="text" class="w-full mt-1.5 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Message</label>
+        <textarea rows="3" class="w-full mt-1.5 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);"></textarea>
+      </div>
+      <button type="submit" class="btn-gold w-full py-3 rounded-sm font-semibold text-sm">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>
+</section>
+
+<footer style="background:var(--navy);" class="text-white/70 pt-16 pb-8 px-5 md:px-10">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" class="h-10 w-10 object-contain" alt="Logo">
+        <span class="serif text-white font-semibold">IPSTG-LEADER</span>
+      </div>
+      <p class="text-sm mt-4">Institut Privé des Sciences Technologiques et de Gestion</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Navigation</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#institut">L'Institut</a></li>
+        <li><a href="#vie-etudiante">Vie étudiante</a></li>
+        <li><a href="#actualites">Actualités</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Formations</p>
+      <a href="#formations" class="text-sm gold-text underline">Voir toutes les formations</a>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Admissions</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" class="text-sm gold-text underline">Inscription 2026–2027</a>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Réseaux sociaux</p>
+      <p class="text-sm">WhatsApp : +227 80 57 47 47</p>
+      <p class="text-sm mt-1">Tél : <a href="tel:+22791313956" class="hover:text-white">+227 91 31 39 56</a></p>
+      <a href="mailto:ipstgleader@gmail.com" class="text-sm gold-text underline mt-2 inline-block">ipstgleader@gmail.com</a><br>
+      <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" class="text-sm gold-text underline mt-1 inline-block">Facebook</a>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto border-t border-white/10 mt-12 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
+    <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
+    <span class="text-white/40">Website concept by RougaTech</span>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed bottom-6 right-6 z-50 float-stack items-end">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener"
+    class="btn-gold rounded-full w-16 h-16 flex flex-col items-center justify-center text-center shadow-lg hover:scale-105 transition text-[9px] font-semibold leading-tight" aria-label="Inscription 2026-2027">
+    <span class="text-lg leading-none">🎓</span>
+    <span>Inscription<br>2026–2027</span>
+  </a>
+  <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener"
+    class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition" aria-label="Contacter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.41 1.02 2.58.12.17 1.77 2.71 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+  </a>
+</div>
+
+
+<script src="assets/site.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Animated counter
+  const counters = document.querySelectorAll('.counter');
+  const cio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el = e.target;
+        const target = parseInt(el.dataset.target,10);
+        let cur = 0;
+        const step = Math.max(1, Math.round(target/40));
+        const iv = setInterval(()=>{
+          cur += step;
+          if(cur >= target){ cur = target; clearInterval(iv); }
+          el.textContent = cur + '%';
+        }, 30);
+        cio.unobserve(el);
+      }
+    });
+  }, {threshold:.5});
+  counters.forEach(c=>cio.observe(c));
+
+  // Horizontal gallery — seamless infinite auto-scroll
+  const track = document.getElementById('gallery-track');
+  // duplicate items once for seamless looping
+  track.innerHTML += track.innerHTML;
+  document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
+  document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
+  let galleryPaused = false;
+  let galleryAuto = setInterval(()=>{
+    if(galleryPaused) return;
+    const half = track.scrollWidth / 2;
+    if(track.scrollLeft >= half){
+      track.scrollLeft -= half;
+    } else {
+      track.scrollLeft += 1;
+    }
+  }, 30);
+  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
+  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
+  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
+  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
+
+  // News modal (reuses program-modal overlay from site.js)
+  document.querySelectorAll('.news-modal-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
+  });
+
+  // Préinscription form → WhatsApp
+  const piForm = document.getElementById('preinscription-form');
+  if(piForm){
+    piForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const nom = document.getElementById('pi-nom').value.trim();
+      const tel = document.getElementById('pi-tel').value.trim();
+      const formation = document.getElementById('pi-formation').value.trim();
+      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
+      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+  }
+});
+</script>
+</body>
+</html>
