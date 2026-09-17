@@ -11,7 +11,19 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-
+.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
+.gallery-track::-webkit-scrollbar{display:none;}
+.partner-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.partner-track{display:flex;gap:1rem;width:max-content;}
+.partner-track-left{animation:partner-scroll-left 38s linear infinite;}
+.partner-track-right{animation:partner-scroll-right 38s linear infinite;}
+.partner-marquee:hover .partner-track{animation-play-state:paused;}
+.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:1rem 1.6rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
+.partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
+@keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+@media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
+@media (prefers-reduced-motion: reduce){.partner-track-left,.partner-track-right{animation:none;}}
 </style>
 </head>
 <body>
@@ -179,6 +191,54 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- NOS PARTENAIRES & INSTITUTIONS DE RÉFÉRENCE -->
+<section class="py-16 px-5 md:px-10" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto text-center reveal">
+    <p class="eyebrow">Réseau &amp; ouverture professionnelle</p>
+    <h2 class="serif text-2xl md:text-3xl font-semibold mt-3" style="color:var(--burgundy);">Nos partenaires &amp; institutions de référence</h2>
+    <p class="text-gray-600 text-sm mt-3 max-w-2xl mx-auto">Des collaborations et références qui renforcent notre ouverture sur le monde professionnel, institutionnel et académique.</p>
+  </div>
+
+  <div class="partner-marquee mt-10 reveal">
+    <div class="partner-track partner-track-left">
+      <span class="partner-card">SONIBANK</span>
+      <span class="partner-card">ECOBANK Niger</span>
+      <span class="partner-card">CORIS BANK</span>
+      <span class="partner-card">Access Finances Africa</span>
+      <span class="partner-card">SGI-Niger</span>
+      <span class="partner-card">DGI Niger</span>
+      <span class="partner-card">LONANI</span>
+      <span class="partner-card">SONIBANK</span>
+      <span class="partner-card">ECOBANK Niger</span>
+      <span class="partner-card">CORIS BANK</span>
+      <span class="partner-card">Access Finances Africa</span>
+      <span class="partner-card">SGI-Niger</span>
+      <span class="partner-card">DGI Niger</span>
+      <span class="partner-card">LONANI</span>
+    </div>
+  </div>
+  <div class="partner-marquee mt-4 reveal">
+    <div class="partner-track partner-track-right">
+      <span class="partner-card">Niger Telecoms</span>
+      <span class="partner-card">SONUCI</span>
+      <span class="partner-card">Sagemcom</span>
+      <span class="partner-card">Ministère de l'Enseignement Supérieur</span>
+      <span class="partner-card">CAMES</span>
+      <span class="partner-card">RESAO</span>
+      <span class="partner-card">Norme ISO 9001</span>
+      <span class="partner-card">Niger Telecoms</span>
+      <span class="partner-card">SONUCI</span>
+      <span class="partner-card">Sagemcom</span>
+      <span class="partner-card">Ministère de l'Enseignement Supérieur</span>
+      <span class="partner-card">CAMES</span>
+      <span class="partner-card">RESAO</span>
+      <span class="partner-card">Norme ISO 9001</span>
+    </div>
+  </div>
+
+  <p class="text-center text-xs text-gray-400 mt-8 reveal">Un réseau au service de la formation, de l'innovation et de l'employabilité.</p>
 </section>
 
 <!-- VIE ÉTUDIANTE — GALERIE HORIZONTALE -->
