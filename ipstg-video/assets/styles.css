@@ -1,0 +1,39 @@
+:root{
+  --gold:#AD8A3D;
+  --gold-light:#D8BE7E;
+  --burgundy:#6E1423;
+  --burgundy-deep:#4A0E18;
+  --navy:#12151F;
+  --cream:#FAF7F1;
+  --ink:#1B1B1E;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+.eyebrow{font-family:'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:600;color:var(--gold);}
+.card{transition:transform .4s ease, box-shadow .4s ease;}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 48px -12px rgba(18,21,31,.18);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.btn-gold{background:var(--gold);color:#fff;transition:background .3s ease, transform .2s ease;}
+.btn-gold:hover{background:#96762E;transform:translateY(-2px);}
+.btn-outline{border:1.5px solid var(--gold);color:var(--gold);transition:all .3s ease;}
+.btn-outline:hover{background:var(--gold);color:#fff;}
+.nav-link{position:relative;}
+.nav-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:var(--gold);transition:width .3s ease;}
+.nav-link:hover::after{width:100%;}
+.nav-link.current::after{width:100%;}
+::selection{background:var(--gold-light);color:var(--navy);}
+.gold-text{color:var(--gold);}
+.section-pad{padding:5.5rem 1.5rem;}
+@media(min-width:768px){.section-pad{padding:7.5rem 3rem;}}
+.hero-overlay{background:linear-gradient(180deg, rgba(18,21,31,.55) 0%, rgba(18,21,31,.75) 55%, rgba(18,21,31,.92) 100%);}
+.scroll-indicator{animation: bob 2s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+.tab-btn.active{background:var(--burgundy);color:#fff;}
+.woven-divider{height:3px;background:repeating-linear-gradient(90deg, var(--gold) 0 24px, transparent 24px 40px);}
+@media (prefers-reduced-motion: reduce){
+  .reveal{transition:none;opacity:1;transform:none;}
+  .scroll-indicator{animation:none;}
+}
