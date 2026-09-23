@@ -19,8 +19,9 @@
 .partner-track-left{animation:partner-scroll-left 38s linear infinite;}
 .partner-track-right{animation:partner-scroll-right 38s linear infinite;}
 .partner-marquee:hover .partner-track{animation-play-state:paused;}
-.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:1rem 1.6rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
+.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:.65rem 1.4rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
 .partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
+.partner-card img{max-height:34px;max-width:150px;width:auto;height:auto;object-fit:contain;}
 @keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
 @media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
@@ -41,7 +42,8 @@
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
       <a href="index.html" class="nav-link current">Accueil</a>
       <a href="institut.html" class="nav-link">L'Institut</a>
-      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="filieres.html" class="nav-link">Filières</a>
+      <a href="formation-continue.html" class="nav-link">Formation Continue</a>
       <a href="admissions.html" class="nav-link">Admissions</a>
       <a href="vie-etudiante.html" class="nav-link">Vie étudiante</a>
       <a href="actualites.html" class="nav-link">Actualités</a>
@@ -57,7 +59,8 @@
   <div id="mobile-menu" class="hidden lg:hidden flex-col bg-white border-t border-black/5 px-5 py-4 gap-4 text-gray-700 font-medium">
     <a href="index.html" class="py-1">Accueil</a>
     <a href="institut.html" class="py-1">L'Institut</a>
-    <a href="formations.html" class="py-1">Formations</a>
+    <a href="filieres.html" class="py-1">Filières</a>
+    <a href="formation-continue.html" class="py-1">Formation Continue</a>
     <a href="admissions.html" class="py-1">Admissions</a>
     <a href="vie-etudiante.html" class="py-1">Vie étudiante</a>
     <a href="actualites.html" class="py-1">Actualités</a>
@@ -81,9 +84,10 @@
     <p class="reveal mt-6 max-w-xl text-white/85 text-base md:text-lg">
       Une formation de qualité pour des compétences réelles et un meilleur avenir professionnel.
     </p>
-    <div class="reveal mt-8 flex flex-wrap gap-4">
-      <a href="formations.html" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm">Découvrir nos formations</a>
+    <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+      <a href="filieres.html" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm">Découvrir nos filières</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="border border-white/60 text-white px-7 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--navy)] transition">Inscription 2026–2027</a>
+      <a href="formation-continue.html" class="text-white/80 text-sm font-semibold underline underline-offset-4 hover:text-white transition">Formation Continue</a>
     </div>
   </div>
 </section>
@@ -114,37 +118,42 @@
   </div>
 </section>
 
-<!-- FORMATIONS -->
+<!-- FILIÈRES -->
 <section class="section-pad">
   <div class="max-w-6xl mx-auto">
     <div class="text-center reveal">
-      <p class="eyebrow">Formations</p>
-      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Des parcours pour un avenir meilleur.</h2>
+      <p class="eyebrow">Filières</p>
+      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Des parcours pour construire l'avenir.</h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+    <div class="grid sm:grid-cols-3 gap-6 mt-12">
       <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
         <h3 class="serif font-semibold" style="color:var(--burgundy);">Licence — Bac+3</h3>
         <p class="text-gray-500 text-xs mt-2">Génie logiciel, IA, gestion, énergies renouvelables et plus.</p>
-        <a href="formations.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
       </div>
       <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
         <h3 class="serif font-semibold" style="color:var(--burgundy);">BTS d'État</h3>
         <p class="text-gray-500 text-xs mt-2">18 filières, du génie électrique à la comptabilité de gestion.</p>
-        <a href="formations.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
       </div>
       <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
         <h3 class="serif font-semibold" style="color:var(--burgundy);">Master — Bac+5</h3>
         <p class="text-gray-500 text-xs mt-2">Approfondissement académique et spécialisation professionnelle.</p>
-        <a href="formations.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
-      </div>
-      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
-        <h3 class="serif font-semibold" style="color:var(--burgundy);">Formation Continue</h3>
-        <p class="text-gray-500 text-xs mt-2">Leadership, ressources humaines, marketing, RSE et plus.</p>
-        <a href="formations.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
+        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
       </div>
     </div>
     <div class="text-center mt-10 reveal">
-      <a href="formations.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les formations</a>
+      <a href="filieres.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les filières</a>
+    </div>
+
+    <!-- FORMATION CONTINUE — séparée des filières diplômantes -->
+    <div class="reveal mt-14 rounded-sm p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6" style="background:var(--navy); border-left:4px solid var(--gold);">
+      <div class="text-center md:text-left">
+        <p class="eyebrow" style="color:var(--gold-light);">Pour les professionnels &amp; entreprises</p>
+        <h3 class="serif text-white text-xl md:text-2xl font-semibold mt-2">Formation Continue</h3>
+        <p class="text-white/70 text-sm mt-2 max-w-md">Leadership, ressources humaines, marketing, RSE et plus — pour renforcer vos compétences tout au long de votre carrière.</p>
+      </div>
+      <a href="formation-continue.html" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm whitespace-nowrap">Découvrir la Formation Continue</a>
     </div>
   </div>
 </section>
@@ -205,42 +214,69 @@
 
   <div class="partner-marquee mt-10 reveal">
     <div class="partner-track partner-track-left">
-      <span class="partner-card">SONIBANK</span>
-      <span class="partner-card">ECOBANK Niger</span>
-      <span class="partner-card">CORIS BANK</span>
-      <span class="partner-card">Access Finances Africa</span>
-      <span class="partner-card">SGI-Niger</span>
-      <span class="partner-card">DGI Niger</span>
-      <span class="partner-card">LONANI</span>
-      <span class="partner-card">SONIBANK</span>
-      <span class="partner-card">ECOBANK Niger</span>
-      <span class="partner-card">CORIS BANK</span>
-      <span class="partner-card">Access Finances Africa</span>
-      <span class="partner-card">SGI-Niger</span>
-      <span class="partner-card">DGI Niger</span>
-      <span class="partner-card">LONANI</span>
+      <span class="partner-card"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
     </div>
   </div>
   <div class="partner-marquee mt-4 reveal">
     <div class="partner-track partner-track-right">
-      <span class="partner-card">Niger Telecoms</span>
-      <span class="partner-card">SONUCI</span>
-      <span class="partner-card">Sagemcom</span>
-      <span class="partner-card">Ministère de l'Enseignement Supérieur</span>
-      <span class="partner-card">CAMES</span>
+      <span class="partner-card"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
       <span class="partner-card">RESAO</span>
       <span class="partner-card">Norme ISO 9001</span>
-      <span class="partner-card">Niger Telecoms</span>
-      <span class="partner-card">SONUCI</span>
-      <span class="partner-card">Sagemcom</span>
-      <span class="partner-card">Ministère de l'Enseignement Supérieur</span>
-      <span class="partner-card">CAMES</span>
+      <span class="partner-card"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="partner-card"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
       <span class="partner-card">RESAO</span>
       <span class="partner-card">Norme ISO 9001</span>
     </div>
   </div>
 
   <p class="text-center text-xs text-gray-400 mt-8 reveal">Un réseau au service de la formation, de l'innovation et de l'employabilité.</p>
+</section>
+
+<!-- VIE ÉTUDIANTE — GALERIE HORIZONTALE -->
+<section class="section-pad">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-end justify-between flex-wrap gap-4 reveal">
+      <div>
+        <p class="eyebrow">Vie étudiante</p>
+        <h2 class="serif text-3xl md:text-4xl font-semibold mt-3" style="color:var(--burgundy);">Apprendre. Partager. Grandir.</h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="gallery-prev" aria-label="Précédent" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">‹</button>
+        <button id="gallery-next" aria-label="Suivant" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">›</button>
+      </div>
+    </div>
+    <div id="gallery-track" class="gallery-track flex gap-4 mt-10 overflow-x-auto pb-4">
+      <img src="assets/students1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Étudiantes en cours" loading="lazy">
+      <img src="assets/group1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Communauté étudiante" loading="lazy">
+      <img src="assets/classroom3.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Salle de classe" loading="lazy">
+      <img src="assets/classroom4.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Événement institutionnel" loading="lazy">
+      <img src="assets/quote1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Une école de prestige" loading="lazy">
+      <img src="assets/makeithappen.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Esprit IPSTG-LEADER" loading="lazy">
+    </div>
+    <div class="text-center mt-8 reveal">
+      <a href="vie-etudiante.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toute la vie étudiante</a>
+    </div>
+  </div>
 </section>
 
 <!-- ACTUALITÉS -->
@@ -264,7 +300,7 @@
         <div class="p-5">
           <span class="text-xs text-gray-400">2026</span>
           <h3 class="serif text-base mt-1 font-semibold">Sessions de formation continue</h3>
-          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="Sessions de formation continue" data-text="Des ateliers et sessions animées accompagnent étudiants et professionnels dans leur développement tout au long de l'année.">Lire l'article →</button>
+          <a href="formation-continue.html" class="inline-block mt-3 text-xs font-semibold gold-text">Découvrir →</a>
         </div>
       </article>
       <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
@@ -381,8 +417,9 @@
       </ul>
     </div>
     <div>
-      <p class="text-white font-semibold text-sm mb-4">Formations</p>
-      <a href="formations.html" class="text-sm gold-text underline">Voir toutes les formations</a>
+      <p class="text-white font-semibold text-sm mb-4">Filières</p>
+      <a href="filieres.html" class="text-sm gold-text underline">Voir toutes les filières</a>
+      <a href="formation-continue.html" class="text-sm gold-text underline block mt-2">Formation Continue</a>
     </div>
     <div>
       <p class="text-white font-semibold text-sm mb-4">Admissions</p>
