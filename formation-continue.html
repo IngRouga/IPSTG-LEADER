@@ -14,16 +14,16 @@
 
 </head>
 <body>
-<header id="nav" class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-black/5">
+<header id="nav">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-3">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain">
+    <a href="index.html" class="flex items-center gap-3 relative">
+      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain rounded-sm">
       <div class="leading-tight">
-        <div class="serif font-semibold text-base" style="color:var(--burgundy);">IPSTG-LEADER</div>
-        <div class="text-[10px] tracking-wide text-gray-500 hidden sm:block">Sciences Technologiques &amp; Gestion</div>
+        <div class="serif font-semibold text-base brand-name">IPSTG-LEADER</div>
+        <div class="text-[10px] tracking-wide brand-tagline hidden sm:block">Sciences Technologiques &amp; Gestion</div>
       </div>
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
       <a href="index.html" class="nav-link">Accueil</a>
       <a href="institut.html" class="nav-link">L'Institut</a>
       <a href="filieres.html" class="nav-link">Filières</a>
@@ -33,14 +33,14 @@
       <a href="actualites.html" class="nav-link">Actualités</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="hidden lg:inline-block btn-gold px-5 py-2.5 rounded-sm text-sm font-semibold">Inscription 2026–2027</a>
-    <button id="burger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
+    <button id="burger" class="lg:hidden relative flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden flex-col bg-white border-t border-black/5 px-5 py-4 gap-4 text-gray-700 font-medium">
+  <div id="mobile-menu" class="flex lg:hidden flex-col items-center justify-center text-center gap-7" aria-hidden="true">
+    <button id="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
     <a href="index.html" class="py-1">Accueil</a>
     <a href="institut.html" class="py-1">L'Institut</a>
     <a href="filieres.html" class="py-1">Filières</a>
@@ -73,7 +73,8 @@
   <div class="max-w-4xl mx-auto reveal">
     <p class="eyebrow" style="color:var(--gold);">01 — Présentation</p>
     <h2 class="serif text-2xl md:text-3xl font-semibold mt-3" style="color:var(--burgundy);">Présentation de la Formation Continue</h2>
-    <p class="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">La Formation Continue d'IPSTG-LEADER accompagne les professionnels et les entreprises qui souhaitent renforcer leurs compétences, indépendamment de nos filières diplômantes (Licence, BTS d'État, Master). Le contenu détaillé de cette offre sera publié prochainement.</p>
+    <div class="woven-divider w-16 mt-5"></div>
+    <p class="text-gray-600 text-sm md:text-base mt-6 leading-relaxed">La Formation Continue d'IPSTG-LEADER accompagne les professionnels et les entreprises qui souhaitent renforcer leurs compétences, indépendamment de nos filières diplômantes (Licence, BTS d'État, Master). Le contenu détaillé de cette offre sera publié prochainement.</p>
   </div>
 </section>
 

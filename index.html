@@ -30,16 +30,16 @@
 
 </head>
 <body>
-<header id="nav" class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-black/5">
+<header id="nav">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-3">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain">
+    <a href="index.html" class="flex items-center gap-3 relative">
+      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain rounded-sm">
       <div class="leading-tight">
-        <div class="serif font-semibold text-base" style="color:var(--burgundy);">IPSTG-LEADER</div>
-        <div class="text-[10px] tracking-wide text-gray-500 hidden sm:block">Sciences Technologiques &amp; Gestion</div>
+        <div class="serif font-semibold text-base brand-name">IPSTG-LEADER</div>
+        <div class="text-[10px] tracking-wide brand-tagline hidden sm:block">Sciences Technologiques &amp; Gestion</div>
       </div>
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
       <a href="index.html" class="nav-link current">Accueil</a>
       <a href="institut.html" class="nav-link">L'Institut</a>
       <a href="filieres.html" class="nav-link">Filières</a>
@@ -49,13 +49,14 @@
       <a href="actualites.html" class="nav-link">Actualités</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button id="burger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
-      <span class="block w-6 h-0.5 bg-gray-800"></span>
+    <button id="burger" class="lg:hidden relative flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden flex-col bg-white border-t border-black/5 px-5 py-4 gap-4 text-gray-700 font-medium">
+  <div id="mobile-menu" class="flex lg:hidden flex-col items-center justify-center text-center gap-7" aria-hidden="true">
+    <button id="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
     <a href="index.html" class="py-1">Accueil</a>
     <a href="institut.html" class="py-1">L'Institut</a>
     <a href="filieres.html" class="py-1">Filières</a>
@@ -91,27 +92,36 @@
   </div>
 </section>
 
-<!-- STATS -->
-<section class="py-14 px-5 md:px-10" style="background:var(--cream);">
-  <div class="max-w-6xl mx-auto">
+<!-- INSTITUTION INTRO -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-3xl mx-auto text-center reveal">
+    <p class="eyebrow">L'institut</p>
+    <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Une école de prestige à Niamey.</h2>
+    <div class="woven-divider w-24 mx-auto mt-6"></div>
+    <p class="text-gray-600 mt-6 leading-relaxed">
+      IPSTG-LEADER (Institut Privé des Sciences Technologiques et de Gestion) est un établissement d'enseignement supérieur situé au quartier Bobiel, face à la mosquée Imam Chafaï, à Niamey. L'institut propose des parcours en BTS d'État, Licence, Master et formation professionnelle continue, avec une orientation forte vers la technologie, la gestion et le leadership.
+    </p>
+    <a href="institut.html" class="inline-block mt-6 text-sm font-semibold gold-text">Découvrir l'institut →</a>
+  </div>
+</section>
+
+<!-- KEY RESULTS -->
+<section class="py-16 px-5 md:px-10" style="background:#F3EEE4;">
+  <div class="max-w-4xl mx-auto">
     <p class="eyebrow text-center reveal">Résultats académiques 2026</p>
     <h2 class="serif text-2xl md:text-3xl font-semibold text-center mt-3 reveal" style="color:var(--burgundy);">Des résultats qui parlent d'eux-mêmes.</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-14">
       <div class="reveal text-center">
-        <div class="serif text-4xl md:text-5xl font-semibold counter" data-target="80" style="color:var(--gold);">80%</div>
+        <div class="serif text-5xl font-semibold counter" data-target="80" style="color:var(--gold);">80%</div>
         <p class="text-sm text-gray-600 mt-3">de réussite au BTS d'État 2026</p>
       </div>
       <div class="reveal text-center">
-        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25v11.5M12 6.25 4 9.5v6l8 3.25 8-3.25v-6L12 6.25Z"/></svg>
-        <p class="text-sm text-gray-600 mt-3">Des filières adaptées au marché</p>
+        <div class="serif text-5xl font-semibold" style="color:var(--gold);">18</div>
+        <p class="text-sm text-gray-600 mt-3">filières BTS d'État</p>
       </div>
       <div class="reveal text-center">
-        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm12 10v-2a4 4 0 0 0-3-3.87M15 2.13a4 4 0 0 1 0 7.75"/></svg>
-        <p class="text-sm text-gray-600 mt-3">Des centaines d'étudiants formés</p>
-      </div>
-      <div class="reveal text-center">
-        <svg class="w-8 h-8 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5-2 2m-9 9-2 2m0-13 2 2m9 9 2 2"/></svg>
-        <p class="text-sm text-gray-600 mt-3">Un cadre d'apprentissage moderne</p>
+        <div class="serif text-5xl font-semibold" style="color:var(--gold);">Bac+5</div>
+        <p class="text-sm text-gray-600 mt-3">Master disponible à IPSTG-LEADER</p>
       </div>
     </div>
   </div>
