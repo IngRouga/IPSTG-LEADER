@@ -5,27 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vie étudiante | IPSTG-LEADER</title>
-<meta name="description" content="IPSTG-LEADER à Niamey : formations Licence, BTS d'État, Master et formations professionnelles. Inscriptions 2026–2027.">
+<meta name="description" content="IPSTG-LEADER à Niamey : conférences hebdomadaires, rencontres professionnelles et vie étudiante. Inscriptions 2026–2027.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/styles.css">
-<style>
-.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
-.gallery-track::-webkit-scrollbar{display:none;}
-.partner-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-.partner-track{display:flex;gap:1rem;width:max-content;}
-.partner-track-left{animation:partner-scroll-left 38s linear infinite;}
-.partner-track-right{animation:partner-scroll-right 38s linear infinite;}
-.partner-marquee:hover .partner-track{animation-play-state:paused;}
-.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:1rem 1.6rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
-.partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
-@keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
-@media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
-@media (prefers-reduced-motion: reduce){.partner-track-left,.partner-track-right{animation:none;}}
-</style>
 
 </head>
 <body>
@@ -68,49 +53,131 @@
   </div>
 </header>
 
-
-<section class="relative min-h-[55vh] flex items-end" style="background:url('assets/classroom4.jpg') center/cover no-repeat;">
-  <div class="absolute inset-0 hero-overlay"></div>
-  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
-    <p class="eyebrow reveal">Vie étudiante</p>
-    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Bien plus qu'une formation.</h1>
+<!-- PAGE BANNER — photo -->
+<section class="page-banner-photo">
+  <img src="assets/group1.jpg" alt="Communauté étudiante IPSTG-LEADER" class="banner-bg">
+  <div class="banner-overlay"></div>
+  <div class="banner-content max-w-5xl mx-auto">
+    <p class="eyebrow reveal text-white/85">Vie étudiante</p>
+    <div class="hero-gold-line reveal mt-4"></div>
+    <h1 class="serif reveal mt-6 leading-[1.02] text-white" style="font-size:clamp(2.5rem,7vw,5.5rem);">VIE ÉTUDIANTE</h1>
+    <p class="reveal mt-5 max-w-xl text-white/80 text-base md:text-lg">Apprendre. Échanger. S'inspirer.</p>
   </div>
 </section>
 
-<section class="section-pad">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
-      <p class="eyebrow">Au quotidien</p>
-      <h2 class="serif text-3xl font-semibold mt-3" style="color:var(--burgundy);">Vie académique</h2>
-      <div class="woven-divider w-16 mx-auto mt-5"></div>
+<!-- CONFÉRENCE DE LA SEMAINE -->
+<section class="section-pad" style="background:var(--cream);padding-top:1.5rem;padding-bottom:2rem;">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-6">
+      <p class="eyebrow">Conférence de la semaine</p>
+      <h2 class="serif mt-3" style="font-size:clamp(2rem,4.5vw,3.25rem);color:var(--burgundy);">Chaque semaine, une nouvelle rencontre.</h2>
+      <div class="woven-divider w-16 mt-5"></div>
+      <p class="text-gray-600 mt-5 leading-relaxed max-w-xl">
+        IPSTG-LEADER met régulièrement ses étudiants en contact avec des professionnels, entrepreneurs, experts et personnalités afin de favoriser le partage d'expérience et l'ouverture sur le monde professionnel.
+      </p>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-      <img src="assets/classroom3.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Salle de classe" loading="lazy">
-      <img src="assets/training1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Session de formation" loading="lazy">
-      <img src="assets/classroom5.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Travaux pratiques informatique" loading="lazy">
+
+    <div class="conf-row reveal py-8 md:py-10">
+      <div class="flex flex-wrap items-start gap-8 md:gap-12">
+        <div class="flex-shrink-0">
+          <p class="serif text-2xl md:text-3xl" style="color:var(--gold);">JEUDI</p>
+          <p class="text-sm text-gray-500 mt-1 tracking-wide">16:00</p>
+        </div>
+        <div class="flex-1 min-w-[220px]">
+          <span class="eyebrow">Conférence de la semaine</span>
+          <h3 class="serif text-xl md:text-2xl mt-2" style="color:var(--burgundy);">Thème — à confirmer</h3>
+          <p class="text-gray-500 text-sm mt-2 max-w-md">Le thème et l'intervenant de cette semaine seront annoncés prochainement.</p>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-1 mt-5 text-sm text-gray-600">
+            <p><span class="font-semibold" style="color:var(--burgundy);">Intervenant :</span> à venir</p>
+            <p><span class="font-semibold" style="color:var(--burgundy);">Lieu :</span> IPSTG-LEADER</p>
+          </div>
+          <button type="button" class="news-modal-btn inline-block mt-5 text-sm font-semibold gold-text" data-title="Conférence de la semaine" data-text="IPSTG-LEADER met régulièrement ses étudiants en contact avec des professionnels, entrepreneurs, experts et personnalités afin de favoriser le partage d'expérience et l'ouverture sur le monde professionnel. Le thème, l'intervenant et l'heure de la prochaine conférence seront annoncés prochainement.">En savoir plus →</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section-pad" style="background:#F3EEE4;">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
-      <p class="eyebrow">Moments forts</p>
-      <h2 class="serif text-3xl font-semibold mt-3" style="color:var(--burgundy);">Événements &amp; cérémonies</h2>
-      <div class="woven-divider w-16 mx-auto mt-5"></div>
+<!-- DES SUJETS QUI OUVRENT LES HORIZONS -->
+<section class="section-pad" style="background:#F1EFEA;padding-top:2rem;padding-bottom:2rem;">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-6">
+      <p class="eyebrow">Thématiques</p>
+      <h2 class="serif mt-3" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">Des sujets qui ouvrent les horizons</h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-      <img src="assets/group1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Photo de groupe étudiants" loading="lazy">
-      <img src="assets/presenter1.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Prise de parole en session" loading="lazy">
-      <img src="assets/makeithappen.jpg" class="lightbox-img rounded-sm w-full h-64 object-cover reveal card" alt="Salle de classe IPSTG-LEADER" loading="lazy">
-    </div>
+    <p class="subject-flow reveal">
+      <span>Entrepreneuriat</span> · <span>Intelligence Artificielle</span> · <span>Finance</span> · <span>Leadership</span> · <span>Technologie</span> · <span>Carrière</span> · <span>Innovation</span> · <span>Développement Personnel</span>
+    </p>
   </div>
 </section>
 
-<section class="section-pad">
-  <div class="max-w-4xl mx-auto text-center reveal">
-    <p class="serif text-2xl md:text-3xl" style="color:var(--burgundy);">« Some people dream of success, others make it happen. »</p>
-    <p class="text-gray-500 mt-4 text-sm">L'esprit affiché dans les salles de cours d'IPSTG-LEADER.</p>
+<!-- À VENIR -->
+<section class="section-pad" style="background:var(--cream);padding-top:2rem;padding-bottom:2rem;">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-6">
+      <p class="eyebrow">Calendrier</p>
+      <h2 class="serif mt-3" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">À venir</h2>
+    </div>
+
+    <div class="agenda-row reveal grid sm:grid-cols-4 gap-2 sm:gap-4 py-6 text-sm">
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Date</span><p class="font-semibold" style="color:var(--burgundy);">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Thème</span><p class="text-gray-600">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Intervenant</span><p class="text-gray-600">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Heure</span><p class="text-gray-600">À confirmer</p></div>
+    </div>
+    <div class="agenda-row reveal grid sm:grid-cols-4 gap-2 sm:gap-4 py-6 text-sm">
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Date</span><p class="font-semibold" style="color:var(--burgundy);">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Thème</span><p class="text-gray-600">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Intervenant</span><p class="text-gray-600">À confirmer</p></div>
+      <div><span class="text-xs text-gray-400 uppercase tracking-wide block sm:hidden">Heure</span><p class="text-gray-600">À confirmer</p></div>
+    </div>
+    <p class="text-gray-400 text-xs mt-6 reveal">Le calendrier complet des prochaines conférences sera publié au fur et à mesure des confirmations.</p>
+  </div>
+</section>
+
+<!-- AU-DELÀ DES COURS -->
+<section class="section-pad" style="background:#F1EFEA;padding-top:2rem;">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-4">
+      <p class="eyebrow">Au-delà des cours</p>
+      <h2 class="serif mt-3" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">La vie étudiante ne s'arrête pas en classe.</h2>
+    </div>
+
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-7">
+      <span class="serif text-lg flex-shrink-0" style="color:var(--gold);">01</span>
+      <div>
+        <p class="font-semibold" style="color:var(--burgundy);">Rencontres professionnelles</p>
+        <p class="text-gray-600 text-sm mt-1">Des occasions d'échanger avec des professionnels et entrepreneurs du secteur.</p>
+      </div>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-7">
+      <span class="serif text-lg flex-shrink-0" style="color:var(--gold);">02</span>
+      <div>
+        <p class="font-semibold" style="color:var(--burgundy);">Activités entrepreneuriales</p>
+        <p class="text-gray-600 text-sm mt-1">Un esprit d'initiative cultivé au-delà des salles de classe.</p>
+      </div>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-7">
+      <span class="serif text-lg flex-shrink-0" style="color:var(--gold);">03</span>
+      <div>
+        <p class="font-semibold" style="color:var(--burgundy);">Voyages</p>
+        <p class="text-gray-600 text-sm mt-1">Des ouvertures rendues possibles grâce aux partenariats de l'institut.</p>
+      </div>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-7">
+      <span class="serif text-lg flex-shrink-0" style="color:var(--gold);">04</span>
+      <div>
+        <p class="font-semibold" style="color:var(--burgundy);">Événements</p>
+        <p class="text-gray-600 text-sm mt-1">Cérémonies, rencontres et moments qui rythment la vie du campus.</p>
+      </div>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-7">
+      <span class="serif text-lg flex-shrink-0" style="color:var(--gold);">05</span>
+      <div>
+        <p class="font-semibold" style="color:var(--burgundy);">Initiatives étudiantes</p>
+        <p class="text-gray-600 text-sm mt-1">Une communauté active, portée par ses étudiants.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -127,7 +194,7 @@
   </a>
 </div>
 
-<footer style="background:var(--navy);" class="text-white/70 pt-16 pb-8 px-5 md:px-10">
+<footer style="background:var(--navy);" class="text-white/70 pt-12 pb-8 px-5 md:px-10">
   <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
     <div>
       <div class="flex items-center gap-3">
@@ -162,7 +229,7 @@
       <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" class="text-sm gold-text underline mt-1 inline-block">Facebook</a>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto border-t border-white/10 mt-12 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
+  <div class="max-w-7xl mx-auto border-t border-white/10 mt-8 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
     <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
     <span class="text-white/40">Website concept by RougaTech</span>
   </div>
@@ -170,67 +237,9 @@
 <script src="assets/site.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // Animated counter
-  const counters = document.querySelectorAll('.counter');
-  const cio = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const el = e.target;
-        const target = parseInt(el.dataset.target,10);
-        let cur = 0;
-        const step = Math.max(1, Math.round(target/40));
-        const iv = setInterval(()=>{
-          cur += step;
-          if(cur >= target){ cur = target; clearInterval(iv); }
-          el.textContent = cur + '%';
-        }, 30);
-        cio.unobserve(el);
-      }
-    });
-  }, {threshold:.5});
-  counters.forEach(c=>cio.observe(c));
-
-  // Horizontal gallery — seamless infinite auto-scroll
-  const track = document.getElementById('gallery-track');
-  if(track){
-  // duplicate items once for seamless looping
-  track.innerHTML += track.innerHTML;
-  document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
-  document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
-  let galleryPaused = false;
-  let galleryAuto = setInterval(()=>{
-    if(galleryPaused) return;
-    const half = track.scrollWidth / 2;
-    if(track.scrollLeft >= half){
-      track.scrollLeft -= half;
-    } else {
-      track.scrollLeft += 1;
-    }
-  }, 30);
-  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
-  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
-  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
-  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
-  }
-
-  // News modal (reuses program-modal overlay from site.js)
   document.querySelectorAll('.news-modal-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
+    btn.addEventListener('click', ()=> openProgramModal('Vie étudiante', btn.dataset.title, btn.dataset.text));
   });
-
-  // Préinscription form → WhatsApp
-  const piForm = document.getElementById('preinscription-form');
-  if(piForm){
-    piForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const nom = document.getElementById('pi-nom').value.trim();
-      const tel = document.getElementById('pi-tel').value.trim();
-      const formation = document.getElementById('pi-formation').value.trim();
-      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
-      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank');
-    });
-  }
 });
 </script>
 </body>
