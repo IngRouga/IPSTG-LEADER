@@ -8,24 +8,9 @@
 <meta name="description" content="IPSTG-LEADER à Niamey : formations Licence, BTS d'État, Master et formations professionnelles. Inscriptions 2026–2027.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/styles.css">
-<style>
-.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
-.gallery-track::-webkit-scrollbar{display:none;}
-.partner-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-.partner-track{display:flex;gap:1rem;width:max-content;}
-.partner-track-left{animation:partner-scroll-left 38s linear infinite;}
-.partner-track-right{animation:partner-scroll-right 38s linear infinite;}
-.partner-marquee:hover .partner-track{animation-play-state:paused;}
-.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:1rem 1.6rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
-.partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
-@keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
-@media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
-@media (prefers-reduced-motion: reduce){.partner-track-left,.partner-track-right{animation:none;}}
-</style>
 
 </head>
 <body>
@@ -68,67 +53,73 @@
   </div>
 </header>
 
-
-<section class="relative min-h-[50vh] flex items-end" style="background:url('assets/classroom2.jpg') center/cover no-repeat;">
-  <div class="absolute inset-0 hero-overlay"></div>
-  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+<!-- PAGE BANNER — typographic, no photo -->
+<section class="page-banner">
+  <div class="max-w-5xl mx-auto">
     <p class="eyebrow reveal">Actualités</p>
-    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Actualités &amp; événements</h1>
-    <p class="reveal mt-5 max-w-xl text-white/85 text-sm md:text-base">Toute l'actualité de l'institut : résultats, formations, vie étudiante et campus.</p>
+    <div class="hero-gold-line reveal mt-4"></div>
+    <h1 class="serif reveal mt-6 leading-[1.02]" style="font-size:clamp(2.5rem,7vw,5.5rem);color:var(--burgundy);">Actualités &amp; événements</h1>
+    <p class="reveal mt-5 max-w-xl text-gray-600 text-sm md:text-base">Toute l'actualité de l'institut : résultats, formations, vie étudiante et campus.</p>
   </div>
 </section>
 
-<section class="section-pad">
-  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/quote1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Une école de prestige" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Institution</span>
-        <h3 class="serif text-lg mt-2 font-semibold">Une école de prestige</h3>
-        <p class="text-gray-600 text-sm mt-2">Le mot du fondateur sur l'ambition de former des entrepreneurs africains compétitifs à l'international.</p>
-      </div>
+<!-- JOURNAL — featured + editorial list, no identical cards -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+    <!-- Featured -->
+    <article class="reveal">
+      <img src="assets/quote1.jpg" class="lightbox-img w-full h-72 md:h-96 object-cover rounded-sm" alt="Une école de prestige" loading="lazy">
+      <span class="text-xs font-semibold gold-text uppercase tracking-wide mt-6 block">Institution</span>
+      <h2 class="serif text-2xl md:text-3xl mt-2" style="color:var(--burgundy);">Une école de prestige</h2>
+      <p class="text-gray-600 text-sm md:text-base mt-3 max-w-md">Le mot du fondateur sur l'ambition de former des entrepreneurs africains compétitifs à l'international.</p>
+      <a href="institut.html" class="inline-block mt-4 text-sm font-semibold gold-text">Lire — L'Institut →</a>
     </article>
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/presenter1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Session de formation" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Formation</span>
-        <h3 class="serif text-lg mt-2 font-semibold">Sessions de formation continue</h3>
-        <p class="text-gray-600 text-sm mt-2">Ateliers et sessions animées pour accompagner étudiants et professionnels dans leur développement.</p>
-        <a href="formation-continue.html" class="inline-block mt-3 text-xs font-semibold gold-text">En savoir plus →</a>
-      </div>
-    </article>
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/makeithappen.jpg" class="lightbox-img w-full h-48 object-cover" alt="Salle de classe IPSTG-LEADER" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Vie étudiante</span>
-        <h3 class="serif text-lg mt-2 font-semibold">L'esprit IPSTG-LEADER</h3>
-        <p class="text-gray-600 text-sm mt-2">« Some people dream of success, others make it happen » — l'état d'esprit affiché dans nos salles de cours.</p>
-      </div>
-    </article>
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/classroom1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Résultats BTS 2026" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Résultats</span>
-        <h3 class="serif text-lg mt-2 font-semibold">BTS d'État 2026</h3>
-        <p class="text-gray-600 text-sm mt-2">Une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.</p>
-      </div>
-    </article>
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/group1.jpg" class="lightbox-img w-full h-48 object-cover" alt="Communauté étudiante" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Communauté</span>
-        <h3 class="serif text-lg mt-2 font-semibold">Une communauté visionnaire</h3>
-        <p class="text-gray-600 text-sm mt-2">Étudiants et équipe pédagogique réunis autour d'un même objectif : former les leaders de demain.</p>
-      </div>
-    </article>
-    <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-      <img src="assets/building2.jpg" class="lightbox-img w-full h-48 object-cover" alt="Campus IPSTG-LEADER" loading="lazy">
-      <div class="p-5">
-        <span class="text-xs font-semibold gold-text uppercase tracking-wide">Campus</span>
-        <h3 class="serif text-lg mt-2 font-semibold">Bienvenue à IPSTG-LEADER</h3>
-        <p class="text-gray-600 text-sm mt-2">Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut.</p>
-      </div>
-    </article>
+
+    <!-- Editorial list -->
+    <div class="reveal journal-divider flex flex-col">
+      <article class="py-7 flex gap-5 items-start" style="padding-top:0;">
+        <img src="assets/presenter1.jpg" class="lightbox-img w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Session de formation" loading="lazy">
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide">Formation</span>
+          <h3 class="serif text-base mt-1 font-semibold">Sessions de formation continue</h3>
+          <p class="text-gray-500 text-sm mt-1">Ateliers et sessions animées pour accompagner étudiants et professionnels dans leur développement.</p>
+          <a href="formation-continue.html" class="inline-block mt-2 text-xs font-semibold gold-text">En savoir plus →</a>
+        </div>
+      </article>
+      <article class="journal-divider py-7 flex gap-5 items-start">
+        <img src="assets/makeithappen.jpg" class="lightbox-img w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Salle de classe IPSTG-LEADER" loading="lazy">
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide">Vie étudiante</span>
+          <h3 class="serif text-base mt-1 font-semibold">L'esprit IPSTG-LEADER</h3>
+          <p class="text-gray-500 text-sm mt-1">« Some people dream of success, others make it happen » — l'état d'esprit affiché dans nos salles de cours.</p>
+        </div>
+      </article>
+      <article class="journal-divider py-7 flex gap-5 items-start">
+        <img src="assets/classroom1.jpg" class="lightbox-img w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Résultats BTS 2026" loading="lazy">
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide">Résultats</span>
+          <h3 class="serif text-base mt-1 font-semibold">BTS d'État 2026</h3>
+          <p class="text-gray-500 text-sm mt-1">Une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.</p>
+        </div>
+      </article>
+      <article class="journal-divider py-7 flex gap-5 items-start">
+        <img src="assets/group1.jpg" class="lightbox-img w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Communauté étudiante" loading="lazy">
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide">Communauté</span>
+          <h3 class="serif text-base mt-1 font-semibold">Une communauté visionnaire</h3>
+          <p class="text-gray-500 text-sm mt-1">Étudiants et équipe pédagogique réunis autour d'un même objectif : former les leaders de demain.</p>
+        </div>
+      </article>
+      <article class="journal-divider py-7 flex gap-5 items-start">
+        <img src="assets/building2.jpg" class="lightbox-img w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Campus IPSTG-LEADER" loading="lazy">
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide">Campus</span>
+          <h3 class="serif text-base mt-1 font-semibold">Bienvenue à IPSTG-LEADER</h3>
+          <p class="text-gray-500 text-sm mt-1">Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut.</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -186,70 +177,5 @@
   </div>
 </footer>
 <script src="assets/site.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Animated counter
-  const counters = document.querySelectorAll('.counter');
-  const cio = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const el = e.target;
-        const target = parseInt(el.dataset.target,10);
-        let cur = 0;
-        const step = Math.max(1, Math.round(target/40));
-        const iv = setInterval(()=>{
-          cur += step;
-          if(cur >= target){ cur = target; clearInterval(iv); }
-          el.textContent = cur + '%';
-        }, 30);
-        cio.unobserve(el);
-      }
-    });
-  }, {threshold:.5});
-  counters.forEach(c=>cio.observe(c));
-
-  // Horizontal gallery — seamless infinite auto-scroll
-  const track = document.getElementById('gallery-track');
-  if(track){
-  // duplicate items once for seamless looping
-  track.innerHTML += track.innerHTML;
-  document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
-  document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
-  let galleryPaused = false;
-  let galleryAuto = setInterval(()=>{
-    if(galleryPaused) return;
-    const half = track.scrollWidth / 2;
-    if(track.scrollLeft >= half){
-      track.scrollLeft -= half;
-    } else {
-      track.scrollLeft += 1;
-    }
-  }, 30);
-  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
-  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
-  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
-  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
-  }
-
-  // News modal (reuses program-modal overlay from site.js)
-  document.querySelectorAll('.news-modal-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
-  });
-
-  // Préinscription form → WhatsApp
-  const piForm = document.getElementById('preinscription-form');
-  if(piForm){
-    piForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const nom = document.getElementById('pi-nom').value.trim();
-      const tel = document.getElementById('pi-tel').value.trim();
-      const formation = document.getElementById('pi-formation').value.trim();
-      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
-      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank');
-    });
-  }
-});
-</script>
 </body>
 </html>

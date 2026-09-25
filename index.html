@@ -8,24 +8,31 @@
 <meta name="description" content="IPSTG-LEADER à Niamey : formations Licence, BTS d'État, Master et formations professionnelles. Inscriptions 2026–2027.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
-.gallery-track::-webkit-scrollbar{display:none;}
-.partner-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-.partner-track{display:flex;gap:1rem;width:max-content;}
-.partner-track-left{animation:partner-scroll-left 38s linear infinite;}
-.partner-track-right{animation:partner-scroll-right 38s linear infinite;}
-.partner-marquee:hover .partner-track{animation-play-state:paused;}
-.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:.65rem 1.4rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
-.partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
-.partner-card img{max-height:34px;max-width:150px;width:auto;height:auto;object-fit:contain;}
-@keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
-@media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
-@media (prefers-reduced-motion: reduce){.partner-track-left,.partner-track-right{animation:none;}}
+/* ---- Our Network — borderless, editorial logo wall (no cards) ---- */
+.net-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.net-track{display:flex;align-items:center;gap:3.5rem;width:max-content;}
+.net-track-left{animation:net-scroll-left 42s linear infinite;}
+.net-track-right{animation:net-scroll-right 42s linear infinite;}
+.net-marquee:hover .net-track{animation-play-state:paused;}
+.net-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:44px;filter:grayscale(1);opacity:.55;transition:filter .35s ease, opacity .35s ease;white-space:nowrap;font-size:.8rem;font-weight:600;color:var(--burgundy);font-family:'Inter',sans-serif;}
+.net-logo:hover{filter:grayscale(0);opacity:1;}
+.net-logo img{max-height:38px;max-width:150px;width:auto;height:auto;object-fit:contain;}
+@keyframes net-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes net-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+@media (max-width:640px){.net-track-left,.net-track-right{animation-duration:60s;}}
+@media (prefers-reduced-motion: reduce){.net-track-left,.net-track-right{animation:none;}}
+
+/* ---- The IPSTG Experience — caption reveals only on the active point ---- */
+.exp-point p{max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease, opacity .4s ease;}
+.exp-point.active p{max-height:100px;opacity:1;}
+.exp-point{border-bottom:1px solid rgba(255,255,255,.12);}
+.exp-point:last-of-type{border-bottom:none;}
+
+.footer-wordmark{position:absolute;right:-2vw;bottom:-7vw;font-family:'Fraunces',serif;font-weight:300;font-size:min(19vw,240px);line-height:1;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none;letter-spacing:-.02em;}
 </style>
 
 </head>
@@ -69,330 +76,286 @@
   </div>
 </header>
 
-
-<!-- HERO CAROUSEL -->
-<section class="relative min-h-[80vh] flex items-center overflow-hidden" id="hero" style="background:linear-gradient(135deg, var(--navy) 0%, var(--burgundy-deep) 100%);">
-  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="assets/students1.jpg">
-    <source src="assets/hero-video.mp4" type="video/mp4">
-  </video>
-  <div class="absolute inset-0 hero-overlay"></div>
-  <div class="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-10 py-20 text-white">
-    <p class="eyebrow reveal">Institut Privé des Sciences Technologiques et de Gestion</p>
-    <h1 class="serif reveal mt-5 text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.05] max-w-4xl">
-      Construisez votre avenir.<br>Devenez le <span class="gold-text">leader</span> de demain.
-    </h1>
-    <p class="reveal mt-6 max-w-xl text-white/85 text-base md:text-lg">
-      Une formation de qualité pour des compétences réelles et un meilleur avenir professionnel.
-    </p>
-    <div class="reveal mt-8 flex flex-wrap items-center gap-4">
-      <a href="filieres.html" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm">Découvrir nos filières</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="border border-white/60 text-white px-7 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--navy)] transition">Inscription 2026–2027</a>
-      <a href="formation-continue.html" class="text-white/80 text-sm font-semibold underline underline-offset-4 hover:text-white transition">Formation Continue</a>
-    </div>
+<!-- 01 — CINEMATIC HERO -->
+<section id="hero" class="relative min-h-screen flex flex-col justify-end overflow-hidden" style="background:var(--navy);">
+  <img src="assets/leader1.jpg" alt="Étudiants leaders IPSTG-LEADER" class="absolute inset-0 w-full h-full object-cover">
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="relative z-10 px-6 md:px-14 pt-40 pb-14 max-w-4xl">
+    <p class="eyebrow reveal text-white/80">IPSTG-LEADER · Niamey, Niger</p>
+    <div class="hero-gold-line reveal mt-5"></div>
+    <h1 class="serif reveal mt-6 text-white leading-[0.98]" style="font-size:clamp(2.75rem,8vw,6.5rem);">FORMER LES LEADERS DE DEMAIN.</h1>
+    <p class="reveal mt-6 text-white/80 text-base md:text-lg max-w-xl">Institut Privé des Sciences Technologiques et de Gestion — une formation exigeante pour des compétences réelles.</p>
+    <a href="institut.html" class="reveal btn-gold inline-block mt-9 px-7 py-3.5 rounded-sm font-semibold text-sm">Explorer IPSTG →</a>
+  </div>
+  <div class="hero-bottom-bar relative z-10 grid grid-cols-3 text-white">
+    <a href="filieres.html" class="reveal py-5 px-4 md:px-8 text-center text-[11px] md:text-xs font-semibold tracking-wide">01 — FORMATION</a>
+    <a href="institut.html" class="reveal py-5 px-4 md:px-8 text-center text-[11px] md:text-xs font-semibold tracking-wide">02 — INNOVATION</a>
+    <a href="formation-continue.html" class="reveal py-5 px-4 md:px-8 text-center text-[11px] md:text-xs font-semibold tracking-wide">03 — ENTREPRENEURIAT</a>
   </div>
 </section>
 
-<!-- INSTITUTION INTRO -->
+<!-- 02 — INSTITUTIONAL STATEMENT -->
 <section class="section-pad" style="background:var(--cream);">
-  <div class="max-w-3xl mx-auto text-center reveal">
-    <p class="eyebrow">L'institut</p>
-    <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Une école de prestige à Niamey.</h2>
-    <div class="woven-divider w-24 mx-auto mt-6"></div>
-    <p class="text-gray-600 mt-6 leading-relaxed">
-      IPSTG-LEADER (Institut Privé des Sciences Technologiques et de Gestion) est un établissement d'enseignement supérieur situé au quartier Bobiel, face à la mosquée Imam Chafaï, à Niamey. L'institut propose des parcours en BTS d'État, Licence, Master et formation professionnelle continue, avec une orientation forte vers la technologie, la gestion et le leadership.
-    </p>
-    <a href="institut.html" class="inline-block mt-6 text-sm font-semibold gold-text">Découvrir l'institut →</a>
-  </div>
-</section>
-
-<!-- KEY RESULTS -->
-<section class="py-16 px-5 md:px-10" style="background:#F3EEE4;">
-  <div class="max-w-4xl mx-auto">
-    <p class="eyebrow text-center reveal">Résultats académiques 2026</p>
-    <h2 class="serif text-2xl md:text-3xl font-semibold text-center mt-3 reveal" style="color:var(--burgundy);">Des résultats qui parlent d'eux-mêmes.</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-14">
-      <div class="reveal text-center">
-        <div class="serif text-5xl font-semibold counter" data-target="80" style="color:var(--gold);">80%</div>
-        <p class="text-sm text-gray-600 mt-3">de réussite au BTS d'État 2026</p>
-      </div>
-      <div class="reveal text-center">
-        <div class="serif text-5xl font-semibold" style="color:var(--gold);">18</div>
-        <p class="text-sm text-gray-600 mt-3">filières BTS d'État</p>
-      </div>
-      <div class="reveal text-center">
-        <div class="serif text-5xl font-semibold" style="color:var(--gold);">Bac+5</div>
-        <p class="text-sm text-gray-600 mt-3">Master disponible à IPSTG-LEADER</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FILIÈRES -->
-<section class="section-pad">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
-      <p class="eyebrow">Filières</p>
-      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Des parcours pour construire l'avenir.</h2>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-6 mt-12">
-      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
-        <h3 class="serif font-semibold" style="color:var(--burgundy);">Licence — Bac+3</h3>
-        <p class="text-gray-500 text-xs mt-2">Génie logiciel, IA, gestion, énergies renouvelables et plus.</p>
-        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
-      </div>
-      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
-        <h3 class="serif font-semibold" style="color:var(--burgundy);">BTS d'État</h3>
-        <p class="text-gray-500 text-xs mt-2">18 filières, du génie électrique à la comptabilité de gestion.</p>
-        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
-      </div>
-      <div class="reveal card rounded-sm border border-black/5 bg-white p-6" style="border-top:3px solid var(--gold);">
-        <h3 class="serif font-semibold" style="color:var(--burgundy);">Master — Bac+5</h3>
-        <p class="text-gray-500 text-xs mt-2">Approfondissement académique et spécialisation professionnelle.</p>
-        <a href="filieres.html" class="inline-block mt-4 text-xs font-semibold gold-text">Découvrir →</a>
-      </div>
-    </div>
-    <div class="text-center mt-10 reveal">
-      <a href="filieres.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les filières</a>
-    </div>
-
-    <!-- FORMATION CONTINUE — séparée des filières diplômantes -->
-    <div class="reveal mt-14 rounded-sm p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6" style="background:var(--navy); border-left:4px solid var(--gold);">
-      <div class="text-center md:text-left">
-        <p class="eyebrow" style="color:var(--gold-light);">Pour les professionnels &amp; entreprises</p>
-        <h3 class="serif text-white text-xl md:text-2xl font-semibold mt-2">Formation Continue</h3>
-        <p class="text-white/70 text-sm mt-2 max-w-md">Leadership, ressources humaines, marketing, RSE et plus — pour renforcer vos compétences tout au long de votre carrière.</p>
-      </div>
-      <a href="formation-continue.html" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm whitespace-nowrap">Découvrir la Formation Continue</a>
-    </div>
-  </div>
-</section>
-
-<!-- POURQUOI CHOISIR -->
-<section class="section-pad" style="background:#F3EEE4;">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
-      <p class="eyebrow">Pourquoi nous choisir</p>
-      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Un environnement propice à votre réussite.</h2>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-      <div class="reveal text-center">
-        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/></svg>
-        <h3 class="font-semibold mt-4 text-sm">Formation de qualité</h3>
-      </div>
-      <div class="reveal text-center">
-        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 3.5a5.5 5.5 0 0 0-3 10.1c.6.4 1 1.1 1 1.9v.5h5v-.5c0-.8.4-1.5 1-1.9a5.5 5.5 0 0 0-4-10.1ZM9 19.5h3M9 22h3"/></svg>
-        <h3 class="font-semibold mt-4 text-sm">Innovation &amp; technologie</h3>
-      </div>
-      <div class="reveal text-center">
-        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-2.5-8-5.5-8-10A5 5 0 0 1 12 7a5 5 0 0 1 8 4c0 4.5-4 7.5-8 10Z"/></svg>
-        <h3 class="font-semibold mt-4 text-sm">Vie étudiante enrichissante</h3>
-      </div>
-      <div class="reveal text-center">
-        <svg class="w-9 h-9 mx-auto" style="color:var(--gold);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 14 0"/></svg>
-        <h3 class="font-semibold mt-4 text-sm">Accompagnement</h3>
-      </div>
-    </div>
-
-    <div class="mt-14 pt-10 border-t border-black/10 reveal">
-      <p class="eyebrow text-center">Notre différence</p>
-      <div class="grid sm:grid-cols-3 gap-6 mt-6 text-center">
-        <div class="flex flex-col items-center gap-2">
-          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01"/></svg>
-          <p class="text-sm text-gray-700 font-medium">École bilingue qui forme des entrepreneurs</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25v11.5M4 9.5l8-3.25 8 3.25v6l-8 3.25-8-3.25v-6Z"/></svg>
-          <p class="text-sm text-gray-700 font-medium">École technologique où l'on lit 100 livres en 3 ans</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <svg class="w-6 h-6" style="color:var(--burgundy);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5Z"/></svg>
-          <p class="text-sm text-gray-700 font-medium">École de voyages grâce à des partenaires internationaux</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NOS PARTENAIRES & INSTITUTIONS DE RÉFÉRENCE -->
-<section class="py-16 px-5 md:px-10" style="background:var(--cream);">
-  <div class="max-w-6xl mx-auto text-center reveal">
-    <p class="eyebrow">Réseau &amp; ouverture professionnelle</p>
-    <h2 class="serif text-2xl md:text-3xl font-semibold mt-3" style="color:var(--burgundy);">Nos partenaires &amp; institutions de référence</h2>
-    <p class="text-gray-600 text-sm mt-3 max-w-2xl mx-auto">Des collaborations et références qui renforcent notre ouverture sur le monde professionnel, institutionnel et académique.</p>
-  </div>
-
-  <div class="partner-marquee mt-10 reveal">
-    <div class="partner-track partner-track-left">
-      <span class="partner-card"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
-    </div>
-  </div>
-  <div class="partner-marquee mt-4 reveal">
-    <div class="partner-track partner-track-right">
-      <span class="partner-card"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
-      <span class="partner-card">RESAO</span>
-      <span class="partner-card">Norme ISO 9001</span>
-      <span class="partner-card"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
-      <span class="partner-card"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
-      <span class="partner-card">RESAO</span>
-      <span class="partner-card">Norme ISO 9001</span>
-    </div>
-  </div>
-
-  <p class="text-center text-xs text-gray-400 mt-8 reveal">Un réseau au service de la formation, de l'innovation et de l'employabilité.</p>
-</section>
-
-<!-- VIE ÉTUDIANTE — GALERIE HORIZONTALE -->
-<section class="section-pad">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex items-end justify-between flex-wrap gap-4 reveal">
-      <div>
-        <p class="eyebrow">Vie étudiante</p>
-        <h2 class="serif text-3xl md:text-4xl font-semibold mt-3" style="color:var(--burgundy);">Apprendre. Partager. Grandir.</h2>
-      </div>
-      <div class="flex items-center gap-3">
-        <button id="gallery-prev" aria-label="Précédent" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">‹</button>
-        <button id="gallery-next" aria-label="Suivant" class="w-10 h-10 rounded-full border" style="border-color:var(--burgundy);color:var(--burgundy);">›</button>
-      </div>
-    </div>
-    <div id="gallery-track" class="gallery-track flex gap-4 mt-10 overflow-x-auto pb-4">
-      <img src="assets/students1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Étudiantes en cours" loading="lazy">
-      <img src="assets/group1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Communauté étudiante" loading="lazy">
-      <img src="assets/classroom3.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Salle de classe" loading="lazy">
-      <img src="assets/classroom4.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Événement institutionnel" loading="lazy">
-      <img src="assets/quote1.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Une école de prestige" loading="lazy">
-      <img src="assets/makeithappen.jpg" class="lightbox-img gallery-item w-72 h-80 object-cover rounded-sm" alt="Esprit IPSTG-LEADER" loading="lazy">
-    </div>
-    <div class="text-center mt-8 reveal">
-      <a href="vie-etudiante.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toute la vie étudiante</a>
-    </div>
-  </div>
-</section>
-
-<!-- ACTUALITÉS -->
-<section class="section-pad" style="background:#F3EEE4;">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
-      <p class="eyebrow">Actualités</p>
-      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Dernières nouvelles</h2>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-        <img src="assets/building2.jpg" class="w-full h-44 object-cover" alt="Campus IPSTG-LEADER" loading="lazy">
-        <div class="p-5">
-          <span class="text-xs text-gray-400">2026</span>
-          <h3 class="serif text-base mt-1 font-semibold">Bienvenue à IPSTG-LEADER</h3>
-          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="Bienvenue à IPSTG-LEADER" data-text="Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut pour l'année académique 2026–2027.">Lire l'article →</button>
-        </div>
-      </article>
-      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-        <img src="assets/presenter1.jpg" class="w-full h-44 object-cover" alt="Session de formation" loading="lazy">
-        <div class="p-5">
-          <span class="text-xs text-gray-400">2026</span>
-          <h3 class="serif text-base mt-1 font-semibold">Sessions de formation continue</h3>
-          <a href="formation-continue.html" class="inline-block mt-3 text-xs font-semibold gold-text">Découvrir →</a>
-        </div>
-      </article>
-      <article class="reveal card bg-white rounded-sm overflow-hidden border border-black/5">
-        <img src="assets/classroom5.jpg" class="w-full h-44 object-cover" alt="BTS d'État 2026" loading="lazy">
-        <div class="p-5">
-          <span class="text-xs text-gray-400">2026</span>
-          <h3 class="serif text-base mt-1 font-semibold">De bons résultats au BTS d'État 2026</h3>
-          <button type="button" class="news-modal-btn inline-block mt-3 text-xs font-semibold gold-text" data-title="De bons résultats au BTS d'État 2026" data-text="80% de réussite au BTS d'État 2026 — une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.">Lire l'article →</button>
-        </div>
-      </article>
-    </div>
-    <div class="text-center mt-10 reveal">
-      <a href="actualites.html" class="btn-outline px-7 py-3 rounded-sm text-sm font-semibold inline-block">Voir toutes les actualités →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ADMISSIONS -->
-<section class="section-pad text-white" style="background:var(--burgundy);">
-  <div class="max-w-4xl mx-auto text-center reveal">
-    <p class="eyebrow" style="color:var(--gold-light);">Admissions 2026–2027</p>
-    <h2 class="serif text-3xl md:text-5xl font-semibold mt-4">Votre avenir commence ici.</h2>
-    <p class="text-white/80 mt-5 max-w-lg mx-auto">Rejoignez IPSTG-LEADER et construisez votre futur.</p>
-    <div class="flex flex-wrap justify-center gap-4 mt-9">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold px-8 py-3.5 rounded-sm font-semibold text-sm">Je m'inscris maintenant</a>
-      <a href="contact.html" class="border border-white/50 px-8 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--burgundy)] transition">Demander des informations</a>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-6 mt-14 text-left">
-      <div class="border-t border-white/20 pt-5">
-        <div class="serif text-2xl" style="color:var(--gold-light);">01</div>
-        <p class="mt-2 font-medium text-sm">Choisissez votre formation</p>
-      </div>
-      <div class="border-t border-white/20 pt-5">
-        <div class="serif text-2xl" style="color:var(--gold-light);">02</div>
-        <p class="mt-2 font-medium text-sm">Remplissez le formulaire d'inscription</p>
-      </div>
-      <div class="border-t border-white/20 pt-5">
-        <div class="serif text-2xl" style="color:var(--gold-light);">03</div>
-        <p class="mt-2 font-medium text-sm">Recevez les informations pour la suite</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT + PRÉINSCRIPTION -->
-<section class="section-pad" style="background:var(--cream);">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14">
-    <div class="reveal">
-      <p class="eyebrow">Contact</p>
-      <h2 class="serif text-2xl md:text-3xl font-semibold mt-4" style="color:var(--burgundy);">IPSTG-LEADER</h2>
-      <p class="text-gray-600 mt-3 text-sm">Quartier Bobiel, face Mosquée Imam Chafaï, Niamey, Niger</p>
-      <p class="text-gray-600 text-sm">
-        <a href="tel:+22780574747" class="hover:underline">+227 80 57 47 47</a> ·
-        <a href="tel:+22791313956" class="hover:underline">+227 91 31 39 56</a>
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+    <div class="lg:col-span-7 reveal">
+      <h2 class="serif leading-[1.05]" style="font-size:clamp(2.25rem,5vw,3.75rem);color:var(--burgundy);">Une école.<br>Des compétences.<br>Une vision.</h2>
+      <div class="woven-divider w-16 mt-8"></div>
+      <p class="text-gray-600 mt-7 leading-relaxed max-w-lg">
+        IPSTG-LEADER (Institut Privé des Sciences Technologiques et de Gestion) est un établissement d'enseignement supérieur situé au quartier Bobiel, face à la mosquée Imam Chafaï, à Niamey. L'institut propose des parcours en BTS d'État, Licence, Master et formation professionnelle continue, avec une orientation forte vers la technologie, la gestion et le leadership.
       </p>
-      <p class="text-gray-600 text-sm mt-1"><a href="mailto:ipstgleader@gmail.com" class="hover:underline gold-text">ipstgleader@gmail.com</a></p>
-      <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20et%20les%20inscriptions%202026%E2%80%932027." target="_blank" rel="noopener" class="btn-gold inline-block mt-6 px-7 py-3 rounded-sm font-semibold text-sm">Contacter IPSTG-LEADER</a>
+      <a href="institut.html" class="btn-outline inline-block mt-8 px-7 py-3 rounded-sm text-sm font-semibold">Découvrir l'Institut →</a>
     </div>
-    <div class="reveal bg-white p-7 rounded-sm border border-black/5">
-      <p class="eyebrow">Préinscription rapide</p>
-      <h3 class="serif text-lg font-semibold mt-2" style="color:var(--burgundy);">Réservez votre place pour 2026–2027</h3>
-      <p class="text-gray-500 text-xs mt-2">Remplissez ce formulaire : il ouvre WhatsApp avec vos informations déjà prêtes à envoyer à IPSTG-LEADER.</p>
-      <form id="preinscription-form" class="mt-5 space-y-3">
-        <input id="pi-nom" type="text" required placeholder="Nom complet" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
-        <input id="pi-tel" type="tel" required placeholder="Téléphone" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
-        <input id="pi-formation" type="text" required placeholder="Formation souhaitée (ex: BTS Génie Électrique)" class="w-full border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:ring-2" style="--tw-ring-color:var(--gold);">
-        <button type="submit" class="btn-gold w-full py-3 rounded-sm font-semibold text-sm flex items-center justify-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Z"/></svg>
-          Envoyer ma préinscription sur WhatsApp
-        </button>
-      </form>
+    <div class="lg:col-span-5 reveal">
+      <img src="assets/building1.jpg" class="lightbox-img w-full h-[420px] md:h-[560px] object-cover rounded-sm" alt="Campus IPSTG-LEADER" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- BANDEAU DÉFILANT -->
-<div class="marquee-wrap py-2.5" style="background:var(--burgundy);">
-  <div class="marquee-track text-white text-xs font-semibold tracking-wide">
-    🎓 Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours — Inscription 2026–2027 en cours —
-  </div>
-</div>
+<!-- 03 — CHOOSE YOUR PATH -->
+<section class="section-pad" style="background:var(--cream);padding-top:3rem;padding-bottom:4rem;">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-8 md:mb-12">
+      <p class="eyebrow">Nos formations</p>
+      <h2 class="serif mt-3" style="font-size:clamp(2rem,5vw,3.5rem);color:var(--burgundy);">CHOOSE YOUR PATH.</h2>
+    </div>
 
-<!-- FOOTER -->
+    <a href="filieres.html" class="path-row reveal block py-8 md:py-10">
+      <div class="path-bg" style="background-image:url('assets/classroom2.jpg');"></div>
+      <div class="path-scrim"></div>
+      <div class="path-row-inner flex items-center justify-between gap-6 flex-wrap">
+        <div class="flex items-baseline gap-5 md:gap-10">
+          <span class="serif text-xl md:text-2xl" style="color:var(--gold);">01</span>
+          <div>
+            <h3 class="serif text-2xl md:text-4xl" style="color:var(--burgundy);">Licence — Bac+3</h3>
+            <p class="text-gray-600 text-sm mt-2 max-w-md">Génie logiciel, intelligence artificielle, gestion, énergies renouvelables et plus.</p>
+          </div>
+        </div>
+        <span class="path-arrow serif text-2xl md:text-3xl flex-shrink-0" style="color:var(--burgundy);">→</span>
+      </div>
+    </a>
+
+    <a href="filieres.html" class="path-row reveal block py-8 md:py-10">
+      <div class="path-bg" style="background-image:url('assets/classroom5.jpg');"></div>
+      <div class="path-scrim"></div>
+      <div class="path-row-inner flex items-center justify-between gap-6 flex-wrap">
+        <div class="flex items-baseline gap-5 md:gap-10">
+          <span class="serif text-xl md:text-2xl" style="color:var(--gold);">02</span>
+          <div>
+            <h3 class="serif text-2xl md:text-4xl" style="color:var(--burgundy);">BTS d'État — 18 filières</h3>
+            <p class="text-gray-600 text-sm mt-2 max-w-md">Du génie électrique à la comptabilité de gestion, en passant par les télécommunications.</p>
+          </div>
+        </div>
+        <span class="path-arrow serif text-2xl md:text-3xl flex-shrink-0" style="color:var(--burgundy);">→</span>
+      </div>
+    </a>
+
+    <a href="filieres.html" class="path-row reveal block py-8 md:py-10">
+      <div class="path-bg" style="background-image:url('assets/training1.jpg');"></div>
+      <div class="path-scrim"></div>
+      <div class="path-row-inner flex items-center justify-between gap-6 flex-wrap">
+        <div class="flex items-baseline gap-5 md:gap-10">
+          <span class="serif text-xl md:text-2xl" style="color:var(--gold);">03</span>
+          <div>
+            <h3 class="serif text-2xl md:text-4xl" style="color:var(--burgundy);">Master — Bac+5</h3>
+            <p class="text-gray-600 text-sm mt-2 max-w-md">Approfondissement académique et spécialisation professionnelle.</p>
+          </div>
+        </div>
+        <span class="path-arrow serif text-2xl md:text-3xl flex-shrink-0" style="color:var(--burgundy);">→</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- 04 — FORMATION CONTINUE -->
+<section class="section-pad" style="background:var(--navy);">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="eyebrow">For professionals</p>
+    <h2 class="serif text-white mt-5" style="font-size:clamp(2rem,6vw,4.5rem);line-height:1.02;">NEVER STOP LEARNING.</h2>
+    <p class="serif mt-2" style="font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--gold-light);">Formation Continue</p>
+    <p class="text-white/65 mt-6 max-w-xl mx-auto">Des parcours courts pensés pour les professionnels en activité et les entreprises.</p>
+    <div class="fc-domains flex flex-wrap justify-center gap-x-8 gap-y-4 mt-10">
+      <span>Leadership</span>
+      <span>Finance</span>
+      <span>Marketing</span>
+      <span>Ressources Humaines</span>
+      <span>Technologie</span>
+      <span>RSE</span>
+    </div>
+    <a href="formation-continue.html" class="btn-gold inline-block mt-10 px-8 py-3.5 rounded-sm font-semibold text-sm">Découvrir →</a>
+  </div>
+</section>
+
+<!-- 05 — THE IPSTG EXPERIENCE -->
+<section class="section-pad" style="background:var(--burgundy-deep);">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal mb-10 md:mb-12">
+      <p class="eyebrow">L'expérience</p>
+      <h2 class="serif text-white mt-3" style="font-size:clamp(2rem,5vw,3.5rem);">THE IPSTG EXPERIENCE</h2>
+    </div>
+    <div class="reveal grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+      <div class="exp-frame lg:col-span-3 h-[320px] sm:h-[420px] md:h-[520px] rounded-sm">
+        <img src="assets/leader1.jpg" alt="Entrepreneuriat à IPSTG-LEADER" class="active" data-point="1">
+        <img src="assets/classroom1.jpg" alt="Technologie à IPSTG-LEADER" data-point="2">
+        <img src="assets/quote1.jpg" alt="Ouverture internationale IPSTG-LEADER" data-point="3">
+        <img src="assets/group1.jpg" alt="Communauté IPSTG-LEADER" data-point="4">
+      </div>
+      <div class="lg:col-span-2 flex flex-col">
+        <button type="button" class="exp-point active text-left py-5" data-point="1">
+          <span class="eyebrow">01</span>
+          <h3 class="serif text-xl text-white mt-2">Entrepreneuriat</h3>
+          <p class="text-white/60 text-sm mt-2">Un esprit d'initiative cultivé au cœur de la pédagogie IPSTG-LEADER.</p>
+        </button>
+        <button type="button" class="exp-point text-left py-5" data-point="2">
+          <span class="eyebrow">02</span>
+          <h3 class="serif text-xl text-white mt-2">Technologie</h3>
+          <p class="text-white/60 text-sm mt-2">Des filières tournées vers le numérique, l'informatique et l'innovation.</p>
+        </button>
+        <button type="button" class="exp-point text-left py-5" data-point="3">
+          <span class="eyebrow">03</span>
+          <h3 class="serif text-xl text-white mt-2">International</h3>
+          <p class="text-white/60 text-sm mt-2">Une ouverture sur le monde professionnel, institutionnel et académique.</p>
+        </button>
+        <button type="button" class="exp-point text-left py-5" data-point="4">
+          <span class="eyebrow">04</span>
+          <h3 class="serif text-xl text-white mt-2">Communauté</h3>
+          <p class="text-white/60 text-sm mt-2">Une vie étudiante active, solidaire et tournée vers la réussite collective.</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — RESULTS -->
+<section class="section-pad text-center" style="background:var(--burgundy);">
+  <div class="max-w-4xl mx-auto reveal">
+    <p class="eyebrow" style="color:var(--gold-light);">Résultats</p>
+    <div class="results-num counter" data-target="80">80%</div>
+    <p class="text-white text-lg md:text-xl mt-3">de réussite au BTS d'État 2026</p>
+    <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 mt-12 text-white/80 text-xs md:text-sm font-semibold tracking-[.15em] uppercase">
+      <span>18 filières BTS</span>
+      <span>Licence</span>
+      <span>Master Bac+5</span>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — OUR NETWORK -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto reveal text-center mb-12 md:mb-16">
+    <p class="eyebrow">Réseau</p>
+    <h2 class="serif mt-3" style="font-size:clamp(2rem,5vw,3.5rem);color:var(--burgundy);">OUR NETWORK</h2>
+    <p class="text-gray-600 text-sm mt-4 max-w-xl mx-auto">Un réseau au service de la formation, de l'innovation et de l'employabilité.</p>
+  </div>
+  <div class="net-marquee reveal">
+    <div class="net-track net-track-left">
+      <span class="net-logo"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
+    </div>
+  </div>
+  <div class="net-marquee mt-2 reveal">
+    <div class="net-track net-track-right">
+      <span class="net-logo"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
+      <span class="net-logo">RESAO</span>
+      <span class="net-logo">Norme ISO 9001</span>
+      <span class="net-logo"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
+      <span class="net-logo">RESAO</span>
+      <span class="net-logo">Norme ISO 9001</span>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — VIE ÉTUDIANTE / CONFÉRENCE DE LA SEMAINE -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-10">
+      <p class="eyebrow">Vie étudiante</p>
+      <h2 class="serif mt-3" style="font-size:clamp(2rem,5vw,3.5rem);color:var(--burgundy);">Conférence de la semaine</h2>
+    </div>
+    <div class="conf-row reveal flex flex-wrap items-start gap-8 md:gap-12 py-8">
+      <div class="flex-shrink-0">
+        <p class="serif text-2xl md:text-3xl" style="color:var(--gold);">JEUDI</p>
+        <p class="text-sm text-gray-500 mt-1 tracking-wide">16:00</p>
+      </div>
+      <div class="flex-1 min-w-[220px]">
+        <span class="eyebrow">Thème — à confirmer</span>
+        <p class="text-gray-600 text-sm mt-2 max-w-md">IPSTG-LEADER met régulièrement ses étudiants en contact avec des professionnels, entrepreneurs, experts et personnalités afin de favoriser le partage d'expérience.</p>
+      </div>
+      <a href="vie-etudiante.html" class="btn-outline px-6 py-3 rounded-sm text-sm font-semibold whitespace-nowrap flex-shrink-0">Voir la vie étudiante →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 09 — IPSTG JOURNAL -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal flex flex-wrap items-end justify-between gap-4 mb-12">
+      <div>
+        <p class="eyebrow">Actualités</p>
+        <h2 class="serif mt-3" style="font-size:clamp(2rem,5vw,3.5rem);color:var(--burgundy);">IPSTG JOURNAL</h2>
+      </div>
+      <a href="actualites.html" class="btn-outline px-6 py-3 rounded-sm text-sm font-semibold whitespace-nowrap">Voir toutes les actualités →</a>
+    </div>
+    <div class="reveal grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+      <article>
+        <img src="assets/building2.jpg" class="w-full h-64 md:h-80 object-cover rounded-sm" alt="Campus IPSTG-LEADER" loading="lazy">
+        <span class="text-xs text-gray-400 font-semibold mt-5 block">2026 · Campus</span>
+        <h3 class="serif text-2xl mt-2" style="color:var(--burgundy);">Bienvenue à IPSTG-LEADER</h3>
+        <p class="text-gray-600 text-sm mt-3 max-w-md">Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut pour l'année académique 2026–2027.</p>
+        <button type="button" class="news-modal-btn inline-block mt-4 text-sm font-semibold gold-text" data-title="Bienvenue à IPSTG-LEADER" data-text="Le campus de Bobiel, face à la mosquée Imam Chafaï, accueille les étudiants de l'institut pour l'année académique 2026–2027.">Lire l'article →</button>
+      </article>
+      <div class="journal-divider flex flex-col">
+        <article class="py-7 flex gap-5 items-start" style="padding-top:0;">
+          <img src="assets/presenter1.jpg" class="w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="Session de formation" loading="lazy">
+          <div>
+            <span class="text-xs text-gray-400">2026</span>
+            <h3 class="serif text-base mt-1 font-semibold">Sessions de formation continue</h3>
+            <a href="formation-continue.html" class="inline-block mt-2 text-xs font-semibold gold-text">Découvrir →</a>
+          </div>
+        </article>
+        <article class="journal-divider py-7 flex gap-5 items-start">
+          <img src="assets/classroom5.jpg" class="w-24 h-24 object-cover rounded-sm flex-shrink-0" alt="BTS d'État 2026" loading="lazy">
+          <div>
+            <span class="text-xs text-gray-400">2026</span>
+            <h3 class="serif text-base mt-1 font-semibold">De bons résultats au BTS d'État 2026</h3>
+            <button type="button" class="news-modal-btn inline-block mt-2 text-xs font-semibold gold-text" data-title="De bons résultats au BTS d'État 2026" data-text="80% de réussite au BTS d'État 2026 — une performance qui témoigne de l'engagement des étudiants et de toute la communauté éducative.">Lire l'article →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — ADMISSIONS -->
+<section class="section-pad text-center" style="background:var(--burgundy-deep);">
+  <div class="max-w-4xl mx-auto reveal">
+    <h2 class="serif text-white leading-[0.98]" style="font-size:clamp(2.5rem,8vw,5.5rem);">YOUR<br><span style="color:var(--gold-light);">NEXT CHAPTER</span><br>STARTS HERE.</h2>
+    <p class="eyebrow mt-8" style="color:var(--gold-light);">Admissions 2026–2027</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-8">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold px-8 py-3.5 rounded-sm font-semibold text-sm">Candidater en ligne →</a>
+      <a href="https://wa.me/22780574747" target="_blank" rel="noopener" class="border-2 border-white/50 text-white px-8 py-3.5 rounded-sm font-semibold text-sm hover:bg-white hover:text-[var(--burgundy-deep)] transition">Parler à l'équipe →</a>
+    </div>
+  </div>
+</section>
 
 <!-- FLOATING BUTTONS -->
 <div class="fixed bottom-6 right-6 z-50 float-stack items-end">
@@ -407,8 +370,10 @@
   </a>
 </div>
 
-<footer style="background:var(--navy);" class="text-white/70 pt-16 pb-8 px-5 md:px-10">
-  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+<!-- 11 — FOOTER -->
+<footer class="relative overflow-hidden text-white/70 pt-16 pb-8 px-5 md:px-10" style="background:var(--navy);">
+  <div class="footer-wordmark" aria-hidden="true">IPSTG</div>
+  <div class="max-w-7xl mx-auto relative grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
     <div>
       <div class="flex items-center gap-3">
         <img src="assets/logo.jpg" class="h-10 w-10 object-contain" alt="Logo">
@@ -442,7 +407,7 @@
       <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" class="text-sm gold-text underline mt-1 inline-block">Facebook</a>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto border-t border-white/10 mt-12 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
+  <div class="max-w-7xl mx-auto relative border-t border-white/10 mt-12 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
     <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
     <span class="text-white/40">Website concept by RougaTech</span>
   </div>
@@ -470,47 +435,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {threshold:.5});
   counters.forEach(c=>cio.observe(c));
 
-  // Horizontal gallery — seamless infinite auto-scroll
-  const track = document.getElementById('gallery-track');
-  if(track){
-  // duplicate items once for seamless looping
-  track.innerHTML += track.innerHTML;
-  document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
-  document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
-  let galleryPaused = false;
-  let galleryAuto = setInterval(()=>{
-    if(galleryPaused) return;
-    const half = track.scrollWidth / 2;
-    if(track.scrollLeft >= half){
-      track.scrollLeft -= half;
-    } else {
-      track.scrollLeft += 1;
-    }
-  }, 30);
-  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
-  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
-  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
-  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
-  }
-
   // News modal (reuses program-modal overlay from site.js)
   document.querySelectorAll('.news-modal-btn').forEach(btn=>{
     btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
   });
 
-  // Préinscription form → WhatsApp
-  const piForm = document.getElementById('preinscription-form');
-  if(piForm){
-    piForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const nom = document.getElementById('pi-nom').value.trim();
-      const tel = document.getElementById('pi-tel').value.trim();
-      const formation = document.getElementById('pi-formation').value.trim();
-      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
-      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank');
+  // The IPSTG Experience — interactive frame with 4 overlay points
+  document.querySelectorAll('.exp-point').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.exp-point').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const p = btn.dataset.point;
+      document.querySelectorAll('.exp-frame img').forEach(img=>{
+        img.classList.toggle('active', img.dataset.point === p);
+      });
     });
-  }
+  });
+
 });
 </script>
 </body>

@@ -8,24 +8,9 @@
 <meta name="description" content="IPSTG-LEADER à Niamey : formations Licence, BTS d'État, Master et formations professionnelles. Inscriptions 2026–2027.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/styles.css">
-<style>
-.gallery-track{scrollbar-width:none;-ms-overflow-style:none;}
-.gallery-track::-webkit-scrollbar{display:none;}
-.partner-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-.partner-track{display:flex;gap:1rem;width:max-content;}
-.partner-track-left{animation:partner-scroll-left 38s linear infinite;}
-.partner-track-right{animation:partner-scroll-right 38s linear infinite;}
-.partner-marquee:hover .partner-track{animation-play-state:paused;}
-.partner-card{flex:0 0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:1rem 1.6rem;font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;white-space:nowrap;height:56px;transition:transform .25s ease, box-shadow .25s ease;}
-.partner-card:hover{transform:scale(1.04);box-shadow:0 6px 16px rgba(18,21,31,.08);}
-@keyframes partner-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@keyframes partner-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
-@media (max-width:640px){.partner-track-left,.partner-track-right{animation-duration:55s;}}
-@media (prefers-reduced-motion: reduce){.partner-track-left,.partner-track-right{animation:none;}}
-</style>
 
 </head>
 <body>
@@ -68,67 +53,81 @@
   </div>
 </header>
 
-
-<section class="relative min-h-[60vh] flex items-end" style="background:url('assets/building2.jpg') center/cover no-repeat;">
-  <div class="absolute inset-0 hero-overlay"></div>
-  <div class="relative z-10 max-w-5xl mx-auto w-full px-5 md:px-10 pb-16 text-white">
+<!-- PAGE BANNER — typographic, no photo -->
+<section class="page-banner">
+  <div class="max-w-5xl mx-auto">
     <p class="eyebrow reveal">L'Institut</p>
-    <h1 class="serif reveal mt-4 text-4xl md:text-6xl font-semibold">Une école de prestige à Niamey.</h1>
-    <p class="reveal mt-5 max-w-xl text-white/85 text-sm md:text-base">Sciences technologiques, gestion et leadership — au cœur de Niamey.</p>
+    <div class="hero-gold-line reveal mt-4"></div>
+    <h1 class="serif reveal mt-6 leading-[1.02]" style="font-size:clamp(2.5rem,7vw,5.5rem);color:var(--burgundy);">Une école de prestige à Niamey.</h1>
+    <p class="reveal mt-5 max-w-xl text-gray-600 text-sm md:text-base">Sciences technologiques, gestion et leadership — au cœur de Niamey.</p>
   </div>
 </section>
 
-<section class="section-pad">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-    <div class="reveal">
+<!-- QUI SOMMES-NOUS — asymmetric editorial -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+    <div class="lg:col-span-7 reveal">
       <p class="eyebrow">Notre histoire</p>
-      <h2 class="serif text-3xl font-semibold mt-4" style="color:var(--burgundy);">Qui sommes-nous ?</h2>
-      <div class="woven-divider w-24 mt-6"></div>
-      <p class="text-gray-600 mt-6 leading-relaxed">
+      <h2 class="serif mt-4" style="font-size:clamp(2rem,4.5vw,3.25rem);color:var(--burgundy);">Qui sommes-nous ?</h2>
+      <div class="woven-divider w-16 mt-7"></div>
+      <p class="text-gray-600 mt-7 leading-relaxed max-w-lg">
         IPSTG-LEADER (Institut Privé des Sciences Technologiques et de Gestion) est un établissement d'enseignement supérieur situé au quartier Bobiel, face à la mosquée Imam Chafaï, à Niamey. L'institut propose des parcours en BTS d'État, Licence, Master et formation professionnelle continue, avec une orientation forte vers la technologie, la gestion et le leadership.
       </p>
     </div>
-    <div class="reveal"><img src="assets/quote1.jpg" class="lightbox-img rounded-sm w-full h-[380px] object-cover" alt="Une école de prestige" loading="lazy"></div>
+    <div class="lg:col-span-5 reveal">
+      <img src="assets/quote1.jpg" class="lightbox-img w-full h-[420px] md:h-[500px] object-cover rounded-sm" alt="Une école de prestige" loading="lazy">
+    </div>
   </div>
 </section>
 
+<!-- LE MOT DU FONDATEUR -->
 <section class="section-pad" style="background:var(--burgundy-deep);">
   <div class="max-w-4xl mx-auto text-center reveal">
-    <p class="eyebrow">Le mot du fondateur</p>
-    <blockquote class="serif text-2xl md:text-3xl text-white mt-6 leading-snug">
+    <p class="eyebrow" style="color:var(--gold-light);">Le mot du fondateur</p>
+    <blockquote class="serif text-white mt-7 leading-snug" style="font-size:clamp(1.4rem,3.5vw,2.5rem);">
       « Notre ambition est de former des jeunes Africains capables de créer des entreprises compétitives, de les mener vers la prospérité et de les vendre à l'international. En effet, des entrepreneurs étrangers parviennent à fonder des entreprises qui prospèrent et finissent par les vendre dans nos pays. Nous avons le potentiel pour faire de même ! »
     </blockquote>
-    <p class="text-white/60 mt-6 text-sm">— Issiafa Hamidou Maiga, Fondateur IPSTG-LEADER</p>
+    <p class="text-white/60 mt-7 text-sm">— Issiafa Hamidou Maiga, Fondateur IPSTG-LEADER</p>
   </div>
 </section>
 
-<section class="section-pad" style="background:#F3EEE4;">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center reveal">
+<!-- CE QUI NOUS DISTINGUE — editorial rows, no cards -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-6">
       <p class="eyebrow">Nos valeurs</p>
-      <h2 class="serif text-3xl md:text-4xl font-semibold mt-4" style="color:var(--burgundy);">Ce qui nous distingue.</h2>
+      <h2 class="serif mt-3" style="font-size:clamp(2rem,4.5vw,3.25rem);color:var(--burgundy);">Ce qui nous distingue.</h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
-        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">École bilingue</h3>
-        <p class="text-gray-600 text-sm mt-3">Une pédagogie qui forme aussi des entrepreneurs, en français et en anglais.</p>
+
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-8">
+      <span class="serif text-xl md:text-2xl flex-shrink-0" style="color:var(--gold);">01</span>
+      <div class="max-w-xl">
+        <h3 class="serif text-xl md:text-2xl" style="color:var(--burgundy);">École bilingue</h3>
+        <p class="text-gray-600 text-sm md:text-base mt-2">Une pédagogie qui forme aussi des entrepreneurs, en français et en anglais.</p>
       </div>
-      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
-        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">École technologique</h3>
-        <p class="text-gray-600 text-sm mt-3">Un institut qui encourage la lecture et l'apprentissage continu tout au long du cursus.</p>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-8">
+      <span class="serif text-xl md:text-2xl flex-shrink-0" style="color:var(--gold);">02</span>
+      <div class="max-w-xl">
+        <h3 class="serif text-xl md:text-2xl" style="color:var(--burgundy);">École technologique</h3>
+        <p class="text-gray-600 text-sm md:text-base mt-2">Un institut qui encourage la lecture et l'apprentissage continu tout au long du cursus.</p>
       </div>
-      <div class="card reveal bg-white p-7 rounded-sm border border-black/5">
-        <h3 class="serif text-lg font-semibold" style="color:var(--burgundy);">Ouverture internationale</h3>
-        <p class="text-gray-600 text-sm mt-3">Des partenariats qui ouvrent les étudiants à des perspectives au-delà du Niger.</p>
+    </div>
+    <div class="value-row reveal flex flex-wrap items-baseline gap-5 md:gap-10 py-8">
+      <span class="serif text-xl md:text-2xl flex-shrink-0" style="color:var(--gold);">03</span>
+      <div class="max-w-xl">
+        <h3 class="serif text-xl md:text-2xl" style="color:var(--burgundy);">Ouverture internationale</h3>
+        <p class="text-gray-600 text-sm md:text-base mt-2">Des partenariats qui ouvrent les étudiants à des perspectives au-delà du Niger.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-pad">
+<!-- PHOTOS -->
+<section class="section-pad" style="background:var(--cream);padding-top:0;">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-    <img src="assets/group1.jpg" class="lightbox-img rounded-sm w-full h-72 object-cover reveal" alt="Communauté IPSTG-LEADER" loading="lazy">
-    <img src="assets/leader1.jpg" class="lightbox-img rounded-sm w-full h-72 object-cover reveal" alt="Direction IPSTG-LEADER" loading="lazy">
+    <img src="assets/group1.jpg" class="lightbox-img rounded-sm w-full h-72 md:h-96 object-cover reveal" alt="Communauté IPSTG-LEADER" loading="lazy">
+    <img src="assets/leader1.jpg" class="lightbox-img rounded-sm w-full h-72 md:h-96 object-cover reveal" alt="Direction IPSTG-LEADER" loading="lazy">
   </div>
 </section>
 
@@ -186,70 +185,5 @@
   </div>
 </footer>
 <script src="assets/site.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Animated counter
-  const counters = document.querySelectorAll('.counter');
-  const cio = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const el = e.target;
-        const target = parseInt(el.dataset.target,10);
-        let cur = 0;
-        const step = Math.max(1, Math.round(target/40));
-        const iv = setInterval(()=>{
-          cur += step;
-          if(cur >= target){ cur = target; clearInterval(iv); }
-          el.textContent = cur + '%';
-        }, 30);
-        cio.unobserve(el);
-      }
-    });
-  }, {threshold:.5});
-  counters.forEach(c=>cio.observe(c));
-
-  // Horizontal gallery — seamless infinite auto-scroll
-  const track = document.getElementById('gallery-track');
-  if(track){
-  // duplicate items once for seamless looping
-  track.innerHTML += track.innerHTML;
-  document.getElementById('gallery-prev').addEventListener('click', ()=>{ track.scrollBy({left:-300, behavior:'smooth'}); });
-  document.getElementById('gallery-next').addEventListener('click', ()=>{ track.scrollBy({left:300, behavior:'smooth'}); });
-  let galleryPaused = false;
-  let galleryAuto = setInterval(()=>{
-    if(galleryPaused) return;
-    const half = track.scrollWidth / 2;
-    if(track.scrollLeft >= half){
-      track.scrollLeft -= half;
-    } else {
-      track.scrollLeft += 1;
-    }
-  }, 30);
-  track.addEventListener('mouseenter', ()=>{ galleryPaused = true; });
-  track.addEventListener('mouseleave', ()=>{ galleryPaused = false; });
-  track.addEventListener('touchstart', ()=>{ galleryPaused = true; });
-  track.addEventListener('touchend', ()=>{ setTimeout(()=>{ galleryPaused = false; }, 2000); });
-  }
-
-  // News modal (reuses program-modal overlay from site.js)
-  document.querySelectorAll('.news-modal-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
-  });
-
-  // Préinscription form → WhatsApp
-  const piForm = document.getElementById('preinscription-form');
-  if(piForm){
-    piForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const nom = document.getElementById('pi-nom').value.trim();
-      const tel = document.getElementById('pi-tel').value.trim();
-      const formation = document.getElementById('pi-formation').value.trim();
-      const msg = `Bonjour IPSTG-LEADER, je souhaite faire une préinscription pour 2026–2027.\nNom : ${nom}\nTéléphone : ${tel}\nFormation souhaitée : ${formation}`;
-      const url = `https://wa.me/22780574747?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank');
-    });
-  }
-});
-</script>
 </body>
 </html>
