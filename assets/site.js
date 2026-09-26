@@ -3,11 +3,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   const burger=document.getElementById('burger');
   const menu=document.getElementById('mobile-menu');
   const menuClose=document.getElementById('mobile-menu-close');
+  let scrollLockY=0;
   function openMenu(){
     if(!menu) return;
+    scrollLockY=window.scrollY||document.documentElement.scrollTop||0;
     menu.classList.add('open');
     menu.setAttribute('aria-hidden','false');
     if(burger){burger.classList.add('is-open');burger.setAttribute('aria-expanded','true');}
+    document.body.classList.add('menu-open');
+    document.body.style.position='fixed';
+    document.body.style.top=`-${scrollLockY}px`;
+    document.body.style.left='0';
+    document.body.style.right='0';
     document.body.style.overflow='hidden';
   }
   function closeMenu(){
@@ -15,13 +22,22 @@ document.addEventListener('DOMContentLoaded',()=>{
     menu.classList.remove('open');
     menu.setAttribute('aria-hidden','true');
     if(burger){burger.classList.remove('is-open');burger.setAttribute('aria-expanded','false');}
+    document.body.classList.remove('menu-open');
+    document.body.style.position='';
+    document.body.style.top='';
+    document.body.style.left='';
+    document.body.style.right='';
     document.body.style.overflow='';
+    window.scrollTo(0,scrollLockY);
   }
   if(burger&&menu){
     burger.addEventListener('click',()=>{ menu.classList.contains('open') ? closeMenu() : openMenu(); });
     menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
     if(menuClose) menuClose.addEventListener('click',closeMenu);
-    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeMenu(); });
+    // Click on the overlay's own background (not on a link/logo/close button) closes it too
+    menu.addEventListener('click',(e)=>{ if(e.target===menu) closeMenu(); });
+    menu.querySelectorAll('.mm-links, .mm-head').forEach(bg=>bg.addEventListener('click',(e)=>{ if(e.target===bg) closeMenu(); }));
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'&&menu.classList.contains('open')) closeMenu(); });
   }
 
   // Header: transparent over hero → solid on scroll
@@ -45,6 +61,15 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   injectOverlays();
   setupLightbox();
+
+  // Floating buttons must never sit on top of the footer — fade them out once it's in view
+  const footerEl=document.querySelector('footer');
+  if(footerEl && document.querySelector('.float-stack')){
+    const footerIO=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ document.body.classList.toggle('footer-in-view', e.isIntersecting); });
+    },{threshold:.01});
+    footerIO.observe(footerEl);
+  }
 });
 
 // ---------- Shared modal + lightbox markup (injected once per page) ----------
@@ -148,11 +173,13 @@ function renderPanel(key){
   const panel=document.querySelector(`.tab-panel[data-panel="${key}"]`);
   if(!panel||panel.dataset.rendered) return;
   panel.innerHTML=programs[key].map(([name,desc],i)=>`
-    <div class="card bg-white rounded-sm p-6 border border-black/5">
-      <span class="text-[10px] font-semibold gold-text uppercase tracking-wide">${catLabels[key]}</span>
-      <h3 class="serif text-base font-semibold mt-2">${name}</h3>
-      ${desc?`<p class="text-gray-500 text-sm mt-2">${desc}</p>`:''}
-      <button type="button" class="program-info-btn inline-block mt-4 text-xs font-semibold gold-text" data-cat="${catLabels[key]}" data-name="${name.replace(/"/g,'&quot;')}" data-desc="${(desc||'').replace(/"/g,'&quot;')}">En savoir plus →</button>
+    <div class="prog-row">
+      <div class="pr-4">
+        <span class="text-[10px] font-semibold gold-text uppercase tracking-wide">${catLabels[key]}</span>
+        <h3 class="serif text-base font-semibold mt-1">${name}</h3>
+        ${desc?`<p class="text-gray-500 text-sm mt-1">${desc}</p>`:''}
+      </div>
+      <button type="button" class="program-info-btn flex-shrink-0 text-xs font-semibold gold-text whitespace-nowrap" data-cat="${catLabels[key]}" data-name="${name.replace(/"/g,'&quot;')}" data-desc="${(desc||'').replace(/"/g,'&quot;')}">En savoir plus →</button>
     </div>
   `).join('');
   panel.dataset.rendered="1";
@@ -172,7 +199,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         renderPanel(key);
         document.querySelectorAll('.tab-panel').forEach(p=>p.classList.add('hidden'));
         document.querySelector(`.tab-panel[data-panel="${key}"]`).classList.remove('hidden');
-        document.querySelectorAll(`.tab-panel[data-panel="${key}"] .card`).forEach(el=>el.classList.add('visible'));
+        document.querySelectorAll(`.tab-panel[data-panel="${key}"] .prog-row`).forEach(el=>el.classList.add('visible'));
       });
     });
   }

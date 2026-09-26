@@ -39,8 +39,15 @@
       <span class="burger-line"></span>
     </button>
   </div>
-  <div id="mobile-menu" class="flex lg:hidden flex-col items-center justify-center text-center gap-7" aria-hidden="true">
-    <button id="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+  <div id="mobile-menu" class="flex lg:hidden flex-col" aria-hidden="true">
+    <div class="mm-head">
+      <a href="index.html" class="mm-head-brand">
+        <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER">
+        <span>IPSTG-LEADER</span>
+      </a>
+      <button id="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <div class="mm-links">
     <a href="index.html" class="py-1">Accueil</a>
     <a href="institut.html" class="py-1">L'Institut</a>
     <a href="filieres.html" class="py-1">Filières</a>
@@ -50,6 +57,7 @@
     <a href="actualites.html" class="py-1">Actualités</a>
     <a href="contact.html" class="py-1">Contact</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold text-center py-3 rounded-sm mt-2">Inscription 2026–2027</a>
+    </div>
   </div>
 </header>
 
@@ -166,7 +174,7 @@
   </div>
   <div class="max-w-7xl mx-auto border-t border-white/10 mt-8 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
     <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
-    <a href="https://rougatech.com" target="_blank" rel="noopener" class="text-white/40 hover:text-white/70 transition">Designed by RougaTech</a>
+    <a href="https://rougatech.com" target="_blank" rel="noopener" class="credit-badge"><span class="credit-by">Designed by</span><span class="credit-rouga">Rouga</span><span class="credit-tech">Tech</span></a>
   </div>
 </footer>
 <script src="assets/site.js"></script>

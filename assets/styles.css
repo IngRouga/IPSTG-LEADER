@@ -26,7 +26,7 @@ h1,h2,h3,.serif{font-family:'Fraunces',serif;letter-spacing:-.01em;}
 .nav-link.current::after{width:100%;}
 ::selection{background:var(--gold-light);color:var(--navy);}
 .gold-text{color:#A5781E;}
-.section-pad{padding:2.75rem 1.5rem;}
+.section-pad{padding:2.9rem 1.5rem;}
 @media(min-width:640px){.section-pad{padding:3.75rem 2rem;}}
 @media(min-width:1024px){.section-pad{padding:4.75rem 3rem;}}
 /* Use on the few sections that genuinely carry more visual weight (results/stats, closing CTA) — not applied mechanically everywhere */
@@ -59,21 +59,32 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 #burger.is-open .burger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ============ MOBILE MENU — full-screen editorial overlay ============ */
-#mobile-menu{position:fixed;inset:0;z-index:60;background:var(--navy);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease, visibility .4s ease;}
+/* z-index sits above #nav (70) and #nav>div:first-child (80) on purpose: the overlay must
+   fully occult the header row underneath it — nothing from the page may show through. */
+#mobile-menu{position:fixed;inset:0;z-index:90;background:var(--navy);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease, visibility .4s ease;display:flex;flex-direction:column;overflow:hidden;}
 #mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;}
-#mobile-menu a{color:#fff;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;opacity:0;transform:translateY(14px);transition:opacity .4s ease, transform .4s ease, color .3s ease;}
-#mobile-menu.open a{opacity:1;transform:translateY(0);}
-#mobile-menu a:nth-of-type(1){transition-delay:.05s;}
-#mobile-menu a:nth-of-type(2){transition-delay:.09s;}
-#mobile-menu a:nth-of-type(3){transition-delay:.13s;}
-#mobile-menu a:nth-of-type(4){transition-delay:.17s;}
-#mobile-menu a:nth-of-type(5){transition-delay:.21s;}
-#mobile-menu a:nth-of-type(6){transition-delay:.25s;}
-#mobile-menu a:nth-of-type(7){transition-delay:.29s;}
-#mobile-menu a:nth-of-type(8){transition-delay:.33s;}
-#mobile-menu a.btn-gold{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;color:#fff;}
-#mobile-menu a:hover{color:var(--gold-light);}
-#mobile-menu-close{position:absolute;top:4.75rem;right:1.5rem;color:#fff;font-size:2rem;line-height:1;z-index:10;}
+.mm-head{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;}
+.mm-head-brand{display:flex;align-items:center;gap:.6rem;}
+.mm-head-brand img{height:2.15rem;width:2.15rem;object-fit:contain;border-radius:.15rem;}
+.mm-head-brand span{font-family:'Fraunces',serif;color:#fff;font-size:.92rem;font-weight:600;}
+#mobile-menu-close{color:#fff;font-size:1.9rem;line-height:1;background:none;border:none;padding:.2rem .3rem;cursor:pointer;}
+.mm-links{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.4rem;padding:1rem 1.5rem 2.25rem;}
+.mm-links a{color:#fff;font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;opacity:0;transform:translateY(14px);transition:opacity .4s ease, transform .4s ease, color .3s ease;}
+#mobile-menu.open .mm-links a{opacity:1;transform:translateY(0);}
+.mm-links a:nth-of-type(1){transition-delay:.05s;}
+.mm-links a:nth-of-type(2){transition-delay:.09s;}
+.mm-links a:nth-of-type(3){transition-delay:.13s;}
+.mm-links a:nth-of-type(4){transition-delay:.17s;}
+.mm-links a:nth-of-type(5){transition-delay:.21s;}
+.mm-links a:nth-of-type(6){transition-delay:.25s;}
+.mm-links a:nth-of-type(7){transition-delay:.29s;}
+.mm-links a:nth-of-type(8){transition-delay:.33s;}
+.mm-links a.btn-gold{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;color:#fff;}
+.mm-links a:hover{color:var(--gold-light);}
+@media (max-height:640px){
+  .mm-links{gap:1rem;padding-top:.25rem;}
+  .mm-links a{font-size:1.2rem;}
+}
 
 /* ============ V3 — editorial / cinematic homepage components ============ */
 .hero-gold-line{height:2px;width:0;background:var(--gold);animation:goldline 1.2s cubic-bezier(.4,0,.2,1) forwards .4s;}
@@ -108,12 +119,12 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 .journal-divider{border-top:1px solid rgba(11,14,26,.12);}
 
 /* ============ Page banner — typographic hero for interior pages (no photo) ============ */
-.page-banner{background:var(--cream);padding:6.5rem 1.5rem 2.5rem;position:relative;}
+.page-banner{background:var(--cream);padding:4.75rem 1.5rem 2.25rem;position:relative;}
 @media(min-width:768px){.page-banner{padding:7.75rem 3rem 3.25rem;}}
 .page-banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(11,14,26,.1);}
 
 /* ============ Page banner — photo variant (specific pages only) ============ */
-.page-banner-photo{position:relative;overflow:hidden;background:var(--navy);padding:7rem 1.5rem 3.25rem;}
+.page-banner-photo{position:relative;overflow:hidden;background:var(--navy);padding:5.25rem 1.5rem 2.75rem;}
 @media(min-width:768px){.page-banner-photo{padding:9rem 3rem 4.25rem;}}
 .page-banner-photo .banner-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .page-banner-photo .banner-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,14,26,.5) 0%, rgba(11,14,26,.62) 55%, rgba(11,14,26,.88) 100%);}
@@ -122,7 +133,7 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 /* ============ Page banner — split variant (text / photo, specific pages only) ============ */
 .page-banner-split{display:grid;background:var(--cream);}
 @media(min-width:1024px){.page-banner-split{grid-template-columns:1fr 1fr;align-items:stretch;min-height:460px;}}
-.page-banner-split .banner-split-text{padding:6.5rem 1.5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;}
+.page-banner-split .banner-split-text{padding:4.75rem 1.5rem 2.25rem;display:flex;flex-direction:column;justify-content:center;}
 @media(min-width:768px){.page-banner-split .banner-split-text{padding:7.75rem 3rem 3rem;}}
 @media(min-width:1024px){.page-banner-split .banner-split-text{padding:3rem 3.5rem;}}
 .page-banner-split .banner-split-photo{position:relative;min-height:260px;}
@@ -165,11 +176,40 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 .tag-list span{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--burgundy);padding-bottom:.4rem;border-bottom:1px solid rgba(110,20,35,.25);white-space:nowrap;}
 
 /* ============ Floating action buttons (Inscription + WhatsApp) — shared on every page ============ */
-.float-stack{display:flex;flex-direction:column;align-items:flex-end;gap:.85rem;}
+.float-stack{display:flex;flex-direction:column;align-items:flex-end;gap:.85rem;bottom:calc(1.5rem + env(safe-area-inset-bottom));right:calc(1.5rem + env(safe-area-inset-right));transition:opacity .3s ease, transform .3s ease;}
+/* Fade out once the footer scrolls into view, so the buttons never sit on top of the footer content (credit badge included) */
+body.footer-in-view .float-stack{opacity:0;pointer-events:none;transform:translateY(6px);}
 .float-stack a{animation:float-breathe-gold 2.8s ease-in-out infinite;will-change:box-shadow,transform;}
 .float-stack a[aria-label^="Inscription"]{animation-name:float-breathe-gold;}
 .float-stack a[aria-label="Contacter sur WhatsApp"]{animation-name:float-breathe-green;animation-delay:.6s;}
 .float-stack a:hover{animation-play-state:paused;}
+/* Discreet on small phones — smaller footprint so they never crowd content */
+@media(max-width:479px){
+  .float-stack{gap:.6rem;}
+  .float-stack a[aria-label^="Inscription"]{width:3.4rem;height:3.4rem;font-size:8px;}
+  .float-stack a[aria-label="Contacter sur WhatsApp"]{width:2.9rem;height:2.9rem;}
+  .float-stack a[aria-label="Contacter sur WhatsApp"] svg{width:1.3rem;height:1.3rem;}
+}
+/* Never compete with the fullscreen mobile menu */
+body.menu-open .float-stack{display:none;}
+
+/* ============ Footer credit badge — discreet "Designed by RougaTech" ============ */
+.credit-badge{display:inline-flex;align-items:center;gap:.32rem;background:rgba(255,255,255,.94);padding:.32rem .7rem;border-radius:999px;text-decoration:none;line-height:1;transition:background .25s ease, transform .25s ease;}
+.credit-badge:hover{background:#fff;transform:translateY(-1px);}
+.credit-badge .credit-by{font-family:'Inter',sans-serif;font-size:.62rem;font-weight:500;color:#6b7280;letter-spacing:.01em;}
+.credit-badge .credit-rouga{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;color:#000000;}
+.credit-badge .credit-tech{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;color:#2563EB;}
+
+/* ============ Hero — compact mobile height (never 100vh) + tighter internal rhythm ============ */
+@media(max-width:767px){
+  #hero{min-height:0;height:660px;height:min(700px,90svh);}
+  #hero .hero-gold-line{margin-top:.75rem;}
+  #hero h1.serif{margin-top:.85rem;}
+  #hero p.reveal{margin-top:.85rem;}
+  #hero a.btn-gold{margin-top:1.35rem;}
+  #hero .max-w-4xl{padding-bottom:1.75rem;}
+  #hero .hero-bottom-bar a{padding-top:.85rem;padding-bottom:.85rem;}
+}
 @keyframes float-breathe-gold{
   0%,100%{box-shadow:0 8px 20px -8px rgba(198,149,42,.55),0 0 0 0 rgba(198,149,42,.38);}
   50%{box-shadow:0 10px 24px -8px rgba(198,149,42,.6),0 0 0 10px rgba(198,149,42,0);}
