@@ -119,6 +119,29 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 .page-banner-photo .banner-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,14,26,.5) 0%, rgba(11,14,26,.62) 55%, rgba(11,14,26,.88) 100%);}
 .page-banner-photo .banner-content{position:relative;z-index:2;}
 
+/* ============ Page banner — split variant (text / photo, specific pages only) ============ */
+.page-banner-split{display:grid;background:var(--cream);}
+@media(min-width:1024px){.page-banner-split{grid-template-columns:1fr 1fr;align-items:stretch;min-height:460px;}}
+.page-banner-split .banner-split-text{padding:6.5rem 1.5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;}
+@media(min-width:768px){.page-banner-split .banner-split-text{padding:7.75rem 3rem 3rem;}}
+@media(min-width:1024px){.page-banner-split .banner-split-text{padding:3rem 3.5rem;}}
+.page-banner-split .banner-split-photo{position:relative;min-height:260px;}
+@media(min-width:768px){.page-banner-split .banner-split-photo{min-height:340px;}}
+@media(min-width:1024px){.page-banner-split .banner-split-photo{min-height:0;}}
+.page-banner-split .banner-split-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+
+/* ============ Domain rows — compact editorial list (Formation Continue) ============ */
+.domain-row{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;padding:.95rem 0;border-top:1px solid rgba(11,14,26,.1);transition:padding-left .3s ease;cursor:default;}
+.domain-row:last-of-type{border-bottom:1px solid rgba(11,14,26,.1);}
+.domain-row:hover{padding-left:.65rem;}
+.domain-row .domain-left{display:flex;align-items:baseline;gap:1.25rem;min-width:0;}
+.domain-row .domain-num{font-family:'Fraunces',serif;color:var(--gold);flex-shrink:0;font-size:.95rem;}
+.domain-row .domain-title{font-family:'Fraunces',serif;color:var(--burgundy);font-size:1rem;transition:color .3s ease;}
+@media(min-width:768px){.domain-row .domain-title{font-size:1.15rem;}}
+.domain-row:hover .domain-title{color:var(--gold);}
+.domain-row .domain-arrow{opacity:0;transform:translateX(-6px);transition:opacity .3s ease, transform .3s ease;color:var(--gold);flex-shrink:0;}
+.domain-row:hover .domain-arrow{opacity:1;transform:translateX(0);}
+
 /* ============ Conférences / agenda — editorial rows (no cards, no photo gallery) ============ */
 .conf-row{border-top:1px solid rgba(11,14,26,.12);border-bottom:1px solid rgba(11,14,26,.12);}
 .agenda-row{border-top:1px solid rgba(11,14,26,.12);}
@@ -141,6 +164,21 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
 .value-row:last-of-type{border-bottom:1px solid rgba(11,14,26,.12);}
 .tag-list span{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--burgundy);padding-bottom:.4rem;border-bottom:1px solid rgba(110,20,35,.25);white-space:nowrap;}
 
+/* ============ Floating action buttons (Inscription + WhatsApp) — shared on every page ============ */
+.float-stack{display:flex;flex-direction:column;align-items:flex-end;gap:.85rem;}
+.float-stack a{animation:float-breathe-gold 2.8s ease-in-out infinite;will-change:box-shadow,transform;}
+.float-stack a[aria-label^="Inscription"]{animation-name:float-breathe-gold;}
+.float-stack a[aria-label="Contacter sur WhatsApp"]{animation-name:float-breathe-green;animation-delay:.6s;}
+.float-stack a:hover{animation-play-state:paused;}
+@keyframes float-breathe-gold{
+  0%,100%{box-shadow:0 8px 20px -8px rgba(198,149,42,.55),0 0 0 0 rgba(198,149,42,.38);}
+  50%{box-shadow:0 10px 24px -8px rgba(198,149,42,.6),0 0 0 10px rgba(198,149,42,0);}
+}
+@keyframes float-breathe-green{
+  0%,100%{box-shadow:0 8px 20px -8px rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,.4);}
+  50%{box-shadow:0 10px 24px -8px rgba(37,211,102,.6),0 0 0 10px rgba(37,211,102,0);}
+}
+
 @media (prefers-reduced-motion: reduce){
   .reveal{transition:none;opacity:1;transform:none;}
   .scroll-indicator{animation:none;}
@@ -148,4 +186,5 @@ img[src="assets/logo.jpg"]{border-radius:9999px;} /* logo has a white square bac
   .hero-gold-line{animation:none;width:72px;}
   .path-row,.path-row .path-bg,.path-row .path-scrim,.path-arrow{transition:none;}
   .exp-frame img{transition:none;}
+  .float-stack a{animation:none;}
 }

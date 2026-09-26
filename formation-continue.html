@@ -45,6 +45,40 @@
 @keyframes net-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
 @media (max-width:640px){.net-track-left,.net-track-right{animation-duration:60s;}}
 @media (prefers-reduced-motion: reduce){.net-track-left,.net-track-right{animation:none;}}
+
+/* ============ Ils nous ont fait confiance — réalisations (LONANI, SONIBANK…) ============ */
+.case-block{margin-bottom:3.5rem;}
+.case-block:last-child{margin-bottom:0;}
+.case-divider{height:1px;background:rgba(255,255,255,.12);margin-bottom:3.5rem;}
+.case-head{display:flex;flex-wrap:wrap;align-items:center;gap:1.1rem;margin-bottom:.9rem;}
+.case-num{font-family:'Fraunces',serif;font-weight:300;font-size:2.1rem;color:rgba(198,149,42,.45);line-height:1;flex-shrink:0;}
+.case-logo{flex-shrink:0;background:#fff;border-radius:4px;padding:.55rem .8rem;display:flex;align-items:center;justify-content:center;height:52px;}
+.case-logo img{max-height:34px;max-width:130px;width:auto;height:auto;object-fit:contain;}
+.case-org{font-family:'Fraunces',serif;color:#fff;font-size:1.35rem;line-height:1.15;}
+.case-theme{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-top:.3rem;}
+.case-desc{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.6;max-width:38rem;margin-bottom:1.6rem;}
+.case-caption{color:rgba(255,255,255,.45);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;margin-top:1.1rem;}
+.case-gallery{position:relative;}
+.case-track{display:flex;gap:.9rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;touch-action:pan-x;padding-bottom:.25rem;}
+.case-track::-webkit-scrollbar{display:none;}
+.case-track.dragging{cursor:grabbing;}
+.case-track img{height:230px;width:auto;flex:0 0 auto;object-fit:cover;border-radius:6px;cursor:zoom-in;transition:transform .3s ease;-webkit-user-drag:none;user-select:none;}
+.case-track img:hover{transform:translateY(-3px);}
+@media(min-width:768px){.case-track img{height:300px;}}
+.case-nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:2.75rem;height:2.75rem;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid rgba(11,14,26,.12);display:flex;align-items:center;justify-content:center;color:var(--burgundy);font-size:1.1rem;box-shadow:0 8px 20px -8px rgba(11,14,26,.35);transition:background .25s ease, transform .25s ease;z-index:5;}
+.case-nav-btn:hover{background:#fff;transform:translateY(-50%) scale(1.06);}
+.case-nav-prev{left:-.5rem;}
+.case-nav-next{right:-.5rem;}
+@media(max-width:767px){.case-nav-btn{display:none;}}
+.case-lightbox{position:fixed;inset:0;z-index:110;background:rgba(11,14,26,.94);display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.case-lightbox.open{display:flex;}
+.case-lightbox img{max-height:85vh;max-width:88vw;border-radius:4px;object-fit:contain;}
+.case-lightbox-close{position:absolute;top:1.25rem;right:1.5rem;color:#fff;font-size:2.1rem;line-height:1;cursor:pointer;background:none;border:none;}
+.case-lightbox-prev,.case-lightbox-next{position:absolute;top:50%;transform:translateY(-50%);color:#fff;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;font-size:1.75rem;cursor:pointer;background:rgba(255,255,255,.08);border:none;border-radius:50%;transition:background .25s ease;}
+.case-lightbox-prev:hover,.case-lightbox-next:hover{background:rgba(255,255,255,.2);}
+.case-lightbox-prev{left:1rem;}
+.case-lightbox-next{right:1rem;}
+@media(max-width:640px){.case-lightbox-prev,.case-lightbox-next{width:2.4rem;height:2.4rem;font-size:1.35rem;}}
 </style>
 
 </head>
@@ -274,6 +308,146 @@
   </div>
 </section>
 
+<!-- ILS NOUS ONT FAIT CONFIANCE — réalisations (LONANI, SONIBANK) -->
+<section class="section-pad" style="background:var(--navy);">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-10 md:mb-12 text-center max-w-2xl mx-auto">
+      <p class="eyebrow" style="color:var(--gold-light);">Réalisations</p>
+      <h2 class="serif mt-4 text-white" style="font-size:clamp(1.85rem,4vw,2.75rem);">Ils nous ont fait confiance</h2>
+      <p class="text-white/70 mt-4 leading-relaxed">IPSTG-LEADER accompagne les entreprises et les organisations dans le développement des compétences de leurs équipes.</p>
+    </div>
+
+    <!-- 01 — LONANI -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">01</span>
+        <span class="case-logo"><img src="assets/LONANI.png" alt="Logo LONANI"></span>
+        <div>
+          <h3 class="case-org">LONANI</h3>
+          <p class="case-theme">Formation en Intelligence Artificielle</p>
+        </div>
+      </div>
+      <p class="case-desc">Formation en Intelligence Artificielle avec les personnels de la Loterie Nationale du Niger (LONANI). Une expérience de formation professionnelle menée par IPSTG-LEADER.</p>
+
+      <div class="case-gallery" data-case="lonani">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente LONANI" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/LONANI/IMG-20260924-WA0019%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0033.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0040%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0041.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0042%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0044.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0045%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0019%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0033.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0040%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0041.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0042%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0044.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/LONANI/IMG-20260924-WA0045%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante LONANI" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Personnel de la Loterie Nationale du Niger (LONANI)</p>
+    </div>
+
+    <div class="case-divider"></div>
+
+    <!-- 02 — SONIBANK -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">02</span>
+        <span class="case-logo"><img src="assets/logo-sonibank.png" alt="Logo SONIBANK"></span>
+        <div>
+          <h3 class="case-org">SONIBANK</h3>
+          <p class="case-theme">Formation professionnelle continue</p>
+        </div>
+      </div>
+      <p class="case-desc">Une expérience de formation professionnelle avec les équipes de SONIBANK, menée par IPSTG-LEADER dans le cadre de la formation continue.</p>
+
+      <div class="case-gallery" data-case="sonibank">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente SONIBANK" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/SONIBANK/IMG-20260924-WA0022.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0023.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0026%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0027%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0029%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0030%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260926-WA0008.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0022.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260924-WA0023.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260924-WA0026%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260924-WA0027%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260924-WA0029%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260924-WA0030%281%29.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/SONIBANK/IMG-20260926-WA0008.jpg" alt="" loading="lazy" aria-hidden="true">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante SONIBANK" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Équipes de SONIBANK</p>
+    </div>
+
+    <div class="case-divider"></div>
+
+    <!-- 03 — ECOBANK NIGER -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">03</span>
+        <span class="case-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="Logo ECOBANK Niger"></span>
+        <div>
+          <h3 class="case-org">ECOBANK NIGER</h3>
+          <p class="case-theme">L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise</p>
+        </div>
+      </div>
+      <p class="case-desc">Formation animée par IPSTG-LEADER pour les équipes d'ECOBANK NIGER sur le thème « L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise », organisée le 05 décembre 2024 au Radisson Blu Hotel, avec remise d'attestations aux participants.</p>
+
+      <div class="case-gallery" data-case="ecobank">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente ECOBANK NIGER" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/ECOBANK/LightOn-32@1431521367.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-22@1402892216.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-42@1460150518.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-132@-316987554.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-125@-342846142.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-135@-314216991.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-138@-311446428.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-32@1431521367.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-22@1402892216.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-42@1460150518.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-132@-316987554.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-125@-342846142.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-135@-314216991.jpg" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/ECOBANK/LightOn-138@-311446428.jpg" alt="" loading="lazy" aria-hidden="true">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante ECOBANK NIGER" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Équipes d'ECOBANK NIGER</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lightboxes — une par réalisation, indépendantes -->
+<div class="case-lightbox" data-case-lightbox="lonani" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="Formation en Intelligence Artificielle — personnel LONANI">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+<div class="case-lightbox" data-case-lightbox="sonibank" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="Formation professionnelle continue — équipes SONIBANK">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+<div class="case-lightbox" data-case-lightbox="ecobank" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+
 <!-- FORMATION SUR MESURE POUR LES ENTREPRISES -->
 <section class="section-pad" style="background:var(--cream);">
   <div class="max-w-2xl mx-auto text-center reveal">
@@ -347,5 +521,141 @@
   </div>
 </footer>
 <script src="assets/site.js"></script>
+<script>
+/* ============ Case-study galleries — auto-scroll, drag, swipe, lightbox (page-specific) ============ */
+/* Each .case-gallery (LONANI, SONIBANK…) is initialized independently, with its own state and its own matching .case-lightbox — nothing is shared between them. */
+(function(){
+  var galleries = Array.prototype.slice.call(document.querySelectorAll('.case-gallery'));
+
+  galleries.forEach(function(gallery){
+    var caseId = gallery.getAttribute('data-case');
+    var track = gallery.querySelector('[data-case-track]');
+    if(!track) return;
+
+    var prevBtn = gallery.querySelector('[data-case-prev]');
+    var nextBtn = gallery.querySelector('[data-case-next]');
+    var lb = document.querySelector('.case-lightbox[data-case-lightbox="' + caseId + '"]');
+    var lbImg = lb ? lb.querySelector('[data-lightbox-img]') : null;
+    var lbClose = lb ? lb.querySelector('[data-lightbox-close]') : null;
+    var lbPrev = lb ? lb.querySelector('[data-lightbox-prev]') : null;
+    var lbNext = lb ? lb.querySelector('[data-lightbox-next]') : null;
+
+    var images = Array.prototype.slice.call(track.querySelectorAll('img'));
+    var uniqueCount = images.length / 2;
+    var singleSetWidth = 0;
+    var paused = false;
+    var dragging = false;
+    var autoTimer = null;
+
+    function computeWidth(){
+      var styles = getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap || styles.gap || 0) || 0;
+      var w = 0;
+      for(var i = 0; i < uniqueCount; i++){ w += images[i].getBoundingClientRect().width + gap; }
+      if(w > 0) singleSetWidth = w;
+    }
+
+    function startAuto(){
+      stopAuto();
+      autoTimer = setInterval(function(){
+        if(paused || dragging) return;
+        track.scrollLeft += 1;
+      }, 22);
+    }
+    function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer = null; } }
+
+    track.addEventListener('scroll', function(){
+      if(singleSetWidth <= 0) return;
+      if(track.scrollLeft >= singleSetWidth){ track.scrollLeft -= singleSetWidth; }
+    });
+
+    window.addEventListener('load', computeWidth);
+    window.addEventListener('resize', computeWidth);
+    images.forEach(function(img){ img.addEventListener('load', computeWidth); });
+    computeWidth();
+    startAuto();
+
+    // Pause on hover (desktop)
+    track.addEventListener('mouseenter', function(){ paused = true; });
+    track.addEventListener('mouseleave', function(){ if(!dragging) paused = false; });
+
+    // Pause during touch swipe (mobile — native scrolling handles the swipe itself)
+    track.addEventListener('touchstart', function(){ paused = true; }, {passive:true});
+    track.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 600); }, {passive:true});
+
+    // Drag-to-scroll with the mouse (desktop)
+    var isDown = false, startX = 0, startScroll = 0, dragMoved = false;
+    track.addEventListener('pointerdown', function(e){
+      if(e.pointerType === 'touch') return;
+      isDown = true; dragging = true; paused = true; dragMoved = false;
+      startX = e.clientX; startScroll = track.scrollLeft;
+      track.classList.add('dragging');
+      try{ track.setPointerCapture(e.pointerId); }catch(err){}
+    });
+    track.addEventListener('pointermove', function(e){
+      if(!isDown) return;
+      var dx = e.clientX - startX;
+      if(Math.abs(dx) > 6) dragMoved = true;
+      track.scrollLeft = startScroll - dx;
+    });
+    function endDrag(){
+      if(!isDown) return;
+      isDown = false;
+      track.classList.remove('dragging');
+      setTimeout(function(){ dragging = false; paused = false; }, 300);
+    }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    track.addEventListener('pointerleave', function(){ if(isDown) endDrag(); });
+
+    if(prevBtn) prevBtn.addEventListener('click', function(){
+      paused = true;
+      track.scrollBy({left: -320, behavior: 'smooth'});
+      clearTimeout(prevBtn._t); prevBtn._t = setTimeout(function(){ paused = false; }, 2200);
+    });
+    if(nextBtn) nextBtn.addEventListener('click', function(){
+      paused = true;
+      track.scrollBy({left: 320, behavior: 'smooth'});
+      clearTimeout(nextBtn._t); nextBtn._t = setTimeout(function(){ paused = false; }, 2200);
+    });
+
+    // Lightbox (own state per gallery)
+    var sources = images.slice(0, uniqueCount).map(function(img){ return img.getAttribute('src'); });
+    var lbIndex = 0;
+
+    function openLightbox(i){
+      if(!lb || !lbImg) return;
+      lbIndex = ((i % sources.length) + sources.length) % sources.length;
+      lbImg.src = sources[lbIndex];
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      paused = true;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      if(!lb) return;
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      paused = false;
+      document.body.style.overflow = '';
+    }
+    images.forEach(function(img, i){
+      img.addEventListener('click', function(){
+        if(!dragMoved){ openLightbox(i % uniqueCount); }
+      });
+    });
+    if(lbClose) lbClose.addEventListener('click', closeLightbox);
+    if(lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+    if(lbPrev) lbPrev.addEventListener('click', function(){ openLightbox(lbIndex - 1); });
+    if(lbNext) lbNext.addEventListener('click', function(){ openLightbox(lbIndex + 1); });
+    document.addEventListener('keydown', function(e){
+      if(!lb || !lb.classList.contains('open')) return;
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowLeft') openLightbox(lbIndex - 1);
+      if(e.key === 'ArrowRight') openLightbox(lbIndex + 1);
+    });
+  });
+})();
+</script>
 </body>
 </html>
