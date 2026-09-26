@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+
+Sitemap: https://ipstgleader.com/sitemap.xml
