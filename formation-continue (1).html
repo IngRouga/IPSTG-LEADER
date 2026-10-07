@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation Continue à Niamey | IPSTG-LEADER</title>
+<meta name="description" content="IPSTG-LEADER propose à Niamey des formations professionnelles continues pour les entreprises et les professionnels, dans onze domaines de compétences.">
+<link rel="canonical" href="https://ipstgleader.com/formation-continue.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPSTG-LEADER">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Formation Continue à Niamey | IPSTG-LEADER">
+<meta property="og:description" content="IPSTG-LEADER propose à Niamey des formations professionnelles continues pour les entreprises et les professionnels, dans onze domaines de compétences.">
+<meta property="og:url" content="https://ipstgleader.com/formation-continue.html">
+<meta property="og:image" content="https://ipstgleader.com/assets/hero-formation-continue.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Formation Continue à Niamey | IPSTG-LEADER">
+<meta name="twitter:description" content="IPSTG-LEADER propose à Niamey des formations professionnelles continues pour les entreprises et les professionnels, dans onze domaines de compétences.">
+<meta name="twitter:image" content="https://ipstgleader.com/assets/hero-formation-continue.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "IPSTG-LEADER",
+  "alternateName": "Institut Privé des Sciences Technologiques et de Gestion",
+  "url": "https://ipstgleader.com/",
+  "logo": "https://ipstgleader.com/assets/logo.jpg",
+  "image": "https://ipstgleader.com/assets/logo.jpg",
+  "email": "contact@ipstgleader.com",
+  "telephone": "+227-96-67-37-05",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Quartier Bobiel, face à la mosquée Imam Chafaï",
+    "addressLocality": "Niamey",
+    "addressCountry": "NE"
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/19C3fJczks/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://ipstgleader.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Formation Continue",
+      "item": "https://ipstgleader.com/formation-continue.html"
+    }
+  ]
+}
+</script>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ============ Formation Continue — liste éditoriale des formations (page-specific) ============ */
+.fm-list{border-top:1px solid rgba(11,14,26,.1);}
+.fm-row{position:relative;display:flex;flex-direction:column;gap:.6rem;padding:1.35rem 1.9rem 1.35rem 0;border-bottom:1px solid rgba(11,14,26,.1);text-decoration:none;transition:padding-left .3s ease;}
+.fm-row:hover,.fm-row:focus-visible{padding-left:.6rem;outline:none;}
+.fm-row-top{display:flex;align-items:baseline;gap:1rem;}
+.fm-num{font-family:'Fraunces',serif;font-weight:400;font-size:.85rem;color:var(--gold);flex-shrink:0;min-width:1.5rem;transition:color .25s ease;}
+.fm-title{font-family:'Fraunces',serif;color:var(--burgundy);font-size:1.1rem;font-weight:500;line-height:1.3;transition:transform .25s ease, color .25s ease;}
+.fm-row:hover .fm-title{transform:translateX(5px);color:var(--gold);}
+.fm-row-bottom{display:flex;flex-direction:column;gap:.6rem;padding-left:2.5rem;}
+.fm-desc{color:#4b5563;font-size:.86rem;line-height:1.6;max-width:34rem;}
+.fm-cta{display:inline-flex;align-items:center;font-size:.76rem;font-weight:600;letter-spacing:.01em;color:var(--gold);transition:color .25s ease;}
+.fm-cta-arrow{display:inline-block;margin-left:.35rem;transition:transform .25s ease;}
+.fm-row:hover .fm-cta{color:var(--burgundy);}
+.fm-row:hover .fm-cta-arrow{transform:translateX(4px);}
+.fm-icon{position:absolute;top:1.4rem;right:0;width:1.05rem;height:1.05rem;color:rgba(11,14,26,.25);transition:color .25s ease, transform .25s ease;}
+.fm-icon svg{width:100%;height:100%;display:block;}
+.fm-row:hover .fm-icon{color:var(--gold);transform:translate(1px,-1px);}
+@media(min-width:768px){
+  .fm-row{flex-direction:row;align-items:flex-start;gap:2.5rem;padding:1.85rem 2.5rem 1.85rem 0;}
+  .fm-row-top{flex:0 0 15rem;}
+  .fm-row-bottom{flex:1;min-width:0;padding-left:0;}
+  .fm-num{font-size:.95rem;}
+  .fm-title{font-size:1.2rem;}
+  .fm-icon{top:1.9rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  .fm-row,.fm-title,.fm-cta,.fm-cta-arrow,.fm-icon,.fm-num{transition:none;}
+}
+
+/* ============ Formation Continue — hero (light outline button on photo) ============ */
+.btn-outline-light{border:1.5px solid rgba(255,255,255,.6);color:#fff;transition:all .3s ease;}
+.btn-outline-light:hover{background:#fff;color:var(--burgundy);border-color:#fff;}
+
+/* ============ Formation Continue — réseau / partenaires (logo wall, no cards) ============ */
+.net-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.net-track{display:flex;align-items:center;gap:3.5rem;width:max-content;}
+.net-track-left{animation:net-scroll-left 42s linear infinite;}
+.net-track-right{animation:net-scroll-right 42s linear infinite;}
+.net-marquee:hover .net-track{animation-play-state:paused;}
+.net-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:44px;filter:grayscale(1);opacity:.55;transition:filter .35s ease, opacity .35s ease;white-space:nowrap;font-size:.8rem;font-weight:600;color:var(--burgundy);font-family:'Inter',sans-serif;}
+.net-logo:hover{filter:grayscale(0);opacity:1;}
+.net-logo img{max-height:38px;max-width:150px;width:auto;height:auto;object-fit:contain;}
+@keyframes net-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes net-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+@media (max-width:640px){.net-track-left,.net-track-right{animation-duration:60s;}}
+@media (prefers-reduced-motion: reduce){.net-track-left,.net-track-right{animation:none;}}
+
+/* ============ Ils nous ont fait confiance — réalisations (LONANI, SONIBANK…) ============ */
+.case-block{margin-bottom:3.5rem;}
+.case-block:last-child{margin-bottom:0;}
+.case-divider{height:1px;background:rgba(255,255,255,.12);margin-bottom:3.5rem;}
+.case-head{display:flex;flex-wrap:wrap;align-items:center;gap:1.1rem;margin-bottom:.9rem;}
+.case-num{font-family:'Fraunces',serif;font-weight:300;font-size:2.1rem;color:rgba(198,149,42,.45);line-height:1;flex-shrink:0;}
+.case-logo{flex-shrink:0;background:#fff;border-radius:4px;padding:.55rem .8rem;display:flex;align-items:center;justify-content:center;height:52px;}
+.case-logo img{max-height:34px;max-width:130px;width:auto;height:auto;object-fit:contain;}
+.case-org{font-family:'Fraunces',serif;color:#fff;font-size:1.35rem;line-height:1.15;}
+.case-theme{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-top:.3rem;}
+.case-desc{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.6;max-width:38rem;margin-bottom:1.6rem;}
+.case-caption{color:rgba(255,255,255,.45);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;margin-top:1.1rem;}
+.case-gallery{position:relative;}
+.case-track{display:flex;gap:.9rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;touch-action:pan-x;padding-bottom:.25rem;}
+.case-track::-webkit-scrollbar{display:none;}
+.case-track.dragging{cursor:grabbing;}
+.case-track img{height:230px;width:auto;flex:0 0 auto;object-fit:cover;border-radius:6px;cursor:zoom-in;transition:transform .3s ease;-webkit-user-drag:none;user-select:none;}
+.case-track img:hover{transform:translateY(-3px);}
+@media(min-width:768px){.case-track img{height:300px;}}
+.case-nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:2.75rem;height:2.75rem;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid rgba(11,14,26,.12);display:flex;align-items:center;justify-content:center;color:var(--burgundy);font-size:1.1rem;box-shadow:0 8px 20px -8px rgba(11,14,26,.35);transition:background .25s ease, transform .25s ease;z-index:5;}
+.case-nav-btn:hover{background:#fff;transform:translateY(-50%) scale(1.06);}
+.case-nav-prev{left:-.5rem;}
+.case-nav-next{right:-.5rem;}
+@media(max-width:767px){.case-nav-btn{display:none;}}
+.case-lightbox{position:fixed;inset:0;z-index:110;background:rgba(11,14,26,.94);display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.case-lightbox.open{display:flex;}
+.case-lightbox img{max-height:85vh;max-width:88vw;border-radius:4px;object-fit:contain;}
+.case-lightbox-close{position:absolute;top:1.25rem;right:1.5rem;color:#fff;font-size:2.1rem;line-height:1;cursor:pointer;background:none;border:none;}
+.case-lightbox-prev,.case-lightbox-next{position:absolute;top:50%;transform:translateY(-50%);color:#fff;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;font-size:1.75rem;cursor:pointer;background:rgba(255,255,255,.08);border:none;border-radius:50%;transition:background .25s ease;}
+.case-lightbox-prev:hover,.case-lightbox-next:hover{background:rgba(255,255,255,.2);}
+.case-lightbox-prev{left:1rem;}
+.case-lightbox-next{right:1rem;}
+@media(max-width:640px){.case-lightbox-prev,.case-lightbox-next{width:2.4rem;height:2.4rem;font-size:1.35rem;}}
+</style>
+
+</head>
+<body>
+<header id="nav">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-3">
+    <a href="index.html" class="flex items-center gap-3 relative">
+      <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER" class="h-11 w-11 object-contain rounded-sm">
+      <div class="leading-tight">
+        <div class="serif font-semibold text-base brand-name">IPSTG-LEADER</div>
+        <div class="text-[10px] tracking-wide brand-tagline hidden sm:block">Sciences Technologiques &amp; Gestion</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="institut.html" class="nav-link">L'Institut</a>
+      <a href="filieres.html" class="nav-link">Filières</a>
+      <a href="formation-continue.html" class="nav-link current">Formation Continue</a>
+      <a href="admissions.html" class="nav-link">Admissions</a>
+      <a href="vie-etudiante.html" class="nav-link">Vie étudiante</a>
+      <a href="ambassadeurs.html" class="nav-link">Ambassadeurs</a>
+      <a href="actualites.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button id="burger" class="lg:hidden relative flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="flex lg:hidden flex-col" aria-hidden="true">
+    <div class="mm-head">
+      <a href="index.html" class="mm-head-brand">
+        <img src="assets/logo.jpg" alt="Logo IPSTG-LEADER">
+        <span>IPSTG-LEADER</span>
+      </a>
+      <button id="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <div class="mm-links">
+    <a href="index.html" class="py-1">Accueil</a>
+    <a href="institut.html" class="py-1">L'Institut</a>
+    <a href="filieres.html" class="py-1">Filières</a>
+    <a href="formation-continue.html" class="py-1">Formation Continue</a>
+    <a href="admissions.html" class="py-1">Admissions</a>
+    <a href="vie-etudiante.html" class="py-1">Vie étudiante</a>
+    <a href="ambassadeurs.html" class="py-1">Ambassadeurs</a>
+    <a href="actualites.html" class="py-1">Actualités</a>
+    <a href="contact.html" class="py-1">Contact</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold text-center py-3 rounded-sm mt-2">Inscription 2026–2027</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO — photo (hero formation continue) -->
+<section class="page-banner-photo">
+  <img src="assets/hero-formation-continue.jpg" alt="Formation professionnelle continue IPSTG-LEADER" class="banner-bg">
+  <div class="banner-overlay"></div>
+  <div class="banner-content max-w-4xl mx-auto">
+    <p class="eyebrow reveal text-white/85">Formation Continue</p>
+    <div class="hero-gold-line reveal mt-4"></div>
+    <h1 class="serif reveal mt-6 leading-[1.08] text-white" style="font-size:clamp(2.15rem,5.5vw,4rem);">Développez vos compétences.<br>Faites évoluer votre carrière.</h1>
+    <p class="reveal mt-5 max-w-xl text-white/80 text-base md:text-lg leading-relaxed">Des formations professionnelles adaptées aux besoins des professionnels, des entreprises et des organisations.</p>
+    <div class="reveal mt-7 flex flex-wrap gap-4">
+      <a href="#formations" class="btn-outline-light px-7 py-3.5 rounded-sm font-semibold text-sm">Découvrir nos formations</a>
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20professionnelles%20continues%20propos%C3%A9es%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="btn-gold px-7 py-3.5 rounded-sm font-semibold text-sm">Demander une formation</a>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSEAU / PARTENAIRES — logos qui défilent -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-6xl mx-auto reveal text-center mb-8 md:mb-10">
+    <p class="eyebrow">Réseau</p>
+    <h2 class="serif mt-3" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">Nos partenaires</h2>
+    <p class="text-gray-600 text-sm mt-4 max-w-xl mx-auto">Un réseau au service de la formation, de l'innovation et de l'employabilité.</p>
+  </div>
+  <div class="net-marquee reveal">
+    <div class="net-track net-track-left">
+      <span class="net-logo"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sonibank.png" alt="SONIBANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="ECOBANK Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/Coris%20bank%20Main-Logo.svg" alt="CORIS BANK" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/AFA_Logo.jpg" alt="Access Finances Africa" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/SGI%20logo_a-1.png" alt="SGI-Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/DGI%20logo-dgi.jpg" alt="DGI Niger" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/LONANI.png" alt="LONANI" loading="lazy"></span>
+    </div>
+  </div>
+  <div class="net-marquee mt-2 reveal">
+    <div class="net-track net-track-right">
+      <span class="net-logo"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
+      <span class="net-logo">RESAO</span>
+      <span class="net-logo">Norme ISO 9001</span>
+      <span class="net-logo"><img src="assets/Logo_of_Niger_Telecoms.png" alt="Niger Telecoms" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-SONUCIe.svg" alt="SONUCI" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/logo-sagemcom-new-charte-header.png" alt="Sagemcom" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/ministere-enseignement-superieur.png" alt="Ministère de l'Enseignement Supérieur" loading="lazy"></span>
+      <span class="net-logo"><img src="assets/CAMES%20logo.svg" alt="CAMES" loading="lazy"></span>
+      <span class="net-logo">RESAO</span>
+      <span class="net-logo">Norme ISO 9001</span>
+    </div>
+  </div>
+</section>
+
+<!-- NOS FORMATIONS — grille éditoriale premium, 11 domaines -->
+<section id="formations" class="section-pad" style="background:#F1EFEA;">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-8 md:mb-10 text-center max-w-xl mx-auto">
+      <p class="eyebrow">Formation professionnelle continue</p>
+      <h2 class="serif mt-4" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">Nos formations</h2>
+      <p class="text-gray-600 mt-5 leading-relaxed">Des domaines de compétences pour accompagner les professionnels et les organisations.</p>
+    </div>
+
+    <div class="fm-list">
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Intelligence%20Artificielle%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">01</span>
+          <h3 class="fm-title">Intelligence Artificielle</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Comprenez les fondamentaux de l'intelligence artificielle et découvrez comment l'intégrer utilement dans vos activités professionnelles.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Informatique%20et%20Technologie%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path d="M20.054 15.987H3.946"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">02</span>
+          <h3 class="fm-title">Informatique et Technologie</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez les compétences nécessaires pour mieux comprendre, utiliser et intégrer les technologies numériques dans votre environnement professionnel.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Gestion%20et%20Leadership%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">03</span>
+          <h3 class="fm-title">Gestion et Leadership</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Renforcez vos compétences en gestion, management et leadership pour mieux accompagner les équipes et piloter les activités.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Ressources%20Humaines%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 19a4 4 0 00-8 0"/><path d="M16 10h2"/><path d="M16 14h2"/><circle cx="9" cy="12" r="3"/><rect x="2" y="5" width="20" height="14" rx="2"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">04</span>
+          <h3 class="fm-title">Ressources Humaines</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez vos compétences dans la gestion des ressources humaines et l'accompagnement des collaborateurs.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Marketing%20et%20Communication%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">05</span>
+          <h3 class="fm-title">Marketing et Communication</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez votre maîtrise du marketing et de la communication pour mieux valoriser une organisation, une marque ou une activité.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Finance%20et%20Comptabilit%C3%A9%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">06</span>
+          <h3 class="fm-title">Finance et Comptabilité</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Renforcez vos connaissances en finance et en comptabilité pour mieux comprendre et piloter les activités financières.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Langues%20%C3%89trang%C3%A8res%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">07</span>
+          <h3 class="fm-title">Langues Étrangères</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez vos compétences linguistiques pour faciliter la communication et les échanges dans un environnement professionnel international.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Sant%C3%A9%20et%20S%C3%A9curit%C3%A9%20au%20Travail%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">08</span>
+          <h3 class="fm-title">Santé et Sécurité au Travail</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez les connaissances nécessaires pour contribuer à un environnement de travail plus sûr et mieux maîtrisé.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20D%C3%A9veloppement%20Durable%20et%20RSE%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20"/><path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">09</span>
+          <h3 class="fm-title">Développement Durable et RSE</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Comprenez les enjeux du développement durable et de la responsabilité sociale des entreprises.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20D%C3%A9veloppement%20Personnel%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">10</span>
+          <h3 class="fm-title">Développement Personnel</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Développez vos compétences personnelles, votre confiance et votre capacité à évoluer dans votre environnement professionnel.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20la%20formation%20en%20Nouvelles%20R%C3%A9glementations%20propos%C3%A9e%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="fm-row reveal">
+        <span class="fm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg></span>
+        <div class="fm-row-top">
+          <span class="fm-num">11</span>
+          <h3 class="fm-title">Nouvelles Réglementations</h3>
+        </div>
+        <div class="fm-row-bottom">
+          <p class="fm-desc">Actualisez vos connaissances afin de mieux comprendre et prendre en compte les évolutions réglementaires dans votre activité.</p>
+          <span class="fm-cta">Découvrir la formation<span class="fm-cta-arrow">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ILS NOUS ONT FAIT CONFIANCE — réalisations (LONANI, SONIBANK) -->
+<section class="section-pad" style="background:var(--navy);">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-10 md:mb-12 text-center max-w-2xl mx-auto">
+      <p class="eyebrow" style="color:var(--gold-light);">Réalisations</p>
+      <h2 class="serif mt-4 text-white" style="font-size:clamp(1.85rem,4vw,2.75rem);">Ils nous ont fait confiance</h2>
+      <p class="text-white/70 mt-4 leading-relaxed">IPSTG-LEADER accompagne les entreprises et les organisations dans le développement des compétences de leurs équipes.</p>
+    </div>
+
+    <!-- 01 — LONANI -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">01</span>
+        <span class="case-logo"><img src="assets/LONANI.png" alt="Logo LONANI"></span>
+        <div>
+          <h3 class="case-org">LONANI</h3>
+          <p class="case-theme">Formation en Intelligence Artificielle</p>
+        </div>
+      </div>
+      <p class="case-desc">Formation en Intelligence Artificielle avec les personnels de la Loterie Nationale du Niger (LONANI). Une expérience de formation professionnelle menée par IPSTG-LEADER.</p>
+
+      <div class="case-gallery" data-case="lonani">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente LONANI" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/LONANI/IMG-20260924-WA0019%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0033.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0040%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0041.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0042%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0044.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0045%281%29.jpg" alt="Formation en Intelligence Artificielle — personnel LONANI" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0019%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 1" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0033.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 2" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0040%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 3" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0041.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 4" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0042%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 5" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0044.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 6" loading="lazy">
+          <img src="assets/LONANI/IMG-20260924-WA0045%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes LONANI, photo 7" loading="lazy">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante LONANI" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Personnel de la Loterie Nationale du Niger (LONANI)</p>
+    </div>
+
+    <div class="case-divider"></div>
+
+    <!-- 02 — SONIBANK -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">02</span>
+        <span class="case-logo"><img src="assets/logo-sonibank.png" alt="Logo SONIBANK"></span>
+        <div>
+          <h3 class="case-org">SONIBANK</h3>
+          <p class="case-theme">Formation professionnelle continue</p>
+        </div>
+      </div>
+      <p class="case-desc">Une expérience de formation professionnelle avec les équipes de SONIBANK, menée par IPSTG-LEADER dans le cadre de la formation continue.</p>
+
+      <div class="case-gallery" data-case="sonibank">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente SONIBANK" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/SONIBANK/IMG-20260924-WA0022.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0023.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0026%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0027%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0029%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0030%281%29.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260926-WA0008.jpg" alt="Formation professionnelle continue — équipes SONIBANK" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0022.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 1" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0023.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 2" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0026%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 3" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0027%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 4" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0029%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 5" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260924-WA0030%281%29.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 6" loading="lazy">
+          <img src="assets/SONIBANK/IMG-20260926-WA0008.jpg" alt="Session de formation continue IPSTG-LEADER — équipes SONIBANK, photo 7" loading="lazy">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante SONIBANK" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Équipes de SONIBANK</p>
+    </div>
+
+    <div class="case-divider"></div>
+
+    <!-- 03 — ECOBANK NIGER -->
+    <div class="case-block reveal">
+      <div class="case-head">
+        <span class="case-num">03</span>
+        <span class="case-logo"><img src="assets/Ecobank_Logo.svg.webp" alt="Logo ECOBANK Niger"></span>
+        <div>
+          <h3 class="case-org">ECOBANK NIGER</h3>
+          <p class="case-theme">L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise</p>
+        </div>
+      </div>
+      <p class="case-desc">Formation animée par IPSTG-LEADER pour les équipes d'ECOBANK NIGER sur le thème « L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise », organisée le 05 décembre 2024 au Radisson Blu Hotel, avec remise d'attestations aux participants.</p>
+
+      <div class="case-gallery" data-case="ecobank">
+        <button type="button" class="case-nav-btn case-nav-prev" aria-label="Photo précédente ECOBANK NIGER" data-case-prev>‹</button>
+        <div class="case-track" data-case-track>
+          <img src="assets/ECOBANK/LightOn-32@1431521367.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-22@1402892216.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-42@1460150518.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-132@-316987554.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-125@-342846142.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-135@-314216991.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-138@-311446428.jpg" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-32@1431521367.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 1" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-22@1402892216.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 2" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-42@1460150518.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 3" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-132@-316987554.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 4" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-125@-342846142.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 5" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-135@-314216991.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 6" loading="lazy">
+          <img src="assets/ECOBANK/LightOn-138@-311446428.jpg" alt="Session de formation continue IPSTG-LEADER — équipes ECOBANK Niger, photo 7" loading="lazy">
+        </div>
+        <button type="button" class="case-nav-btn case-nav-next" aria-label="Photo suivante ECOBANK NIGER" data-case-next>›</button>
+      </div>
+      <p class="case-caption">Équipes d'ECOBANK NIGER</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lightboxes — une par réalisation, indépendantes -->
+<div class="case-lightbox" data-case-lightbox="lonani" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="Formation en Intelligence Artificielle — personnel LONANI">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+<div class="case-lightbox" data-case-lightbox="sonibank" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="Formation professionnelle continue — équipes SONIBANK">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+<div class="case-lightbox" data-case-lightbox="ecobank" aria-hidden="true">
+  <button type="button" class="case-lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
+  <button type="button" class="case-lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
+  <img data-lightbox-img src="" alt="L'Impact de l'Intelligence Artificielle dans la Stratégie d'Entreprise — équipes ECOBANK NIGER">
+  <button type="button" class="case-lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
+</div>
+
+<!-- FORMATION SUR MESURE POUR LES ENTREPRISES -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="max-w-2xl mx-auto text-center reveal">
+    <p class="eyebrow">Formation sur mesure pour les entreprises</p>
+    <h2 class="serif mt-4" style="font-size:clamp(1.85rem,4vw,2.75rem);color:var(--burgundy);">Votre entreprise a un besoin spécifique ?</h2>
+    <p class="text-gray-600 mt-5 leading-relaxed">Nous pouvons échanger avec votre organisation afin d'identifier vos besoins et envisager une formation adaptée.</p>
+    <a href="https://wa.me/22780574747?text=Bonjour%2C%20notre%20entreprise%20souhaite%20%C3%A9changer%20avec%20IPSTG-LEADER%20au%20sujet%20d%27une%20formation%20sur%20mesure." target="_blank" rel="noopener" class="btn-gold inline-block mt-7 px-7 py-3.5 rounded-sm font-semibold text-sm">Parler à notre équipe →</a>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section-pad text-center" style="background:var(--burgundy);">
+  <div class="max-w-xl mx-auto reveal">
+    <h2 class="serif text-white" style="font-size:clamp(1.85rem,4vw,2.75rem);">Prêt à développer vos compétences ?</h2>
+    <p class="text-white/80 mt-4 leading-relaxed">Échangeons sur votre projet de formation.</p>
+    <a href="https://wa.me/22780574747?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20les%20formations%20professionnelles%20continues%20propos%C3%A9es%20par%20IPSTG-LEADER." target="_blank" rel="noopener" class="btn-gold inline-block mt-7 px-8 py-3.5 rounded-sm font-semibold text-sm">Demander une formation →</a>
+  </div>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed bottom-6 right-6 z-50 float-stack items-end">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener"
+    class="btn-gold rounded-full w-16 h-16 flex flex-col items-center justify-center text-center shadow-lg hover:scale-105 transition text-[9px] font-semibold leading-tight" aria-label="Inscription 2026-2027">
+    <span class="text-lg leading-none">🎓</span>
+    <span>Inscription<br>2026–2027</span>
+  </a>
+  <a href="https://wa.me/22780574747?text=Bonjour%20IPSTG-LEADER%2C%20je%20souhaite%20me%20former%20(Formation%20Continue)%20et%20j%27aimerais%20obtenir%20des%20informations." target="_blank" rel="noopener"
+    class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition" aria-label="Contacter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.41 1.02 2.58.12.17 1.77 2.71 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+  </a>
+</div>
+
+<footer style="background:var(--navy);" class="text-white/70 pt-12 pb-8 px-5 md:px-10">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" class="h-10 w-10 object-contain" alt="Logo IPSTG-LEADER">
+        <span class="serif text-white font-semibold">IPSTG-LEADER</span>
+      </div>
+      <p class="text-sm mt-4">Institut Privé des Sciences Technologiques et de Gestion</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Navigation</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="institut.html">L'Institut</a></li>
+        <li><a href="vie-etudiante.html">Vie étudiante</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Filières</p>
+      <a href="filieres.html" class="text-sm gold-text underline">Voir toutes les filières</a>
+      <a href="formation-continue.html" class="text-sm gold-text underline block mt-2">Formation Continue</a>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Admissions</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" class="text-sm gold-text underline">Inscription 2026–2027</a>
+    </div>
+    <div>
+      <p class="text-white font-semibold text-sm mb-4">Réseaux sociaux</p>
+      <p class="text-sm">WhatsApp : +227 80 57 47 47</p>
+      <p class="text-sm mt-1">Tél : <a href="tel:+22796673705" class="hover:text-white">+227 96 67 37 05</a></p>
+      <a href="mailto:contact@ipstgleader.com" class="text-sm gold-text underline mt-2 inline-block">contact@ipstgleader.com</a><br>
+      <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" class="text-sm gold-text underline mt-1 inline-block">Facebook</a>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto border-t border-white/10 mt-8 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
+    <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
+    <a href="https://rougatech.com" target="_blank" rel="noopener" class="footer-credit"><span class="designed-by">Designed by</span><span class="rouga">Rouga</span><span class="tech">Tech</span></a>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script>
+/* ============ Case-study galleries — auto-scroll, drag, swipe, lightbox (page-specific) ============ */
+/* Each .case-gallery (LONANI, SONIBANK…) is initialized independently, with its own state and its own matching .case-lightbox — nothing is shared between them. */
+(function(){
+  var galleries = Array.prototype.slice.call(document.querySelectorAll('.case-gallery'));
+
+  galleries.forEach(function(gallery){
+    var caseId = gallery.getAttribute('data-case');
+    var track = gallery.querySelector('[data-case-track]');
+    if(!track) return;
+
+    var prevBtn = gallery.querySelector('[data-case-prev]');
+    var nextBtn = gallery.querySelector('[data-case-next]');
+    var lb = document.querySelector('.case-lightbox[data-case-lightbox="' + caseId + '"]');
+    var lbImg = lb ? lb.querySelector('[data-lightbox-img]') : null;
+    var lbClose = lb ? lb.querySelector('[data-lightbox-close]') : null;
+    var lbPrev = lb ? lb.querySelector('[data-lightbox-prev]') : null;
+    var lbNext = lb ? lb.querySelector('[data-lightbox-next]') : null;
+
+    var images = Array.prototype.slice.call(track.querySelectorAll('img'));
+    var uniqueCount = images.length / 2;
+    var singleSetWidth = 0;
+    var paused = false;
+    var dragging = false;
+    var autoTimer = null;
+
+    function computeWidth(){
+      var styles = getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap || styles.gap || 0) || 0;
+      var w = 0;
+      for(var i = 0; i < uniqueCount; i++){ w += images[i].getBoundingClientRect().width + gap; }
+      if(w > 0) singleSetWidth = w;
+    }
+
+    function startAuto(){
+      stopAuto();
+      autoTimer = setInterval(function(){
+        if(paused || dragging) return;
+        track.scrollLeft += 1;
+      }, 22);
+    }
+    function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer = null; } }
+
+    track.addEventListener('scroll', function(){
+      if(singleSetWidth <= 0) return;
+      if(track.scrollLeft >= singleSetWidth){ track.scrollLeft -= singleSetWidth; }
+    });
+
+    window.addEventListener('load', computeWidth);
+    window.addEventListener('resize', computeWidth);
+    images.forEach(function(img){ img.addEventListener('load', computeWidth); });
+    computeWidth();
+    startAuto();
+
+    // Pause on hover (desktop)
+    track.addEventListener('mouseenter', function(){ paused = true; });
+    track.addEventListener('mouseleave', function(){ if(!dragging) paused = false; });
+
+    // Pause during touch swipe (mobile — native scrolling handles the swipe itself)
+    track.addEventListener('touchstart', function(){ paused = true; }, {passive:true});
+    track.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 600); }, {passive:true});
+
+    // Drag-to-scroll with the mouse (desktop)
+    var isDown = false, startX = 0, startScroll = 0, dragMoved = false;
+    track.addEventListener('pointerdown', function(e){
+      if(e.pointerType === 'touch') return;
+      isDown = true; dragging = true; paused = true; dragMoved = false;
+      startX = e.clientX; startScroll = track.scrollLeft;
+      track.classList.add('dragging');
+      try{ track.setPointerCapture(e.pointerId); }catch(err){}
+    });
+    track.addEventListener('pointermove', function(e){
+      if(!isDown) return;
+      var dx = e.clientX - startX;
+      if(Math.abs(dx) > 6) dragMoved = true;
+      track.scrollLeft = startScroll - dx;
+    });
+    function endDrag(){
+      if(!isDown) return;
+      isDown = false;
+      track.classList.remove('dragging');
+      setTimeout(function(){ dragging = false; paused = false; }, 300);
+    }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    track.addEventListener('pointerleave', function(){ if(isDown) endDrag(); });
+
+    if(prevBtn) prevBtn.addEventListener('click', function(){
+      paused = true;
+      track.scrollBy({left: -320, behavior: 'smooth'});
+      clearTimeout(prevBtn._t); prevBtn._t = setTimeout(function(){ paused = false; }, 2200);
+    });
+    if(nextBtn) nextBtn.addEventListener('click', function(){
+      paused = true;
+      track.scrollBy({left: 320, behavior: 'smooth'});
+      clearTimeout(nextBtn._t); nextBtn._t = setTimeout(function(){ paused = false; }, 2200);
+    });
+
+    // Lightbox (own state per gallery)
+    var sources = images.slice(0, uniqueCount).map(function(img){ return img.getAttribute('src'); });
+    var lbIndex = 0;
+
+    function openLightbox(i){
+      if(!lb || !lbImg) return;
+      lbIndex = ((i % sources.length) + sources.length) % sources.length;
+      lbImg.src = sources[lbIndex];
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      paused = true;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      if(!lb) return;
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      paused = false;
+      document.body.style.overflow = '';
+    }
+    images.forEach(function(img, i){
+      img.addEventListener('click', function(){
+        if(!dragMoved){ openLightbox(i % uniqueCount); }
+      });
+    });
+    if(lbClose) lbClose.addEventListener('click', closeLightbox);
+    if(lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+    if(lbPrev) lbPrev.addEventListener('click', function(){ openLightbox(lbIndex - 1); });
+    if(lbNext) lbNext.addEventListener('click', function(){ openLightbox(lbIndex + 1); });
+    document.addEventListener('keydown', function(e){
+      if(!lb || !lb.classList.contains('open')) return;
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowLeft') openLightbox(lbIndex - 1);
+      if(e.key === 'ArrowRight') openLightbox(lbIndex + 1);
+    });
+  });
+})();
+</script>
+</body>
+</html>
