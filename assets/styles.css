@@ -193,12 +193,23 @@ body.footer-in-view .float-stack{opacity:0;pointer-events:none;transform:transla
 /* Never compete with the fullscreen mobile menu */
 body.menu-open .float-stack{display:none;}
 
-/* ============ Footer credit badge — discreet "Designed by RougaTech" ============ */
-.credit-badge{display:inline-flex;align-items:center;gap:.32rem;background:rgba(255,255,255,.94);padding:.32rem .7rem;border-radius:999px;text-decoration:none;line-height:1;transition:background .25s ease, transform .25s ease;}
-.credit-badge:hover{background:#fff;transform:translateY(-1px);}
-.credit-badge .credit-by{font-family:'Inter',sans-serif;font-size:.62rem;font-weight:500;color:#6b7280;letter-spacing:.01em;}
-.credit-badge .credit-rouga{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;color:#000000;}
-.credit-badge .credit-tech{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;color:#2563EB;}
+/* ============ Footer credit — "Designed by RougaTech", plain text on white, no capsule ============ */
+/* No flex gap here on purpose: gap would insert equal space between EVERY child, including
+   between .rouga and .tech, which is exactly the bug being fixed — Rouga+Tech must be flush. */
+.footer-credit{display:inline-flex;align-items:baseline;white-space:nowrap;background:#FFFFFF;padding:.3rem .55rem;text-decoration:none;border-radius:0;border:none;box-shadow:none;line-height:1.2;}
+.footer-credit:hover{opacity:.82;}
+.footer-credit .designed-by{font-family:'Inter',sans-serif;font-size:.64rem;font-weight:500;color:#6b7280;letter-spacing:.01em;margin-right:.3rem;white-space:nowrap;}
+.footer-credit .rouga{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;color:#000000;white-space:nowrap;}
+.footer-credit .tech{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;color:#2563EB;white-space:nowrap;}
+@media(max-width:479px){
+  .footer-credit{padding:.28rem .5rem;}
+  .footer-credit .designed-by{font-size:.6rem;margin-right:.25rem;}
+  .footer-credit .rouga,.footer-credit .tech{font-size:.7rem;}
+}
+
+/* ============ "Chaque samedi" — discreet institutional badge (Vie étudiante) ============ */
+.badge-samedi{display:inline-flex;align-items:center;gap:.4rem;background:rgba(198,149,42,.1);border:1px solid rgba(198,149,42,.4);color:var(--burgundy);font-family:'Inter',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .85rem;border-radius:999px;white-space:nowrap;}
+.badge-samedi::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 
 /* ============ Hero — compact mobile height (never 100vh) + tighter internal rhythm ============ */
 @media(max-width:767px){

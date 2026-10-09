@@ -169,6 +169,46 @@ const programs={
 };
 const catLabels={licence:"Licence — Bac+3",bts:"BTS d'État",master:"Master — Bac+5",pro:"Formation Continue"};
 
+// Generic, non-fabricated presentation + débouchés text generated from the filière's own name/field.
+// No invented partners, numbers or employer names — only standard job-family descriptions for the domain.
+function getProgramDetails(cat,name,desc){
+  const n=name.toLowerCase();
+  let debouches;
+  if(/informatique|logiciel|réseaux|télécommunication|intelligence artificielle|maintenance informatique/.test(n)){
+    debouches=["Développeur / développeuse d'applications","Technicien(ne) ou administrateur(trice) systèmes et réseaux","Chargé(e) de support informatique","Analyste ou chef de projet informatique (avec expérience)"];
+  } else if(/gestion commerciale|marketing|communication des entreprises|secrétariat/.test(n)){
+    debouches=["Chargé(e) de clientèle ou commercial(e)","Assistant(e) de direction / secrétaire de direction","Chargé(e) de communication ou marketing","Responsable commercial(e) (avec expérience)"];
+  } else if(/comptabilité|finance|banque|microfinance/.test(n)){
+    debouches=["Comptable ou aide-comptable","Agent(e) ou conseiller(ère) en établissement bancaire ou de microfinance","Assistant(e) financier(ère)","Contrôleur(se) de gestion (avec expérience)"];
+  } else if(/administration et gestion|gestion des organisations/.test(n)){
+    debouches=["Assistant(e) administratif(ve)","Gestionnaire de structures publiques ou privées","Chargé(e) de projets","Cadre administratif (avec expérience)"];
+  } else if(/génie électrique|génie civil|génie mécanique|chaudronnerie/.test(n)){
+    debouches=["Technicien(ne) de bureau d'études ou de chantier","Agent(e) de maintenance industrielle","Technicien(ne) en installation et contrôle d'équipements","Chef d'équipe technique (avec expérience)"];
+  } else if(/transport|logistique/.test(n)){
+    debouches=["Agent(e) ou responsable logistique","Gestionnaire de parc ou d'exploitation transport","Chargé(e) de la chaîne d'approvisionnement","Responsable logistique (avec expérience)"];
+  } else if(/énergies renouvelables|environnement/.test(n)){
+    debouches=["Technicien(ne) en énergies renouvelables","Agent(e) de suivi environnemental","Chargé(e) de projets énergie/environnement","Responsable technique (avec expérience)"];
+  } else if(/ressources humaines/.test(n)){
+    debouches=["Assistant(e) ressources humaines","Chargé(e) de recrutement ou de formation","Gestionnaire du personnel","Responsable RH (avec expérience)"];
+  } else if(/langues étrangères/.test(n)){
+    debouches=["Interprète ou traducteur(trice)","Assistant(e) dans un cadre international","Formateur(trice) en langues","Chargé(e) de relations internationales"];
+  } else if(/santé et sécurité/.test(n)){
+    debouches=["Agent(e) HSE (Hygiène, Sécurité, Environnement)","Responsable sécurité au travail","Chargé(e) de prévention des risques","Coordinateur(trice) HSE (avec expérience)"];
+  } else if(/développement durable|rse/.test(n)){
+    debouches=["Chargé(e) de projets RSE","Coordinateur(trice) développement durable","Chargé(e) de suivi environnemental et social"];
+  } else if(/développement personnel|nouvelles réglementations/.test(n)){
+    debouches=["Formateur(trice) ou facilitateur(trice)","Consultant(e) en accompagnement professionnel","Chargé(e) de veille réglementaire"];
+  } else if(/pétrole/.test(n)){
+    debouches=["Technicien(ne) du secteur pétrolier","Agent(e) de suivi des opérations pétrolières","Technicien(ne) HSE pétrolier (avec expérience)"];
+  } else if(/agro-alimentaires/.test(n)){
+    debouches=["Technicien(ne) en industries agro-alimentaires","Agent(e) de contrôle qualité","Responsable de production agro-alimentaire (avec expérience)"];
+  } else {
+    debouches=["Cadre ou technicien(ne) dans le secteur de la gestion","Chargé(e) de projets","Poste à responsabilité (avec expérience)"];
+  }
+  const presentation=`La filière ${name} (${catLabels[cat]}) ${desc?`forme les étudiants aux compétences suivantes : ${desc.charAt(0).toLowerCase()+desc.slice(1)}`:"prépare les étudiants aux compétences clés de ce domaine"}. Les enseignements combinent cours théoriques, travaux dirigés et mises en situation pratique, pour une insertion rapide dans la vie professionnelle à l'issue de la formation.`;
+  return {presentation,debouches};
+}
+
 function renderPanel(key){
   const panel=document.querySelector(`.tab-panel[data-panel="${key}"]`);
   if(!panel||panel.dataset.rendered) return;
@@ -179,14 +219,51 @@ function renderPanel(key){
         <h3 class="serif text-base font-semibold mt-1">${name}</h3>
         ${desc?`<p class="text-gray-500 text-sm mt-1">${desc}</p>`:''}
       </div>
-      <button type="button" class="program-info-btn flex-shrink-0 text-xs font-semibold gold-text whitespace-nowrap" data-cat="${catLabels[key]}" data-name="${name.replace(/"/g,'&quot;')}" data-desc="${(desc||'').replace(/"/g,'&quot;')}">En savoir plus →</button>
+      <a href="filiere-detail.html?cat=${encodeURIComponent(key)}&name=${encodeURIComponent(name)}" class="flex-shrink-0 text-xs font-semibold gold-text whitespace-nowrap">Voir plus →</a>
     </div>
   `).join('');
   panel.dataset.rendered="1";
-  panel.querySelectorAll('.program-info-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>openProgramModal(btn.dataset.cat, btn.dataset.name, btn.dataset.desc));
-  });
 }
+
+// ---------- Filière detail page (filiere-detail.html) ----------
+function initFiliereDetailPage(){
+  const root=document.getElementById('filiere-detail-root');
+  if(!root) return;
+  const params=new URLSearchParams(window.location.search);
+  const cat=params.get('cat');
+  const name=params.get('name');
+  const list=programs[cat]||[];
+  const entry=list.find(([n])=>n===name);
+  if(!entry){
+    root.innerHTML=`<div class="max-w-3xl mx-auto text-center py-10">
+      <p class="eyebrow">Filière introuvable</p>
+      <h1 class="serif mt-4" style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--burgundy);">Cette filière n'existe pas ou plus.</h1>
+      <a href="filieres.html" class="btn-gold inline-block mt-7 px-7 py-3 rounded-sm font-semibold text-sm">Voir toutes les filières →</a>
+    </div>`;
+    return;
+  }
+  const [progName,desc]=entry;
+  const {presentation,debouches}=getProgramDetails(cat,progName,desc);
+  document.title=`${progName} — ${catLabels[cat]} | IPSTG-LEADER`;
+  root.innerHTML=`
+    <p class="eyebrow reveal">${catLabels[cat]}</p>
+    <h1 class="serif reveal mt-4 leading-[1.05]" style="font-size:clamp(2rem,5vw,3.25rem);color:var(--burgundy);">${progName}</h1>
+    <p class="reveal mt-6 text-gray-600 text-base leading-relaxed max-w-2xl">${presentation}</p>
+
+    <h2 class="serif reveal mt-12 text-xl md:text-2xl font-semibold" style="color:var(--burgundy);">Débouchés professionnels</h2>
+    <ul class="reveal mt-5 space-y-3 max-w-2xl">
+      ${debouches.map(d=>`<li class="flex items-start gap-3 text-gray-700 text-sm md:text-base"><span class="gold-text font-bold mt-0.5">•</span><span>${d}</span></li>`).join('')}
+    </ul>
+
+    <div class="reveal mt-12 flex flex-wrap gap-4">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2ukXEiBiVLY73QBf0RpQ-BetLX82rcs8B3XWc1u5Hu8Dtw/viewform" target="_blank" rel="noopener" class="btn-gold inline-block px-8 py-3.5 rounded-sm font-semibold text-sm">S'inscrire à cette filière</a>
+      <a href="https://wa.me/22780574747?text=${encodeURIComponent('Bonjour IPSTG-LEADER, je souhaite des informations sur la filière '+progName+' ('+catLabels[cat]+').')}" target="_blank" rel="noopener" class="btn-outline inline-block px-8 py-3.5 rounded-sm font-semibold text-sm">Poser une question (WhatsApp)</a>
+      <a href="filieres.html" class="inline-block px-8 py-3.5 rounded-sm font-semibold text-sm gold-text underline self-center">← Toutes les filières</a>
+    </div>
+  `;
+  root.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+}
+document.addEventListener('DOMContentLoaded',initFiliereDetailPage);
 
 document.addEventListener('DOMContentLoaded',()=>{
   if(document.querySelector('.tab-panel')){

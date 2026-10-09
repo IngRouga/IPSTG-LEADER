@@ -530,17 +530,38 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', ()=> openProgramModal('Actualités', btn.dataset.title, btn.dataset.text));
   });
 
-  // The IPSTG Experience — interactive frame with 4 overlay points
-  document.querySelectorAll('.exp-point').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.exp-point').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      const p = btn.dataset.point;
-      document.querySelectorAll('.exp-frame img').forEach(img=>{
-        img.classList.toggle('active', img.dataset.point === p);
+  // The IPSTG Experience — interactive frame with 4 overlay points, auto-rotating every 5s
+  (function(){
+    const expPoints = Array.from(document.querySelectorAll('.exp-point'));
+    if(!expPoints.length) return;
+    const expImgs = document.querySelectorAll('.exp-frame img');
+    let expIndex = 0;
+    let expTimer = null;
+
+    function showExp(i){
+      expIndex = i;
+      const p = expPoints[i].dataset.point;
+      expPoints.forEach(b=>b.classList.remove('active'));
+      expPoints[i].classList.add('active');
+      expImgs.forEach(img=>{ img.classList.toggle('active', img.dataset.point === p); });
+    }
+
+    function startExpAuto(){
+      clearInterval(expTimer);
+      expTimer = setInterval(()=>{
+        showExp((expIndex + 1) % expPoints.length);
+      }, 5000);
+    }
+
+    expPoints.forEach((btn,i)=>{
+      btn.addEventListener('click', ()=>{
+        showExp(i);
+        startExpAuto(); // restart the 5s cycle from the manually chosen point
       });
     });
-  });
+
+    startExpAuto();
+  })();
 
 });
 </script>
