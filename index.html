@@ -257,7 +257,7 @@
       <div class="exp-frame lg:col-span-3 h-[320px] sm:h-[420px] md:h-[520px] rounded-sm">
         <img src="assets/leader1.jpg" alt="Entrepreneuriat à IPSTG-LEADER" class="active" data-point="1">
         <img src="assets/classroom1.jpg" alt="Technologie à IPSTG-LEADER" data-point="2">
-        <img src="assets/quote1.jpg" alt="Ouverture internationale IPSTG-LEADER" data-point="3">
+        <img src="assets/citation.jpg" alt="Ouverture internationale IPSTG-LEADER" data-point="3">
         <img src="assets/group1.jpg" alt="Communauté IPSTG-LEADER" data-point="4">
       </div>
       <div class="lg:col-span-2 flex flex-col">
@@ -497,9 +497,9 @@
       <a href="https://www.facebook.com/share/19C3fJczks/" target="_blank" class="text-sm gold-text underline mt-1 inline-block">Facebook</a>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto relative border-t border-white/10 mt-8 pt-6 text-xs flex flex-col sm:flex-row justify-between gap-2">
+  <div class="max-w-7xl mx-auto relative border-t border-white/10 mt-8 pt-6 text-xs flex flex-col items-center text-center gap-3">
     <span>© 2026 IPSTG-LEADER. Tous droits réservés.</span>
-    <a href="https://rougatech.com" target="_blank" rel="noopener" class="footer-credit"><span class="designed-by">Designed by</span><span class="rouga">Rouga</span><span class="tech">Tech</span></a>
+    <a href="https://rougatech.com" target="_blank" rel="noopener" class="footer-credit"><span class="designed-by">Powered by</span><span class="rouga">Rouga</span><span class="tech">Tech</span></a>
   </div>
 </footer>
 <script src="assets/site.js"></script>
@@ -546,12 +546,24 @@ document.addEventListener('DOMContentLoaded', () => {
       expImgs.forEach(img=>{ img.classList.toggle('active', img.dataset.point === p); });
     }
 
+    const expReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function stopExpAuto(){ clearInterval(expTimer); expTimer = null; }
     function startExpAuto(){
-      clearInterval(expTimer);
+      stopExpAuto();
+      if(expReduced || document.hidden) return;
       expTimer = setInterval(()=>{
         showExp((expIndex + 1) % expPoints.length);
       }, 5000);
     }
+    // Accessibility (WCAG 2.2.2): pause while the visitor hovers or focuses the block, and when the tab is hidden
+    const expSection = document.querySelector('.exp-frame') && document.querySelector('.exp-frame').closest('.grid');
+    if(expSection){
+      expSection.addEventListener('mouseenter', stopExpAuto);
+      expSection.addEventListener('mouseleave', startExpAuto);
+      expSection.addEventListener('focusin', stopExpAuto);
+      expSection.addEventListener('focusout', startExpAuto);
+    }
+    document.addEventListener('visibilitychange', ()=>{ document.hidden ? stopExpAuto() : startExpAuto(); });
 
     expPoints.forEach((btn,i)=>{
       btn.addEventListener('click', ()=>{
