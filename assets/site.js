@@ -237,7 +237,7 @@ function initFiliereDetailPage(){
   if(!entry){
     root.innerHTML=`<div class="max-w-3xl mx-auto text-center py-10">
       <p class="eyebrow">Filière introuvable</p>
-      <h1 class="serif mt-4" style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--burgundy);">Cette filière n'existe pas ou plus.</h1>
+      <h1 class="serif mt-4" style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--burgundy);">Cette filière n'existe pas ou plus</h1>
       <a href="filieres.html" class="btn-gold inline-block mt-7 px-7 py-3 rounded-sm font-semibold text-sm">Voir toutes les filières →</a>
     </div>`;
     return;
@@ -280,4 +280,76 @@ document.addEventListener('DOMContentLoaded',()=>{
       });
     });
   }
+});
+
+// ============ Animations globales (ajout) ============
+document.addEventListener('DOMContentLoaded',()=>{
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // En-tête lisible sur les pages à fond clair : barre solide dès le chargement
+  const nav=document.getElementById('nav');
+  const firstSection=nav?document.querySelector('header ~ section'):null;
+  if(nav&&firstSection){
+    const bg=getComputedStyle(firstSection).backgroundColor.match(/\d+(\.\d+)?/g);
+    if(bg&&bg.length>=3){
+      const lum=(0.299*bg[0]+0.587*bg[1]+0.114*bg[2])/255;
+      if(lum>0.6){
+        nav.classList.add('solid');
+        window.addEventListener('scroll',()=>nav.classList.add('solid'),{passive:true});
+      }
+    }
+  }
+
+  if(reduce) return;
+
+  // Barre de progression du défilement
+  const bar=document.createElement('div');bar.id='scroll-progress';document.body.appendChild(bar);
+  const upd=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')';};
+  upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+
+  const skip=el=>el.closest('#hero, header, footer, .case-track, .case-lightbox, #lightbox, #program-modal, .reveal, svg');
+  const added=[];
+  // Titres de section et photos : apparition au défilement
+  document.querySelectorAll('section h2, section img.object-cover, section img.rounded-sm').forEach(el=>{
+    if(el.classList.contains('reveal')||skip(el.parentElement||el)) return;
+    el.classList.add('reveal'); if(el.tagName==='IMG') el.classList.add('reveal-img'); added.push(el);
+  });
+  // Séparateurs dorés qui se dessinent
+  document.querySelectorAll('.woven-divider').forEach(el=>{ el.classList.add('anim-draw'); added.push(el); });
+
+  // Apparition en cascade des éléments d'une même rangée
+  const groups=new Map();
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.style.transitionDelay) return;
+    const p=el.parentElement; if(!p) return;
+    if(!groups.has(p)) groups.set(p,[]); groups.get(p).push(el);
+  });
+  groups.forEach(list=>{
+    if(list.length<2) return;
+    list.forEach((el,i)=>{ if(i===0) return; const d=Math.min(i,5)*0.1; el.style.transitionDelay=d+'s'; el.dataset.staggered='1'; });
+  });
+
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    const el=e.target; el.classList.add('visible'); io.unobserve(el);
+    if(el.dataset.staggered) setTimeout(()=>{el.style.transitionDelay='';},1600);
+  }});},{threshold:.12});
+  added.forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-staggered]').forEach(el=>{ if(!el.classList.contains('visible')) io.observe(el); else setTimeout(()=>{el.style.transitionDelay='';},1600); });
+  setTimeout(()=>{added.forEach(el=>el.classList.add('visible'));},2500);
+
+  // Léger zoom des photos au survol (si le cadre les recadre)
+  document.querySelectorAll('section img.object-cover').forEach(img=>{
+    const p=img.parentElement;
+    if(!p||img.closest('#hero, .case-track, header, footer')) return;
+    if(getComputedStyle(p).overflow==='hidden'){ img.classList.add('zoomable'); p.classList.add('zoom-parent'); }
+  });
+
+  // Compteurs pour les pourcentages (ex. 10 %, 15 %, 100 %)
+  const counters=[...document.querySelectorAll('section *')].filter(el=>el.children.length===0&&/^\s*\d{1,3}\s?%\s*$/.test(el.textContent));
+  const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+    const el=e.target,txt=el.textContent,n=parseInt(txt,10),t0=performance.now(),dur=1200;
+    const step=t=>{const k=Math.min((t-t0)/dur,1),v=Math.round(n*(1-Math.pow(1-k,3)));el.textContent=txt.replace(/\d+/,v);if(k<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);
+  });},{threshold:.5});
+  counters.forEach(c=>cio.observe(c));
 });

@@ -236,3 +236,22 @@ body.menu-open .float-stack{display:none;}
   .exp-frame img{transition:none;}
   .float-stack a{animation:none;}
 }
+
+/* ============ Animations globales (ajout) ============ */
+#scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform-origin:left;transform:scaleX(0);z-index:100;pointer-events:none;}
+.woven-divider.anim-draw{transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.4,0,.2,1) .2s;}
+.woven-divider.anim-draw.visible{transform:scaleX(1);}
+.btn-gold{position:relative;overflow:hidden;isolation:isolate;}
+.btn-gold::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);transition:left .75s ease;pointer-events:none;z-index:1;}
+.btn-gold:hover::after{left:130%;}
+.zoomable{transition:transform 1.2s cubic-bezier(.2,.6,.2,1);}
+.zoom-parent:hover>.zoomable{transform:scale(1.05);}
+.reveal.reveal-img{transform:scale(.98);transition:opacity 1s ease, transform 1.2s cubic-bezier(.2,.6,.2,1);}
+.reveal.reveal-img.visible{transform:none;}
+.nav-link{transition:color .3s ease;}
+@media (prefers-reduced-motion:reduce){
+  #scroll-progress{display:none;}
+  .woven-divider.anim-draw{transform:none;transition:none;}
+  .btn-gold::after{display:none;}
+  .zoomable,.zoom-parent:hover>.zoomable{transition:none;transform:none;}
+}
