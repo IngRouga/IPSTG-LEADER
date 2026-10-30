@@ -120,12 +120,43 @@
   </div>
 </header>
 
-<!-- PAGE BANNER — typographic, no photo -->
-<section class="page-banner">
-  <div class="max-w-5xl mx-auto">
-    <p class="eyebrow reveal">Digital Campus</p>
-    <div class="hero-gold-line reveal mt-4"></div>
-    <h1 class="serif reveal mt-6 leading-[1.02]" style="font-size:clamp(2.5rem,7vw,5.5rem);color:var(--burgundy);">Un espace numérique pour la formation en ligne.</h1>
+<!-- PAGE BANNER — animé : ordinateur + icônes flottantes -->
+<section class="page-banner overflow-hidden">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <p class="eyebrow reveal">Digital Campus</p>
+      <div class="hero-gold-line reveal mt-4"></div>
+      <h1 class="serif reveal mt-6 leading-[1.02]" style="font-size:clamp(2.5rem,6vw,4.75rem);color:var(--burgundy);">Un espace numérique pour la formation <span class="typed">en ligne</span>.</h1>
+      <p class="reveal mt-6 text-gray-600 leading-relaxed max-w-lg">Apprendre avec IPSTG-LEADER, où que vous soyez.</p>
+    </div>
+    <div class="lg:col-span-5 reveal">
+      <svg viewBox="0 0 420 300" class="w-full h-auto anim" role="img" aria-label="Illustration : formation en ligne sur ordinateur portable">
+        <defs><pattern id="dots2" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="rgba(11,14,26,.10)"/></pattern></defs>
+        <rect width="420" height="300" rx="10" fill="url(#dots2)"/>
+        <g class="laptop">
+          <rect x="80" y="60" width="260" height="165" rx="10" fill="var(--navy)"/>
+          <rect x="92" y="72" width="236" height="141" rx="4" fill="#141a2e"/>
+          <rect x="104" y="84" width="130" height="78" rx="4" fill="#1d2540"/>
+          <circle cx="169" cy="123" r="20" class="play-halo"/>
+          <circle cx="169" cy="123" r="16" fill="var(--gold)"/>
+          <path d="M164 114 L177 123 L164 132 Z" fill="var(--navy)"/>
+          <rect x="104" y="172" width="130" height="5" rx="2.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="104" y="172" width="130" height="5" rx="2.5" fill="var(--gold)" class="progress"/>
+          <rect x="246" y="86" width="70" height="6" rx="3" fill="rgba(255,255,255,.35)" class="line l1"/>
+          <rect x="246" y="100" width="56" height="6" rx="3" fill="rgba(255,255,255,.22)" class="line l2"/>
+          <rect x="246" y="114" width="64" height="6" rx="3" fill="rgba(255,255,255,.22)" class="line l3"/>
+          <rect x="246" y="136" width="70" height="26" rx="4" fill="rgba(200,152,46,.18)" class="line l4"/>
+          <rect x="104" y="188" width="212" height="6" rx="3" fill="rgba(255,255,255,.14)" class="line l5"/>
+          <rect x="104" y="200" width="150" height="6" rx="3" fill="rgba(255,255,255,.10)" class="line l6"/>
+          <path d="M56 232 H364 L350 246 H70 Z" fill="#1d2540"/>
+          <circle cx="306" cy="78" r="3.5" fill="#25D366" class="live"/>
+        </g>
+        <g class="float f1"><circle cx="52" cy="70" r="24" fill="#fff" stroke="rgba(11,14,26,.08)"/><path d="M40 70 L52 64 L64 70 L52 76 Z M45 72.5 V78 C48 81 56 81 59 78 V72.5" fill="none" stroke="var(--burgundy)" stroke-width="2.2" stroke-linejoin="round"/></g>
+        <g class="float f2"><circle cx="372" cy="58" r="24" fill="#fff" stroke="rgba(11,14,26,.08)"/><path d="M361 50 h9 a3 3 0 0 1 3 3 v14 a3 3 0 0 0 -3 -3 h-9 Z M383 50 h-9 a3 3 0 0 0 -3 3 v14 a3 3 0 0 1 3 -3 h9 Z" fill="none" stroke="var(--burgundy)" stroke-width="2" stroke-linejoin="round"/></g>
+        <g class="float f3"><circle cx="384" cy="176" r="22" fill="#fff" stroke="rgba(11,14,26,.08)"/><path d="M373 168 h22 a2 2 0 0 1 2 2 v11 a2 2 0 0 1 -2 2 h-14 l-6 5 v-5 h-2 a2 2 0 0 1 -2 -2 v-11 a2 2 0 0 1 2 -2 Z" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linejoin="round"/></g>
+        <g class="float f4"><circle cx="40" cy="186" r="20" fill="#fff" stroke="rgba(11,14,26,.08)"/><path d="M30 184 a14 14 0 0 1 20 0 M34 188.5 a8 8 0 0 1 12 0" fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round"/><circle cx="40" cy="193" r="2" fill="var(--gold)"/></g>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -139,6 +170,29 @@
 .dest-num{font-family:'Fraunces',serif;font-size:2.75rem;line-height:1;color:var(--gold);opacity:.85;}
 @media (prefers-reduced-motion:reduce){.soon-badge::before{animation:none}.dest-card{transition:none}}
 </style>
+<style>
+.laptop{animation:bob 6s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float{transform-box:fill-box;transform-origin:center;animation:floaty 5s ease-in-out infinite;}
+.f2{animation-delay:-1.2s;animation-duration:5.6s}.f3{animation-delay:-2.4s;animation-duration:4.6s}.f4{animation-delay:-3.3s;animation-duration:6.2s}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(4deg)}}
+.play-halo{fill:var(--gold);opacity:.3;transform-box:fill-box;transform-origin:center;animation:halo 2s ease-out infinite;}
+@keyframes halo{0%{transform:scale(.8);opacity:.45}100%{transform:scale(1.9);opacity:0}}
+.progress{transform-box:fill-box;transform-origin:left;animation:prog 6s ease-in-out infinite;}
+@keyframes prog{0%{transform:scaleX(0)}80%,100%{transform:scaleX(1)}}
+.line{transform-box:fill-box;transform-origin:left;animation:lineIn 6s ease infinite;}
+.l2{animation-delay:.25s}.l3{animation-delay:.5s}.l4{animation-delay:.75s}.l5{animation-delay:1s}.l6{animation-delay:1.25s}
+@keyframes lineIn{0%{transform:scaleX(0);opacity:0}12%,85%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+.live{animation:blink 1.4s ease-in-out infinite;}
+@keyframes blink{50%{opacity:.25}}
+.typed{color:var(--gold);border-right:.06em solid var(--gold);padding-right:.05em;animation:caret 1s step-end infinite;}
+@keyframes caret{50%{border-color:transparent}}
+.dc-feature{opacity:0;transform:translateY(14px);animation:fadeUp .7s ease forwards;}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+.dc-card svg{animation:floaty 5s ease-in-out infinite;}
+@media (prefers-reduced-motion:reduce){.anim *,.anim{animation:none!important;transition:none!important}.route{stroke-dashoffset:0!important}}
+@media (prefers-reduced-motion:reduce){.typed{border:0}}
+</style>
 <section class="section-pad" style="background:var(--cream);">
   <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7 reveal">
@@ -148,7 +202,7 @@
       <p class="text-gray-600 mt-6 leading-relaxed">Le <strong>Digital Campus</strong> d'IPSTG-LEADER sera un espace numérique dédié à la formation en ligne. Les programmes, le fonctionnement et les modalités d'inscription seront communiqués très prochainement.</p>
     </div>
     <div class="lg:col-span-5 reveal">
-      <div class="dest-card text-center" style="padding:3rem 2rem;">
+      <div class="dest-card dc-card text-center" style="padding:3rem 2rem;">
         <svg viewBox="0 0 64 64" class="w-20 h-20 mx-auto" fill="none" stroke="currentColor" stroke-width="2.2" style="color:var(--burgundy);" aria-hidden="true"><rect x="8" y="12" width="48" height="32" rx="3"/><path d="M4 50h56"/><path d="M24 50l2-6h12l2 6"/><path d="M27 24l9 4-9 4z" fill="currentColor" stroke="none"/></svg>
         <p class="serif text-2xl mt-6" style="color:var(--burgundy);">Digital Campus</p>
         <p class="text-xs font-semibold mt-3 uppercase tracking-wide" style="color:var(--gold);">Lancement prochainement</p>
